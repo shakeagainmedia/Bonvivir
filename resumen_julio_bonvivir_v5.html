@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resumen Ejecutivo Julio 2026 — Bonvivir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;0,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+:root{
+  --rojo:#AF0217;
+  --rojo-brillante:#ED1C24;
+  --negro:#141414;
+  --hueso:#F8FAFD;
+  --gris:#313131;
+  --gris-suave:#EDEDEF;
+  --gris-linea:#DEDEE2;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;font-weight:300;background:var(--gris-suave);color:var(--negro);font-size:16px;line-height:1.7;padding:2rem 1rem}
+.page{max-width:840px;margin:0 auto}
+.cover{background:var(--negro);border-radius:16px;padding:2.6rem 2.5rem;margin-bottom:1.25rem;position:relative;overflow:hidden}
+.cover::after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 30% 30%, var(--rojo) 0%, transparent 70%);opacity:.5}
+.kicker{font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo-brillante);margin-bottom:10px;position:relative}
+.cover h1{font-weight:800;font-size:28px;color:var(--hueso);margin-bottom:6px;position:relative}
+.cover .subtitle{font-weight:300;font-size:13px;color:#C9C9CE;position:relative}
+.card{background:#fff;border-radius:16px;border:.5px solid var(--gris-linea);padding:2rem 2.5rem;margin-bottom:1.25rem}
+.st{font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--rojo);margin:0 0 14px;border-bottom:2px solid var(--negro);padding-bottom:8px;display:flex;align-items:center;gap:8px}
+.st .n{background:var(--negro);color:#fff;font-weight:700;font-size:11px;width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.g{display:grid;gap:10px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.mc{background:var(--hueso);border-radius:8px;padding:12px 14px;border:.5px solid var(--gris-linea)}
+.ml{font-weight:600;font-size:10.5px;letter-spacing:.02em;text-transform:uppercase;color:#767680;margin:0 0 4px}
+.mv{font-weight:800;font-size:21px;color:var(--negro);margin:0}
+.ms{font-weight:300;font-size:11px;color:#767680;margin:4px 0 0}
+.up{color:#3D7A4E}.warn{color:#B4772A}.dn{color:var(--rojo)}
+.nb{background:var(--hueso);border-left:3px solid var(--negro);border-radius:0 8px 8px 0;padding:12px 16px;font-weight:300;font-size:13px;color:var(--negro);line-height:1.6;margin-bottom:12px}
+.nb strong{font-weight:600}
+.wb{background:#FBF1E4;border-left:3px solid #B4772A;border-radius:0 8px 8px 0;padding:12px 16px;font-weight:300;font-size:13px;color:var(--negro);line-height:1.6;margin-bottom:12px}
+.wb strong{font-weight:600}
+.eb{background:#FBE9EA;border-left:3px solid var(--rojo);border-radius:0 8px 8px 0;padding:12px 16px;font-weight:300;font-size:13px;color:var(--negro);line-height:1.6;margin-bottom:12px}
+.eb strong{font-weight:600}
+.eb.headline,.nb.headline,.wb.headline{margin-bottom:14px}
+.headline-tag{font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--rojo);display:block;margin-bottom:5px}
+.gap-box{display:flex;align-items:center;justify-content:center;gap:18px;background:var(--negro);border-radius:10px;padding:16px 20px;margin:0 0 16px}
+.gap-item{text-align:center}
+.gap-item .gl{font-weight:600;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#B7B7BD}
+.gap-item .gv{font-weight:800;font-size:24px;color:#fff}
+.gap-arrow{color:var(--rojo-brillante);font-size:20px}
+.bul{display:flex;gap:8px;margin-bottom:10px;font-weight:300;font-size:13px;color:var(--negro);line-height:1.5}
+.bul i{margin-top:3px;flex-shrink:0;font-size:16px;color:var(--rojo)}
+.bul strong{font-weight:600}
+.tag{font-weight:300;font-size:10px;color:#767680;display:block;margin-top:1px}
+strong{font-weight:600}
+hr.div{border:none;border-top:.5px solid var(--gris-linea);margin:1.2rem 0}
+.footer-note{font-weight:300;font-size:11px;color:#767680;margin-top:8px}
+.eyebrow{font-weight:600;font-size:12px;color:#767680;margin:-8px 0 14px}
+.sub-st{font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin:22px 0 10px;padding-top:16px;border-top:.5px solid var(--gris-linea);display:flex;align-items:center;gap:6px}
+.sub-st i{color:var(--rojo);font-size:14px}
+table.t{width:100%;border-collapse:collapse;font-size:12px}
+table.t th{text-align:left;font-weight:700;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#767680;padding:6px 8px 8px;border-bottom:2px solid var(--negro)}
+table.t td{padding:7px 8px;border-bottom:.5px solid var(--gris-linea);color:var(--negro);vertical-align:top;font-weight:300}
+table.t tr:last-child td{border-bottom:none}
+table.t strong{font-weight:600}
+.badge{display:inline-block;font-weight:600;font-size:10px;padding:2px 7px;border-radius:20px}
+.b-wine{background:#FBE9EA;color:var(--rojo)}
+.b-olive{background:#EFF1E4;color:#5C6B2A}
+.b-blue{background:#E6EEF7;color:#2A4C7A}
+.b-amber{background:#FBEEDC;color:#8A5A17}
+.b-gray{background:var(--gris-suave);color:#5F5E5A}
+.ab-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.ab-label{font-weight:600;font-size:11px;color:#767680;width:70px;flex-shrink:0}
+.ab-track{flex:1;background:var(--hueso);border-radius:4px;height:16px;overflow:hidden;display:flex}
+.ab-fill{height:100%;display:flex;align-items:center}
+.ab-fill.f{background:var(--rojo)}
+.ab-fill.m{background:var(--negro)}
+.ab-pct{font-weight:600;font-size:11px;color:#767680;width:38px;text-align:right;flex-shrink:0}
+
+/* TABS */
+.tabs-card{background:#fff;border-radius:16px;border:.5px solid var(--gris-linea);padding:0;margin-bottom:1.25rem;overflow:hidden}
+.tab-nav{display:flex;background:var(--negro)}
+.tab-btn{flex:1;background:transparent;border:none;cursor:pointer;padding:16px 10px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#8A8A90;display:flex;flex-direction:column;align-items:center;gap:4px;transition:.15s;border-bottom:3px solid transparent}
+.tab-btn i{font-size:18px}
+.tab-btn:hover{color:#D6D6DA}
+.tab-btn.active{color:#fff;border-bottom-color:var(--rojo-brillante);background:#232323}
+.tab-panel{display:none;padding:2rem 2.5rem}
+.tab-panel.active{display:block}
+.tab-title{font-weight:800;font-size:19px;color:var(--negro);margin-bottom:2px}
+.tab-subtitle{font-weight:600;font-size:12px;color:#767680;margin-bottom:18px}
+
+@media(max-width:600px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .gap-box{flex-direction:column;gap:8px}
+  .tab-btn{font-size:10px;padding:12px 4px}
+  .tab-btn i{font-size:16px}
+  .tab-panel{padding:1.5rem 1.25rem}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+  <div class="kicker">Bonvivir · Reporte mensual</div>
+  <h1>Resumen ejecutivo — Julio 2026</h1>
+  <p class="subtitle">Mes cerrado (31 días) · Club de Suscripción (vino + oliva), Tienda online y Leads · Meta + Google Ads</p>
+</div>
+
+<!-- INSIGHTS DEL MES -->
+<div class="card">
+  <div class="st"><span class="n">✓</span>Insights del mes — lo que fuimos encontrando</div>
+  <div class="bul"><i class="ti ti-grape"></i><span><strong>Vino:</strong> al cruzar lo que reporta cada plataforma contra las altas reales, nos encontramos con que Meta cuenta 312 "registros completos" en el mes, pero de ahí solo 254 terminan siendo altas pagas reales (contando también Google). Esa diferencia nos llevó a mirar qué evento está usando Meta para optimizar la campaña — y es justamente "registro completo", que se dispara antes del pago. Mientras esa siga siendo la señal que le enseñamos a la puja, el algoritmo va a seguir trayendo gente que se parece a quien registra, no a quien paga.</span></div>
+  <div class="bul"><i class="ti ti-chart-line" style="color:var(--rojo)"></i><span><strong>Vino:</strong> también notamos que las sesiones pagas llegaron al 102% del objetivo, pero las altas se quedaron en 51% — la conversión sesión→alta real quedó en ≈0,52%, la mitad del ≈1,04% que hacía falta con ese mismo volumen. Eso nos dice que el problema no es de tráfico, porque llegamos e incluso superamos la meta: está en lo que pasa después, entre la sesión y el pago.</span></div>
+  <div class="bul"><i class="ti ti-shopping-cart"></i><span><strong>Tienda:</strong> al comparar las 357 compras que reportan las plataformas contra las 151 ventas reales que nos confirmó Bonvivir, encontramos una brecha de 2,4x. Lo que nos preocupa no es solo el número en sí: si esa sobreatribución no es pareja entre campañas, el "ganador" que nos muestra cada plataforma podría no ser el que más vende de verdad. Todavía no medimos dónde se concentra esa brecha, así que no estamos tomando decisiones de optimización basadas en el ranking de plataforma hasta poder confirmarlo.</span></div>
+  <div class="bul"><i class="ti ti-droplet"></i><span><strong>Oliva:</strong> este mes logramos dejar bien configurada la medición de conversión de esta línea, así que por primera vez pudimos ver con claridad el tráfico que está entrando. Lo que encontramos es que las keywords que está usando la campaña tienen muy poco volumen de búsqueda — no es que la gente busque y no convierta, es que casi no hay gente buscando esos términos todavía. Con la conversión ya lista, el próximo paso es ampliar hacia términos con más volumen antes de sacar conclusiones sobre el objetivo de altas.</span></div>
+  <div class="bul"><i class="ti ti-target-arrow"></i><span><strong>Leads:</strong> comparando el costo por lead de cada plataforma, encontramos que Meta trae leads a $1.074 y Google a $1.780 — un lead de Google cuesta 66% más que uno de Meta. Sin feedback de calidad de Bonvivir no podemos saber si esa diferencia de precio también es una diferencia de calidad: hoy estaríamos tentados a recomendar mover presupuesto hacia Meta solo porque es más barato, sin saber si esos leads convierten igual de bien a socios reales.</span></div>
+</div>
+
+<!-- INVERSIÓN CONSOLIDADA -->
+<div class="card">
+  <div class="st"><span class="n">✓</span>Inversión total del mes</div>
+  <div class="wb headline"><strong>Motivo de la sobre-ejecución:</strong> durante julio la cuenta sufrió un hackeo que generó consumo no planificado — esta es la causa principal de que el mes haya cerrado 36% por encima del presupuesto ($19,25M reales vs. $14,10M planificados), no una decisión de escalar inversión.</div>
+  <div class="g g4">
+    <div class="mc"><p class="ml">Inversión Meta + Google</p><p class="mv">$19.248.320</p><p class="ms">Fuente: Master Metrics</p></div>
+    <div class="mc"><p class="ml">Meta</p><p class="mv">$16.609.634</p><p class="ms">86% del total</p></div>
+    <div class="mc"><p class="ml">Google</p><p class="mv">$2.638.686</p><p class="ms">14% del total</p></div>
+    <div class="mc"><p class="ml">vs. plan Club+Tienda</p><p class="mv warn">136%</p><p class="ms">Plan $14,10M</p></div>
+  </div>
+  <p class="footer-note">Inversión validada contra el tablero de seguimiento interno del cliente (diferencia menor a $2.000 sobre $19,2M).</p>
+</div>
+
+<!-- TABS -->
+<div class="tabs-card">
+  <div class="tab-nav">
+    <button class="tab-btn active" data-tab="vino"><i class="ti ti-grape"></i>Vino</button>
+    <button class="tab-btn" data-tab="tienda"><i class="ti ti-shopping-cart"></i>Tienda</button>
+    <button class="tab-btn" data-tab="oliva"><i class="ti ti-droplet"></i>Oliva</button>
+    <button class="tab-btn" data-tab="leads"><i class="ti ti-target-arrow"></i>Leads</button>
+  </div>
+
+  <!-- VINO -->
+  <div class="tab-panel active" id="tab-vino">
+    <div class="tab-title">Club de Suscripción — Vino</div>
+    <div class="tab-subtitle">La vertical principal del Club y la métrica norte del mes</div>
+
+    <div class="nb headline"><span class="headline-tag">Lo que encontramos</span>Al cruzar lo que reporta cada plataforma contra las altas reales, nos dimos cuenta de que <strong>254 altas reales</strong> es bastante menos de lo que sugieren los números sueltos de cada plataforma: Meta cuenta 312 eventos de "registro completo" (que se disparan al completar el formulario, no al confirmar el pago), y Google cuenta 165 conversiones de "Suscripción" en su única campaña de suscripción digital. Esa diferencia — y no solo el objetivo de 495 (51,3% de cumplimiento) — es lo que nos hizo mirar más de cerca qué está optimizando cada plataforma.</div>
+
+    <div class="gap-box">
+      <div class="gap-item"><div class="gl">Meta+Google (suma bruta)</div><div class="gv">477</div></div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-item"><div class="gl">Altas reales (CRM/Tableau)</div><div class="gv">254</div></div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-item"><div class="gl">Brecha</div><div class="gv" style="color:var(--rojo-brillante)">1,9x</div></div>
+    </div>
+
+    <div class="wb"><span class="headline-tag">Siguiendo el hilo</span>Cuando miramos por qué el algoritmo trae registros que no pagan, encontramos dos causas encadenadas: primero, Meta está optimizando contra "registro completo", un evento que ocurre antes del pago — mientras esa sea la señal que le enseñamos a la puja, va a seguir trayendo gente parecida a quien registra, no a quien paga. Segundo, incluso descontando eso, las sesiones pagas llegaron al 102% del objetivo pero las altas solo al 51% — la conversión sesión→alta real (≈0,52%) quedó en la mitad de lo que hacía falta (≈1,04%). El tráfico no es el problema, porque llegó e incluso superó la meta; el problema está en lo que pasa entre la sesión y el pago.</div>
+
+    <div class="g g4" style="margin-bottom:6px">
+      <div class="mc"><p class="ml">Inversión (Meta+Google)</p><p class="mv">$9.622.386*</p><p class="ms">Campañas de Suscripción Vino</p></div>
+      <div class="mc"><p class="ml">Sesiones pagas</p><p class="mv">48.646</p><p class="ms up">Obj. 47.600 → 102%</p></div>
+      <div class="mc"><p class="ml">Meta reporta</p><p class="mv">312</p><p class="ms">"Registro completo" (pixel)</p></div>
+      <div class="mc"><p class="ml">Google reporta</p><p class="mv">165</p><p class="ms">Conversión "Suscripción"</p></div>
+    </div>
+    <p class="footer-note">*Suma de campañas Meta (RMKT Suscripción Digital, Tráfico Consideración Club, Club Sale RMKT) y la única campaña de Google de Club/Vino: Suscripción Digital genérica. "Club_Vinos" en Google es, en rigor, una campaña de Leads y se reclasificó en esa solapa.</p>
+
+    <div class="sub-st"><i class="ti ti-speakerphone"></i>Campañas</div>
+    <table class="t">
+      <thead><tr><th>Campaña</th><th>Plataforma</th><th>Inversión</th><th>Resultado</th></tr></thead>
+      <tbody>
+        <tr><td><strong>RMKT Suscripción Digital</strong></td><td><span class="badge b-blue">Meta</span></td><td>$6.641.112</td><td>309 registros · 64 compras pixel</td></tr>
+        <tr><td><strong>Tráfico Consideración Club</strong></td><td><span class="badge b-blue">Meta</span></td><td>$1.123.010</td><td>1 lead</td></tr>
+        <tr><td><strong>Suscripción Digital (genérica)</strong></td><td><span class="badge b-amber">Google</span></td><td>$1.537.215</td><td>165 conversiones "Suscripción"</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">La campaña de remarketing de Meta concentra 69% de la inversión en Vino y es la única con volumen real de registros — el resto es tráfico de consideración con casi nada de conversión directa. En Google, toda la Suscripción Digital vive en una sola campaña genérica (sin segmentar por ticket o tipo de caja).</div>
+
+    <div class="sub-st"><i class="ti ti-photo"></i>Creativos (Meta)</div>
+    <table class="t">
+      <thead><tr><th>Anuncio</th><th>Inv.</th><th>Compras</th><th>Revenue</th><th>ROAS plat.</th></tr></thead>
+      <tbody>
+        <tr><td><strong>UGC Teresita — Servicio Club</strong></td><td>$1.125.131</td><td>22</td><td>$1.992.220</td><td class="warn" style="font-weight:600">1,8</td></tr>
+        <tr><td><strong>UGC Matías — Servicio (juntada)</strong></td><td>$1.404.791</td><td>12</td><td>$968.110</td><td class="dn" style="font-weight:600">0,7</td></tr>
+        <tr><td><strong>UGC Giuli — Desc. Selección Exclusiva</strong></td><td>$1.054.008</td><td>6</td><td>$653.249</td><td class="dn" style="font-weight:600">0,6</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">Encontramos algo consistente con el problema de señal de arriba: los tres creativos que más gastan en la campaña de remarketing del Club tienen ROAS de plataforma entre 0,6 y 1,8 — muy por debajo de los ROAS de 10x+ que vimos en Tienda. Son piezas de formato UGC/testimonial, pensadas para generar confianza y registro, no necesariamente para cerrar el pago en el momento. Tiene sentido que su "compra" (pixel) sea baja si buena parte de lo que están logrando es el registro que mencionamos arriba.</div>
+
+    <div class="sub-st"><i class="ti ti-users"></i>Audiencias (Meta)</div>
+    <div class="ab-row"><span class="ab-label">Género</span>
+      <div class="ab-track">
+        <div class="ab-fill f" style="width:38.2%"></div>
+        <div class="ab-fill m" style="width:61.8%"></div>
+      </div>
+    </div>
+    <p class="footer-note" style="margin:-4px 0 10px">38,2% mujeres · 61,8% varones</p>
+    <table class="t">
+      <thead><tr><th>Edad</th><th>% inversión</th><th>Costo por registro</th></tr></thead>
+      <tbody>
+        <tr><td>25-34</td><td>31,5%</td><td class="up" style="font-weight:600">$17.700</td></tr>
+        <tr><td>35-44</td><td>32,3%</td><td>$22.800</td></tr>
+        <tr><td>45-54</td><td>20,8%</td><td class="dn" style="font-weight:600">$26.400</td></tr>
+        <tr><td>55-64</td><td>8,8%</td><td>$24.200</td></tr>
+        <tr><td>65+</td><td>6,5%</td><td>$21.100</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">Al calcular el costo por registro por franja, encontramos que 25-34 es la más eficiente ($17.700 por registro) y 45-54 la más cara ($26.400) — un 49% más. La inversión, sin embargo, está bastante pareja entre esos dos segmentos (31,5% vs 20,8%). Ajustar esa distribución hacia donde el registro sale más barato es una palanca concreta para agosto, sin necesidad de más presupuesto.</div>
+
+    <div class="sub-st"><i class="ti ti-search"></i>Keywords (Google Search)</div>
+    <div class="nb"><span class="headline-tag">Lo que encontramos</span>El 92,8% de la inversión en la campaña de Suscripción Digital va a términos de marca ("bonvivir", "club bonvivir", "bon vivir") — tráfico de alta intención, esperable y sano. Pero al revisar término por término, encontramos que alrededor de un 6% del gasto (~$83.000) se está yendo a búsquedas de "aceite de oliva [marca]" que no tienen nada que ver con el club de vino — probablemente por una concordancia amplia mal acotada. No es un problema grave todavía, pero es presupuesto de Vino financiando tráfico de otra categoría.</div>
+  </div>
+
+  <!-- TIENDA -->
+  <div class="tab-panel" id="tab-tienda">
+    <div class="tab-title">Tienda online</div>
+    <div class="tab-subtitle">Ventas reales vs. lo reportado por plataforma</div>
+
+    <div class="nb headline"><span class="headline-tag">Lo que encontramos</span>Cuando cruzamos las 357 compras que reportan las plataformas contra las <strong>151 ventas reales</strong> que nos confirmó Bonvivir, apareció una brecha de 2,4x — mucho más grande de lo que esperábamos incluso considerando que hay más de un camino de compra (carrito directo, WhatsApp, teléfono). CPA real: $24.444 por venta, tomando 151 como la cifra oficial del mes.</div>
+
+    <div class="gap-box">
+      <div class="gap-item"><div class="gl">Compras reportadas (plataforma)</div><div class="gv">357</div></div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-item"><div class="gl">Ventas reales (cliente)</div><div class="gv">151</div></div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-item"><div class="gl">Brecha</div><div class="gv" style="color:var(--rojo-brillante)">2,4x</div></div>
+    </div>
+
+    <div class="eb"><span class="headline-tag">Por qué seguimos mirando esto</span>Una brecha de 2,4x no es solo un problema de precisión — es un problema de confianza en las decisiones que tomamos con esos datos. Parte de esa inflación corresponde al gasto del hackeo que sufrió la cuenta en julio (ver nota de presupuesto arriba) — lo excluimos del análisis de campañas, creativos y audiencias de esta sección para no mezclar un incidente de seguridad con el desempeño real de medios.</div>
+
+    <div class="g g4">
+      <div class="mc"><p class="ml">Inversión (Meta+Google)</p><p class="mv">$3.691.039</p><p class="ms up">97,1% del plan ($3,80M)</p></div>
+      <div class="mc"><p class="ml">Meta reporta</p><p class="mv">289</p><p class="ms">Compras (pixel purchase)</p></div>
+      <div class="mc"><p class="ml">Google reporta</p><p class="mv">68</p><p class="ms">Conversiones ("Compra")</p></div>
+      <div class="mc"><p class="ml">Total plataformas</p><p class="mv warn">357</p><p class="ms">Meta + Google</p></div>
+    </div>
+
+    <div class="sub-st"><i class="ti ti-speakerphone"></i>Campañas</div>
+    <table class="t">
+      <thead><tr><th>Campaña</th><th>Plataforma</th><th>Inversión</th><th>Resultado (plat.)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Conv. Ventas v2</strong></td><td><span class="badge b-blue">Meta</span></td><td>$1.092.992</td><td>207 compras · $16,87M</td></tr>
+        <tr><td><strong>Conv. Sale ADV+ v2</strong></td><td><span class="badge b-blue">Meta</span></td><td>$527.361</td><td>74 compras · $6,02M</td></tr>
+        <tr><td><strong>Brand Search</strong></td><td><span class="badge b-amber">Google</span></td><td>$127.210</td><td>40,8 conv. · $3,05M</td></tr>
+        <tr><td><strong>PMax Tienda</strong></td><td><span class="badge b-amber">Google</span></td><td>$139.724</td><td>27,6 conv. · $2,93M</td></tr>
+      </tbody>
+    </table>
+    <p class="footer-note">No incluye el gasto asociado al hackeo de julio, que se contabiliza aparte en "Inversión total del mes".</p>
+
+    <div class="sub-st"><i class="ti ti-photo"></i>Creativos (Meta)</div>
+    <table class="t">
+      <thead><tr><th>Anuncio</th><th>Inv.</th><th>Compras</th><th>Revenue</th><th>ROAS plat.</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Estático Combo 2 Invierno</strong></td><td>$870.746</td><td>158</td><td>$11.923.933</td><td class="up" style="font-weight:600">13,7</td></tr>
+        <tr><td><strong>Carrusel AON Sin Descuento</strong></td><td>$25.033</td><td>7</td><td>$724.739</td><td class="up" style="font-weight:600">29,0</td></tr>
+        <tr><td><strong>Estático AON VHombre</strong></td><td>$108.117</td><td>27</td><td>$2.633.682</td><td class="up" style="font-weight:600">24,4</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">Los creativos estáticos con descuento (combos de invierno) son, por lejos, los más eficientes del mes en Tienda — ROAS de plataforma entre 13,7 y 29. El de mejor desempeño individual, "Combo 2 Invierno", generó casi $12M con menos de $1M de inversión.</div>
+
+    <div class="sub-st"><i class="ti ti-users"></i>Audiencias (Meta)</div>
+    <div class="ab-row"><span class="ab-label">Género</span>
+      <div class="ab-track">
+        <div class="ab-fill f" style="width:26.5%"></div>
+        <div class="ab-fill m" style="width:73.5%"></div>
+      </div>
+    </div>
+    <p class="footer-note" style="margin:-4px 0 10px">26,5% mujeres · 73,5% varones</p>
+    <table class="t">
+      <thead><tr><th>Edad</th><th>% inversión</th></tr></thead>
+      <tbody>
+        <tr><td>25-34</td><td>12,4%</td></tr>
+        <tr><td>35-44</td><td class="up" style="font-weight:600">27,8%</td></tr>
+        <tr><td>45-54</td><td>26,9%</td></tr>
+        <tr><td>55-64</td><td>20,6%</td></tr>
+        <tr><td>65+</td><td>12,3%</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">Con el gasto del hackeo afuera, la audiencia real de Tienda se ve muy distinta a lo que mostraba el promedio general: 73,5% varones, concentrada en 35-54 años (54,7% de la inversión). Es un perfil mucho más coherente con lo que esperaríamos de un e-commerce de vino, y más útil como referencia para segmentar campañas futuras.</div>
+
+    <div class="sub-st"><i class="ti ti-search"></i>Keywords (Google Search)</div>
+    <div class="nb">Brand Search en Tienda es, como en Vino, mayormente términos de marca: "bonvivir" ($59.898), "tienda bonvivir" ($12.182), "bonvivir tienda" y variantes cercanas concentran la mayor parte de los $127.210 de esta campaña. Es tráfico de intención directa de compra — no encontramos aquí el mismo problema de bleeding hacia términos genéricos que sí vimos en Vino.</div>
+  </div>
+
+  <!-- OLIVA -->  <!-- OLIVA -->
+  <div class="tab-panel" id="tab-oliva">
+    <div class="tab-title">Club de Suscripción — Oliva</div>
+    <div class="tab-subtitle">Campaña en rodaje — lleva un par de meses activa</div>
+
+    <div class="nb headline"><span class="headline-tag">Lo que encontramos</span>Este mes logramos dejar bien configurada la medición de conversión de Oliva, así que por primera vez pudimos ver con claridad el tráfico que está entrando a esta campaña. Con esa visibilidad nueva, lo que encontramos es que las keywords que está usando la campaña tienen muy poco volumen de búsqueda — no es que la gente busque y no convierta, es que casi no hay gente buscando esos términos todavía. Con la conversión ya lista, recién ahora podemos empezar a diagnosticar esta línea con datos confiables.</div>
+
+    <div class="wb"><span class="headline-tag">Qué significa esto para agosto</span>Con la conversión bien medida, el próximo paso lógico es ampliar el set de keywords hacia términos con más volumen de búsqueda y más cerca de la intención de suscripción (no solo de producto puntual como "aceite de oliva [marca]"). Recién con esa ampliación vamos a poder saber si el objetivo de 110 altas es alcanzable con el nivel de tráfico disponible, o si hay que replantearlo — hasta ahora, con la conversión recién arrancada, no teníamos con qué responder esa pregunta.</div>
+
+    <div class="g g4">
+      <div class="mc"><p class="ml">Inversión (Google)</p><p class="mv">$409.790</p><p class="ms">Única campaña activa</p></div>
+      <div class="mc"><p class="ml">Google reporta</p><p class="mv">3</p><p class="ms">Conversiones</p></div>
+      <div class="mc"><p class="ml">Altas reales (CPC, final)</p><p class="mv">13</p><p class="ms warn">Obj. 110 → 11,8%</p></div>
+      <div class="mc"><p class="ml">CPA real</p><p class="mv">$31.522</p><p class="ms">Inversión / 13 altas</p></div>
+    </div>
+
+    <div class="sub-st"><i class="ti ti-speakerphone"></i>Campañas</div>
+    <table class="t">
+      <thead><tr><th>Campaña</th><th>Plataforma</th><th>Inversión</th><th>Resultado</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Club Oliva — Suscripción Digital</strong></td><td><span class="badge b-olive">Google</span></td><td>$409.790</td><td>3 conversiones · $193.120</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">Oliva es la única vertical con una sola campaña activa, y en una sola plataforma. No hay creativos que analizar (es Search, sin componente visual) ni audiencias de Meta que desglosar — no tiene ninguna campaña corriendo ahí todavía.</div>
+
+    <div class="sub-st"><i class="ti ti-search"></i>Keywords (Google Search)</div>
+    <table class="t">
+      <thead><tr><th>Término (ejemplos)</th><th>Clicks</th><th>Inversión</th></tr></thead>
+      <tbody>
+        <tr><td>aceite de oliva</td><td>36</td><td>$18.859</td></tr>
+        <tr><td>carrefour</td><td>12</td><td>$6.088</td></tr>
+        <tr><td>aceite de oliva extra virgen</td><td>13</td><td>$6.378</td></tr>
+        <tr><td>olivos de tupungato</td><td>10</td><td>$5.230</td></tr>
+      </tbody>
+    </table>
+    <div class="nb"><span class="headline-tag">Lo que encontramos</span>Ninguno de los términos supera los 36 clicks en todo el mes, y la gran mayoría son búsquedas de una sola palabra clave con 1 click — nombres de marcas puntuales de aceite ("laur", "zuccardi", "carrefour aceite de girasol"), no de club o suscripción. Esto confirma lo que vimos arriba: el problema no es de conversión, es que el universo de gente buscando estos términos es chico. Ampliar hacia keywords de mayor volumen es el paso lógico antes de evaluar el objetivo de altas.</div>
+  </div>
+
+  <!-- LEADS -->
+  <div class="tab-panel" id="tab-leads">
+    <div class="tab-title">Leads (Club — generación)</div>
+    <div class="tab-subtitle">Solo datos de plataforma este mes</div>
+
+    <div class="eb headline"><span class="headline-tag">Lo que encontramos</span>Al desglosar el CPL por plataforma dentro de Leads, encontramos una diferencia grande: Meta trae leads a <strong>$1.074</strong> cada uno, Google a <strong>$1.780</strong> — un lead de Google cuesta 66% más que uno de Meta. El problema es que no tenemos forma de saber si esa diferencia de precio también es una diferencia de calidad: sin feedback de Bonvivir sobre cuáles de estos leads terminan siendo altas, estaríamos a un paso de recomendar mover presupuesto hacia Meta solo porque es más barato, sin saber si esos leads convierten igual de bien. Por eso le pedimos al equipo de Bonvivir que nos comparta, aunque sea mensualmente, cuántos de estos leads terminan siendo altas — antes de tocar cualquier asignación entre plataformas.</div>
+
+    <div class="g g4" style="margin-bottom:6px">
+      <div class="mc"><p class="ml">Inversión (Meta+Google)</p><p class="mv">$607.592</p><p class="ms">Campañas de Leads</p></div>
+      <div class="mc"><p class="ml">Meta reporta</p><p class="mv">299</p><p class="ms">Leads (pixel lead)</p></div>
+      <div class="mc"><p class="ml">Google reporta</p><p class="mv">161</p><p class="ms">Conversiones ("Compra"/lead)</p></div>
+      <div class="mc"><p class="ml">CPL de plataforma (blended)</p><p class="mv">$1.321</p><p class="ms">Inversión / 460 leads</p></div>
+    </div>
+    <div class="g g2">
+      <div class="mc"><p class="ml">CPL Meta</p><p class="mv up">$1.074</p><p class="ms">$321.049 / 299 leads</p></div>
+      <div class="mc"><p class="ml">CPL Google</p><p class="mv warn">$1.780</p><p class="ms">$286.543 / 161 leads</p></div>
+    </div>
+    <p class="footer-note">Incluye, del lado de Google, la campaña "Club_Vinos" (reclasificada aquí como Leads, no Club Digital) junto con las dos campañas de Leads dedicadas.</p>
+
+    <div class="sub-st"><i class="ti ti-speakerphone"></i>Campañas</div>
+    <table class="t">
+      <thead><tr><th>Campaña</th><th>Plataforma</th><th>Inversión</th><th>Resultado</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Club Sale RMKT Contáctese</strong></td><td><span class="badge b-blue">Meta</span></td><td>$321.049</td><td>299 leads</td></tr>
+        <tr><td><strong>Club_Vinos (Search producto)</strong></td><td><span class="badge b-amber">Google</span></td><td>$105.565</td><td>74 conv.</td></tr>
+        <tr><td><strong>Search Leads Conquista</strong></td><td><span class="badge b-amber">Google</span></td><td>$74.575</td><td>26,5 conv.</td></tr>
+        <tr><td><strong>PMax Club Leads</strong></td><td><span class="badge b-amber">Google</span></td><td>$106.403</td><td>60,5 conv.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sub-st"><i class="ti ti-photo"></i>Creativos (Meta)</div>
+    <table class="t">
+      <thead><tr><th>Anuncio</th><th>Inv.</th><th>Leads</th></tr></thead>
+      <tbody>
+        <tr><td><strong>UGC Tere v1 — Desc. Selección Exclusiva</strong></td><td>$222.609</td><td>232</td></tr>
+        <tr><td><strong>UGC Giuli v2 — Desc. Selección Exclusiva</strong></td><td>$52.187</td><td>33</td></tr>
+        <tr><td><strong>UGC Matías/Rochy — Servicio (junio-julio)</strong></td><td>$46.730</td><td>34</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">A diferencia de Vino, acá los creativos UGC de descuento sí funcionan como generadores directos de lead — la pieza de Tere concentra el 78% de los leads de Meta con menos de un tercio del presupuesto de la campaña. Vale la pena replicar ese formato antes que el de Vino.</div>
+
+    <div class="sub-st"><i class="ti ti-users"></i>Audiencias (Meta)</div>
+    <div class="ab-row"><span class="ab-label">Género</span>
+      <div class="ab-track">
+        <div class="ab-fill f" style="width:48.5%"></div>
+        <div class="ab-fill m" style="width:51.5%"></div>
+      </div>
+    </div>
+    <p class="footer-note" style="margin:-4px 0 10px">48,5% mujeres · 51,5% varones — la única vertical prácticamente pareja por género. Se concentra en 25-44 años (65,5% de la inversión).</p>
+
+    <div class="sub-st"><i class="ti ti-search"></i>Keywords (Google Search)</div>
+    <div class="nb">A diferencia de las búsquedas de marca que dominan Vino, acá el tráfico es de prospección pura: "club del vino", "vino colon frutos rojos", "el club del vino argentina" — términos genéricos y de competencia, no de Bonvivir. Es coherente con el objetivo de "conquista" de estas campañas: van a buscar gente que todavía no conoce la marca, por eso el costo por lead es más alto que en Vino.</div>
+  </div>
+</div>
+
+<!-- RESUMEN EJECUTIVO -->
+<div class="card">
+  <div class="st"><span class="n">✓</span>Resumen ejecutivo</div>
+  <div class="bul"><i class="ti ti-grape"></i><span><strong>Vino:</strong> 254 altas reales (51,3% del objetivo) pese a que el tráfico superó su meta (102%) — la brecha vive en el embudo posterior a la sesión, y en que el algoritmo de Meta optimiza contra un evento ("registro completo") que no equivale a alta paga.</span></div>
+  <div class="bul"><i class="ti ti-shopping-cart"></i><span><strong>Tienda:</strong> 151 ventas reales dentro del presupuesto planificado (97%), con una brecha de atribución de 2,4x frente a plataforma que pone en duda si el ranking de campañas/creativos que vemos en cada plataforma refleja lo que realmente vende.</span></div>
+  <div class="bul"><i class="ti ti-droplet"></i><span><strong>Oliva:</strong> con la conversión ya bien configurada este mes, pudimos ver por primera vez que las keywords actuales tienen muy poco volumen de búsqueda — el próximo paso es ampliar hacia términos con más volumen antes de evaluar el objetivo de altas.</span></div>
+  <div class="bul"><i class="ti ti-target-arrow"></i><span><strong>Leads:</strong> Meta trae leads más baratos que Google ($1.074 vs $1.780), pero sin feedback de calidad del cliente no podemos saber si esa diferencia de precio también es de calidad — necesitamos ese circuito antes de tocar cualquier asignación entre plataformas.</span></div>
+  <div class="bul"><i class="ti ti-currency-dollar"></i><span><strong>Presupuesto:</strong> la inversión total del mes ($19,25M) quedó 36% por encima del plan de Club+Tienda ($14,10M), explicado por el hackeo sufrido durante julio.</span></div>
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var target = btn.getAttribute('data-tab');
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('tab-' + target).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
