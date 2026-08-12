@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resumen Ejecutivo Julio 2026 — Bonvivir</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;0,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+:root{
+  --rojo:#AF0217;
+  --rojo-brillante:#ED1C24;
+  --negro:#141414;
+  --hueso:#F8FAFD;
+  --gris:#313131;
+  --gris-suave:#EDEDEF;
+  --gris-linea:#DEDEE2;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;font-weight:300;background:var(--gris-suave);color:var(--negro);font-size:16px;line-height:1.7;padding:2rem 1rem}
+.page{max-width:840px;margin:0 auto}
+.cover{background:var(--negro);padding:2.6rem 2.5rem;margin-top:-2rem;margin-bottom:1.25rem;position:relative;left:50%;right:50%;width:100vw;margin-left:-50vw;margin-right:-50vw;overflow:hidden}
+.cover-inner{max-width:840px;margin:0 auto}
+@media(max-width:600px){.cover{padding:2.2rem 1.25rem}}
+.cover-top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap;position:relative;margin-bottom:26px}
+.cover-logo{height:22px;filter:invert(1);display:block}
+.cover-meta{text-align:right;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#9A9AA0;line-height:1.9}
+.cover-meta b{color:#fff;font-weight:600}
+.kicker{font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo-brillante);margin-bottom:10px;position:relative}
+.cover h1{font-weight:800;font-size:28px;color:var(--hueso);margin-bottom:6px;position:relative}
+.cover h1 em{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-weight:700;color:#B7B7BD}
+.cover .subtitle{font-weight:300;font-size:13px;color:#C9C9CE;position:relative}
+.card{background:#fff;border-radius:16px;border:.5px solid var(--gris-linea);padding:2rem 2.5rem;margin-bottom:1.25rem}
+.st{font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--rojo);margin:0 0 14px;border-bottom:2px solid var(--negro);padding-bottom:8px;display:flex;align-items:center;gap:8px}
+.st .n{background:var(--negro);color:#fff;font-weight:700;font-size:11px;width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.g{display:grid;gap:10px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.mc{background:var(--hueso);border-radius:8px;padding:12px 14px;border:.5px solid var(--gris-linea)}
+.ml{font-weight:600;font-size:10.5px;letter-spacing:.02em;text-transform:uppercase;color:#767680;margin:0 0 4px}
+.mv{font-weight:800;font-size:21px;color:var(--negro);margin:0}
+.ms{font-weight:300;font-size:11px;color:#767680;margin:4px 0 0}
+.up{color:#3D7A4E}.warn{color:#B4772A}.dn{color:var(--rojo)}
+.nb{background:var(--hueso);border-left:3px solid var(--negro);border-radius:0 8px 8px 0;padding:12px 16px;font-weight:300;font-size:13px;color:var(--negro);line-height:1.6;margin-bottom:12px}
+.nb strong{font-weight:600}
+.wb{background:#FBF1E4;border-left:3px solid #B4772A;border-radius:0 8px 8px 0;padding:12px 16px;font-weight:300;font-size:13px;color:var(--negro);line-height:1.6;margin-bottom:12px}
+.wb strong{font-weight:600}
+.eb{background:#FBE9EA;border-left:3px solid var(--rojo);border-radius:0 8px 8px 0;padding:12px 16px;font-weight:300;font-size:13px;color:var(--negro);line-height:1.6;margin-bottom:12px}
+.eb strong{font-weight:600}
+.eb.headline,.nb.headline,.wb.headline{margin-bottom:14px}
+.headline-tag{font-weight:700;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--rojo);display:block;margin-bottom:5px}
+.gap-box{display:flex;align-items:center;justify-content:center;gap:18px;background:var(--negro);border-radius:10px;padding:16px 20px;margin:0 0 16px}
+.gap-item{text-align:center}
+.gap-item .gl{font-weight:600;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:#B7B7BD}
+.gap-item .gv{font-weight:800;font-size:24px;color:#fff}
+.gap-arrow{color:var(--rojo-brillante);font-size:20px}
+.bul{display:flex;gap:8px;margin-bottom:10px;font-weight:300;font-size:13px;color:var(--negro);line-height:1.5}
+.bul i{margin-top:3px;flex-shrink:0;font-size:16px;color:var(--rojo)}
+.bul strong{font-weight:600}
+.tag{font-weight:300;font-size:10px;color:#767680;display:block;margin-top:1px}
+strong{font-weight:600}
+hr.div{border:none;border-top:.5px solid var(--gris-linea);margin:1.2rem 0}
+.footer-note{font-weight:300;font-size:11px;color:#767680;margin-top:8px}
+.eyebrow{font-weight:600;font-size:12px;color:#767680;margin:-8px 0 14px}
+.sub-st{font-weight:700;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin:22px 0 10px;padding-top:16px;border-top:.5px solid var(--gris-linea);display:flex;align-items:center;gap:6px}
+.sub-st i{color:var(--rojo);font-size:14px}
+table.t{width:100%;border-collapse:collapse;font-size:12px}
+table.t th{text-align:left;font-weight:700;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#767680;padding:6px 8px 8px;border-bottom:2px solid var(--negro)}
+table.t td{padding:7px 8px;border-bottom:.5px solid var(--gris-linea);color:var(--negro);vertical-align:top;font-weight:300}
+table.t tr:last-child td{border-bottom:none}
+table.t strong{font-weight:600}
+.badge{display:inline-block;font-weight:600;font-size:10px;padding:2px 7px;border-radius:20px}
+.b-wine{background:#FBE9EA;color:var(--rojo)}
+.b-olive{background:#EFF1E4;color:#5C6B2A}
+.b-blue{background:#E6EEF7;color:#2A4C7A}
+.b-amber{background:#FBEEDC;color:#8A5A17}
+.b-gray{background:var(--gris-suave);color:#5F5E5A}
+.ab-row{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+.ab-label{font-weight:600;font-size:11px;color:#767680;width:70px;flex-shrink:0}
+.ab-track{flex:1;background:var(--hueso);border-radius:4px;height:16px;overflow:hidden;display:flex}
+.ab-fill{height:100%;display:flex;align-items:center}
+.ab-fill.f{background:var(--rojo)}
+.ab-fill.m{background:var(--negro)}
+.ab-pct{font-weight:600;font-size:11px;color:#767680;width:38px;text-align:right;flex-shrink:0}
+.steps{list-style:none;margin:10px 0 0;display:grid;gap:8px}
+.steps li{display:flex;gap:8px;font-weight:300;font-size:13px;color:var(--negro);line-height:1.5}
+.steps li i{margin-top:3px;flex-shrink:0;font-size:15px;color:#3D7A4E}
+
+/* TABS */
+.tabs-card{background:#fff;border-radius:16px;border:.5px solid var(--gris-linea);padding:0;margin-bottom:1.25rem;overflow:hidden}
+.tab-nav{display:flex;background:var(--negro)}
+.tab-btn{flex:1;background:transparent;border:none;cursor:pointer;padding:16px 10px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#8A8A90;display:flex;flex-direction:column;align-items:center;gap:4px;transition:.15s;border-bottom:3px solid transparent}
+.tab-btn i{font-size:18px}
+.tab-btn:hover{color:#D6D6DA}
+.tab-btn.active{color:#fff;border-bottom-color:var(--rojo-brillante);background:#232323}
+.tab-panel{display:none;padding:2rem 2.5rem}
+.tab-panel.active{display:block}
+.tab-title{font-weight:800;font-size:19px;color:var(--negro);margin-bottom:2px}
+.tab-subtitle{font-weight:600;font-size:12px;color:#767680;margin-bottom:18px}
+
+@media(max-width:600px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .gap-box{flex-direction:column;gap:8px}
+  .tab-btn{font-size:10px;padding:12px 4px}
+  .tab-btn i{font-size:16px}
+  .tab-panel{padding:1.5rem 1.25rem}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- COVER -->
+<div class="cover">
+<div class="cover-inner">
+  <div class="cover-top">
+    <img class="cover-logo" alt="Shake Again" src="data:image/png;base64,/9j/4AAQSkZJRgABAgAAAQABAAD/wAARCACoBGADACIAAREBAhEB/9sAQwAIBgYHBgUIBwcHCQkICgwUDQwLCwwZEhMPFB0aHx4dGhwcICQuJyAiLCMcHCg3KSwwMTQ0NB8nOT04MjwuMzQy/9sAQwEJCQkMCwwYDQ0YMiEcITIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMAAAERAhEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoorE8U+K9I8H6O+pavciKIHbGi8vK391R3P8u9AG3WFrXjPw34dbZq2t2VrJ18p5QZP++Blv0r5p8afGzxJ4nlkt9PmfSNNPCxW74kcf7bjn8BgfXrXmhJZizEkk5JPegD6xuvj34EtyRFeXlzjvDasM/99bagj/aD8ESMQ39pRj1a2HP5Ma+VKKAPsKw+M/gK/YIuvJC57XEMkY/76K4/Wux07VtN1eDztN1C1vIv79vMsgH4g18GVPZ313p1ytzY3U9tOv3ZYJCjD6Ec0AffFFfLnhL4/eItHeO311F1ezzgu2EnUezDhv8AgQyfWvoLwp430HxpZfadGvVkZQDLbv8ALLF/vL/UZHvQB0NFFFABWDJ438JRSNHJ4o0RHQlWVtQiBBHUEbq3q+ENd/5GHU/+vuX/ANDNAH2f/wAJ34P/AOhr0P8A8GMP/wAVV/TNf0bWmkXStXsL9ogDILW5SUoD0ztJx0NfCNe7/s0f8hHxF/1yg/m9AH0RRRRQAUUUUAFFFFAGNeeLvDWnXclpe+IdJtrmM4eGe9jR1OM8qWyOKg/4Tvwf/wBDXof/AIMYf/iq+WPjB/yVfX/+uqf+i0rh6APunT/FPh7VroWum67pl5cEFhFbXccjkDqcKSa1q+UPgD/yVGD/AK9Jv5Cvq+gAooooAKKKKACiiigAritT+LfgbR9TudOvtdEd3bSGOVBazPtYdRlUIOPY1r+NPEcXhPwhqWsyFS9vEfJVv45Twg/76Iz7Zr4hmmkuZ5J5nLyyMXd26sxOSTQB9ef8Lt+Hn/Qw/wDklcf/AButzw14+8MeL7me20LVBdzQIJJE8mSMhc4z86jPPpXxJXVfDjxQfCHjnTtUZyttv8m6HrE3Dflw31UUAfatFICGUMpBBGQR3paACiiigAooooAKKKKAMGTxv4SikaOTxRoiOhKsrahECCOoI3U3/hO/B/8A0Neh/wDgxh/+Kr4w13/kYdT/AOvuX/0M1n0Afd2ma/o2tNIulavYX7RAGQWtykpQHpnaTjoa0a+d/wBmj/kI+Iv+uUH83r6IoAKKKKACiiigArCl8beE4ZXil8UaLHIjFXR7+IFSOoI3cGvKvjN8Wv7OSfwv4euAbtgUvbqNv9SO8an+96nt069PnKgD7f8A+E78H/8AQ16H/wCDGH/4qj/hO/B//Q16H/4MYf8A4qviCvYvg98JT4klTxBr8DDSI2zbwOMfamHc/wCwP16dAaAPpm3uILu3juLaaOaCVQ8csbBldT0II4IqSkRFjRURQqKMKqjAA9BS0AQ3d3bWFrJdXlxFb28Q3SSzOERB6kngVi/8J34P/wChr0P/AMGMP/xVZ/xU/wCSXeIf+vQ/zFfGFAH2/wD8J34P/wChr0P/AMGMP/xVH/Cd+D/+hr0P/wAGMP8A8VXxBRQB9v8A/Cd+D/8Aoa9D/wDBjD/8VR/wnfg//oa9D/8ABjD/APFV8QUUAfb/APwnfg//AKGvQ/8AwYw//FUf8J34P/6GvQ//AAYw/wDxVfEFFAH2/wD8J34P/wChr0P/AMGMP/xVH/Cd+D/+hr0P/wAGMP8A8VXxBRQB9v8A/Cd+D/8Aoa9D/wDBjD/8VWzZ3trqNpHd2VzDc20gyk0EgdGGccMODzXwPX2P8H/+SUaB/wBcn/8ARj0AdxRRRQAUUUUAFFFFABVLV9XsNB0q41TU7gW9lbqGllKk7QSAOACTyQOKu14J+0b4q2W+n+FreT5pD9rusHooyEU/U7j+C0Ad3/wu34ef9DD/AOSVx/8AG6P+F2/Dz/oYf/JK4/8AjdfIFFAH3npWq2OuaXb6nptwtxZ3C74pQCNw+hwR9DVyvCf2c/FPn2F/4XuJMvbn7Vagn+AkB1H0bB/4Ea92oAKKKKACiiigAooooAKKKbLLHDE8srrHGgLM7HAUDqSe1ADqZLLHBE0ssixxqMs7nAA9zXi3jj9oCw015bDwtCl/cjKm9k/1Kn/ZHV/rwPrXg/iHxh4g8VXBl1nVLi6GcrEWxGn+6g+UflQB9Yar8WfA2jsUuPENtLIONtqGn5+qAgfia5q4/aI8GQtiO31ecesdug/9CcV8s0UAfUKftG+DmcKbDW0B/iaCLA/KStWy+O/gO7YCTULm0J/572r/AM1DV8k0UAfc+keK/D+vgf2TrNjeN12RTKXH1XqPyrYr4BVmRw6MVZTkEHBBr0Lwp8Z/Fvhh0iluzqliODb3rFiB/sv94fqPagD68oriPA3xS8P+OYxDbSm01IDL2M5Af3KHo4+nPqBXb0AFFFFABRRRQAUUUUAFNkkSGJ5ZHVI0UszMcAAdSadXmPx08U/8I/4CksYZNt5qxNsmDyI8ZkP0wQv/AAOgC9/wu34ef9DD/wCSVx/8bo/4Xb8PP+hh/wDJK4/+N18gUUAfdHhzxRo3i3T3v9DvRd2ySGJnEbIQwAOCGAPQjtWvXy7+z/4q/sjxjLok8mLbVU2pk8CZclfzG4e5219RUAFFFFABRRRQAUUUUAUtS1jTNGhSbVNRs7GJ22K91OsSs3XALEZPFZn/AAnfg/8A6GvQ/wDwYw//ABVeb/tI/wDIm6T/ANhD/wBpvXzRQB9v/wDCd+D/APoa9D/8GMP/AMVW9HIksayRuro4DKynIIPQg18BV936D/yL2mf9ekX/AKAKANCs3U/EOiaLJHHqusafYPINyLdXKRFh6gMRmtKvm/8AaU/5GHQ/+vR//Q6APcP+E78H/wDQ16H/AODGH/4qp7Pxf4Z1C7jtLLxFpNzcyHCQw3sbux68KGya+Gakt7ia1uYri3kaKaJg8ciHBVgcgg+tAH33RXB/Cz4gw+OvDoM7Imr2gCXcQ43ekgHof0OR6V3lABRRRQAUUUUAFYt14w8MWF1Ja3niPSLe4iO2SKa+jR0PoQWyK2q+MPip/wAlQ8Q/9fZ/kKAPq/8A4Tvwf/0Neh/+DGH/AOKq3p3ifQNXuTbaZrmmXtwFL+VbXccjbR1OFJOORXwrXrH7PP8AyUqT/sHy/wDoSUAfU9FFFABRRRQBV1LULXSdNudQvZRFbW0bSyueygZNfGPjzxrfeOfEcupXTMlupKWtvniGPPA+p6k9z7AV7l+0V4hew8K2GiQuVbUpi8uD1jjwcH6syn/gNfM1ABRR1OBX0v8ADH4Kabp2nW+r+KLRbvUpVEiWcwzHbjsGXozeueB0xxmgD5ys9Mv9QJFlY3NyQcYhiZ+fwFT3OgazZoXutIv4FAyWltnUY/EV91wwxW8KxQxpHEgwqIoAA9gKfQB8AUV9wa54I8M+JEYarolncOwwZvLCyD6OuG/WvGfGH7O0sSyXfhO9MwAJ+w3bAN9Ek6H6Nj60AeC1e0fUdS0vVbe70i4ngv0cCJoCdxJ4wAOuemO/So9R02+0i+lsdRtZrW6iOHilUqw/+t717Z8BPh59quB4v1SH9xCxXT43H3nHWX6DoPfJ7CgD3bw62rv4dsG14QjVWhU3IhGFDen16ZxxnOOK06KKACvhDXf+Rh1P/r7l/wDQzX3fXwhrv/Iw6n/19y/+hmgDPr3f9mj/AJCPiL/rlB/N68Ir3f8AZo/5CPiL/rlB/N6APoiiiigAooooAKKKKAPjj4wf8lX1/wD66p/6LSuHruPjB/yVfX/+uqf+i0rh6APUPgD/AMlRg/69Jv5Cvq+vlD4A/wDJUYP+vSb+Qr6voAKKKKACiiigAooqtqN/b6Vpt1qF2+y3tommlb0VRk/yoA8A/aM8Vede2Hhe3k+SAfaroD++RhFP0GT/AMCFeEVp+ItauPEfiK/1i6P727maUjP3Qeij2AwPwrMoAKKe8MsSRPJG6pKu+NmGA4yVyPUZBH1BplAH138F/FP/AAkvw+tY5pN15pv+iTZPJCj5G/FcDPcg16JXyd8C/FP/AAj/AI9jsZpNtnqyi2fJ4Emcxn65JX/gdfWNABRRRQAUUUUAFFFFAHwhrv8AyMOp/wDX3L/6Gaz60Nd/5GHU/wDr7l/9DNZ9AHu/7NH/ACEfEX/XKD+b19EV87/s0f8AIR8Rf9coP5vX0RQAUUUUAFePfGH4sr4bgk8P6DcA6xIMTzrz9lUjoP8AbP6DnritD4ufFOLwbZNpOlyK+vXCZBGCLVD/ABt/tHsPxPGM/Ks88tzcSTzyvLNIxd5HYlmY8kknqaAGMzOxZiSxOSSeSaSivTfhP8LJ/GuoLqWpRvFoMDfO2dpuGH8Cn09T+A56AFr4RfCiTxdcx63q6GPQ4X+VD1umB+6P9gdz36DuR9TRRRwxJFEixxooVEQYCgdAB2FMtraCytYrW1hSGCJQkcca4VVHAAHYVLQAUUUUAcf8VP8Akl3iH/r0P8xXxhX2f8VP+SXeIf8Ar0P8xXxhQAUUV9N/BzwZ4Z1n4a2F7qWhWF3dPLMGlmgVmIEhA5PtQB8yUV9r/wDCt/BX/Qr6V/4DL/hR/wAK38Ff9CvpX/gMv+FAHxRRX2v/AMK38Ff9CvpX/gMv+FH/AArfwV/0K+lf+Ay/4UAfFFFfa/8AwrfwV/0K+lf+Ay/4Uf8ACt/BX/Qr6V/4DL/hQB8UV9j/AAf/AOSUaB/1yf8A9GPWh/wrfwV/0K+lf+Ay/wCFb9hp9ppdjFZWFtFbWsQIjiiXaqjOeB9SaALNFFFABRRRQAUUUUAR3FxFaW0tzPII4YUMkjt0VQMkn8K+IPGHiKbxX4t1LWpcgXMxMan+CMcIv4KBX0Z8e/FX9ieCRpMEm271ZjEcHkQrgufx+Vfoxr5XoAKKfDDLcTxwQxtJLIwREQZZmJwAB3OaZ0ODQBv+CfEknhPxhpusoW2QSjzlH8UR4cf98k/jivt2GaO4gjmhdXikUOjqchgRkEV8B19XfAjxT/b3gRdNmk3XeksLcgnkxHmM/kCv/AKAPUaKKKACiiigAooooAq6lqVnpGm3Go386wWluhklkbooH+enevlL4l/FnUfG9y9lZGSz0ND8sGcNN/tSY/Reg9zzV340fEh/FWtNoumzH+xrGQglTxcSjgt7qOQPxPcY8qoAKKK7LwL8NNd8eXJNlGLfT0bbLfTA7FPoo6s3sPxIoA42pIbee4JEMMkpHUIpb+VfXPhj4MeD/DkaPLYLql2B8098A4z7J90fkT7130MENtEIoIkijHREUKB+AoA+C5rO6ts+fbTRYODvjK4P41BX3+QCCCMg9Qa53WPAXhTXkYajoFjKzdZFiEcn/fa4b9aAPiKivfvGH7OpVJLrwlelyAT9hu2GT7JJ/RvzrwvUdOvdJv5bHULWW2uoTtkilUqyn/PegCCGaW3mSaCR4pY2DI6MVZSOhBHQ19b/AAb8R+JPE3hD7X4ghUoj+Xa3h4e5UdSy9ODxu788cZPg3wq+HE/jvXPNuVePRbRgbmUceYeojU+p7nsPqK+uba2hs7WK2tokighQRxxoMKigYAA7ACgCWiiigAooooAKKKKACvkT40eKf+El+IN1HDJus9N/0SHB4JU/O34tkZ7gCvpH4j+KB4Q8DajqiuFudnk2o9ZW4X8uW+imvisksxZiSScknvQAlFFPmhlt5TFNG0cgxlXGCO/SgCSzu59Pvre8tZDHcW8iyxOOqspyD+Yr7h8La9B4n8MadrVvgJdwh2UfwP0ZfwYEfhXwvX0B+zn4qyNQ8K3EnT/S7QE/QSKP/HTj/eNAHv8ARRRQAUUUUAFFFFAHi/7SP/Im6T/2EP8A2m9fNFfS/wC0j/yJuk/9hD/2m9fNFABX3foP/IvaZ/16Rf8AoAr4Qr7v0H/kXtM/69Iv/QBQBoV83/tKf8jDof8A16P/AOh19IV83/tKf8jDof8A16P/AOh0AeIUUUUAbfhPxRf+D/EVtrGnt+8iOJIycLLGfvI3sf0OD2r7O8N+ItP8VaBa6xpsm+3nXO0/ejburDsQeP8A61fC1ei/CT4jSeB9e+z3jsdFvWC3K9fKboJQPbv6j3AoA+uqKbHIk0SSxOrxuAyupyGB6EHuKdQAUUUUAFfGHxU/5Kh4h/6+z/IV9n18YfFT/kqHiH/r7P8AIUAcfXrH7PP/ACUqT/sHy/8AoSV5PXrH7PP/ACUqT/sHy/8AoSUAfU9FFFABRRRQB8y/tIzlvG+l2/O1NODj/gUjj/2WvGq9t/aTs2TxNot8V+WazaENjqUckj/yIPzrxKgDf8D28F3498P29yAYZNRgV1PRgZBx+PT8a+4K+BbW5ls7uG6gcpNC6yRsOzA5B/MV9neA/H2leOtGjubSZEvkQfarMn54m78d1z0b+uRQB1lFFFABRRRQBzvizwPoPjWyW31mzDun+quIztlj+jenscj2rbs7O30+ygs7SFYbaBBHFGgwFUDAAqeigAooooAK+ENd/wCRh1P/AK+5f/QzX3fXwhrv/Iw6n/19y/8AoZoAz693/Zo/5CPiL/rlB/N68Ir3f9mj/kI+Iv8ArlB/N6APoiiiigAooooAKKKKAPjj4wf8lX1//rqn/otK4eu4+MH/ACVfX/8Arqn/AKLSuHoA9Q+AP/JUYP8Ar0m/kK+r6+UPgD/yVGD/AK9Jv5Cvq+gAooooAKKKKACvGv2hfFX9m+F7bw/byYuNSffNg9IUOcfi2PwU17KSACScAdSa+LfiX4pPi7x3qOpI+61RvIteePKTgEfU5b/gVAHJVZ0+xuNU1K1sLRN9xcyrDEvqzHA/U1Wr2H9nvwv/AGp4tn16dM2+lpiPPQzOCB+S7j9StAHUfGL4d2+n/DPSJ9NjBfQEWGRgMGSJsBmPvvw3/Amr52r721Gwt9V0260+7Tfb3MTQyr6qwwf518OeItFuPDniK/0e6H720maInH3gOjD2IwfxoAzopHhlSWJykiMGVlOCCOhr7b8C+JY/F3g3TdYUjzZots6j+GVeHGO3IJHsRXxFXuX7Onir7Nqt74XuH/d3YNzagngSKPnA+qgH/gFAH0bRRRQAUUUUAFFFFAHwhrv/ACMOp/8AX3L/AOhms+tDXf8AkYdT/wCvuX/0M1n0Ae7/ALNH/IR8Rf8AXKD+b19EV87/ALNH/IR8Rf8AXKD+b19EUAFeefFP4m23gTS/s1qUm1u5Q+RESCIh08xx6eg7kexq58SfiLZeAdFL/u59VnBFpak9f9tsdFH69B6j5D1XVb3W9VudS1G4ae7uHLySN3Pt6AdAOgHFAEV7e3Oo3s15eTyT3Mzl5JZDlmY9STUFFd18Nfhtf+PdWBIaDSLdh9qusde+xPVj+g5PYEAs/C34Y3PjzUzcXXmQaJbMPPmAwZT/AM80Pr6nsD7ivrSxsbXTLCCxsoEgtYEEcUaDhVHQUzS9LstG02DTtOtkt7S3XZHEg4A/qe5PUmrdABRRRQAUUUUAcf8AFT/kl3iH/r0P8xXxhX2f8VP+SXeIf+vQ/wAxXxhQAV9b/Ar/AJJRpv8A11n/APRjV8kV9b/Ar/klGm/9dZ//AEY1AHpFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFcZ8U/FP/CJeAb+9jk23k6/ZrXnnzHBGR/ujc34UAfN3xd8Vf8ACVfEC9lik3WVmfsltzwVQnc34tuP0xXCUUUAeq/ATwt/bfjk6rPHutdJQTc9DM2RGPwwzfVRWP8AGDwt/wAIt8Qb2OGPbZ3v+l2+BgAMTuUfRgwx6Yr6E+Dvhf8A4Rj4e2SyptvL7/TJ89QWA2r+ChePXNY/x78Lf234HGqwR7rvSWMvA5MLYDj8Plb6KaAPlavQPg34q/4Rj4g2nnSbbLUP9Enz0G4jY34Njn0Jrz+gEggg4I6EUAff9Fcl8NPFI8X+BNO1J33XSL5F16+anBJ+ow3/AAKutoAKKKKACvNvjX4ybwt4Je2tZNmoaoTbxEHlEx+8cfgQPYsD2r0mvkr45eITrfxHubZHLW2mILVBnjcOXOPXcSP+AigDzWiipba3mvLqG2t42knmcRxovVmJwAPxoA7n4WfDmbx7rbG4Lw6RaEG6lXguT0jU+p9ew/DP1xp+n2mlafBYWFvHb2sCBIooxgKBWR4J8LW3g7wpZaNbhS0Sbp5B/wAtJT95vz6ewA7V0FABRRRQAUUUUAFcn44+HuieO7DytQi8q8jGIL2IDzI/b/aX2P4YPNdZRQBmeH9A0/wxodtpGmQ+Xa264GeWY92Y9yTya06KKACiiigAooooAKKKz9d1i28P6Dfavdn9xaQtKwzy2BwB7k4H40AfPH7Q/ir+0PEdr4ct5MwacnmzgdDM44H4Lj/vo14vVvVNSudY1a71K8ffcXUrTSH3Y549qqUAdV8OvDB8XeOdN0tkLW2/zro+kS8t+fC/VhXf/tD+FRp/iCz8RW0eLe/QQzYHCyoMD80x/wB8Gur/AGdvC32Hw/eeJJ48TX7+TbkjpCh5I+r5/wC+BXoPxG8MDxd4G1HS1QNc7POts9pV5X8+V+jGgD4qrZ8KeIJ/C3inTtag3FrWYMyg43p0ZfxUkfjWOQVYqwIIOCD2pKAPvm0uob6zgu7aQSQTxrLG46MrDIP5Gpq8k+AHir+2PBj6NPJm60p9ignloWyVP4Hcv0Ar1ugAooooAKKKKAPF/wBpH/kTdJ/7CH/tN6+aK+l/2kf+RN0n/sIf+03r5ooAK+79B/5F7TP+vSL/ANAFfCFfd+g/8i9pn/XpF/6AKANCvm/9pT/kYdD/AOvR/wD0OvpCvm/9pT/kYdD/AOvR/wD0OgDxCiitXwxFHP4s0aGVFkjkvoFdGGQwMiggj0oAyqK9C+LHw7k8DeIPNtEZtGvGLWznnyz1MZPqO3qPcGvPaAPoD4EfEnPl+D9Xn/7B0rn/AMhE/wDoP4j0r3+vgKOR4ZUlidkkQhldTgqR0IPY19c/CT4ix+ONA+z3kijW7JQtynTzV6CUD36H0PoCKAPRKKKKACvjD4qf8lQ8Q/8AX2f5Cvs+vjD4qf8AJUPEP/X2f5CgDj69Y/Z5/wCSlSf9g+X/ANCSvJ69Y/Z5/wCSlSf9g+X/ANCSgD6nooooAKKKKAPMvjn4Vk8ReA2u7WLfd6W/2lQByY8YkA/DDf8AAa+Ta+/+owa+aPiv8GrvSbu413w1bNPpkhLzWkQy9se5Ud0+nT6DNAHi9T2V9d6ddx3djczW1zGcpLC5RlPsRzUFFAHrvh39oTxPpapDq9vb6vCv8TfuZf8AvpRj81z716donx/8HantS+N3pcp4Pnxb0z7Mmf1Ar5UooA+7NJ8R6LrqbtJ1ayveMkQTK5H1AOR+NadfAUcskMiyROySKcqynBB9jXeeHvjJ408PsqjVG1C3GMw3+ZRj/ezuH50AfYNFeTeEPj34e16RLTWYzo123AeR90DH/f42/wDAgB716wrK6B0YMrDIIOQRQAtFFFABXwhrv/Iw6n/19y/+hmvu+vhDXf8AkYdT/wCvuX/0M0AZ9eu/AnxboXhS91t9c1FLNbiOERF0ZtxBbP3QfUV5FRQB9j/8Lg8A/wDQxwf9+pP/AImj/hcHgH/oY4P+/Un/AMTXxxRQB9j/APC4PAP/AEMcH/fqT/4mj/hcHgH/AKGOD/v1J/8AE18cUUAfY/8AwuDwD/0McH/fqT/4mj/hcHgH/oY4P+/Un/xNfHFFAHWfEvVbHW/iJrGpabcLcWc8iGOVQQGARR356g1ydFFAHqHwB/5KjB/16TfyFfV9fKHwB/5KjB/16TfyFfV9ABRRRQAUUUUAef8Axk8Vf8Ix8PrsQybb3UP9Egx1G4He34Lnn1Ir5Ar1H47+Kf7e8dtpsMm600lTbgA8GU8yH8wF/wCAV5dQAV9m/C3wt/wiXgHT7KSPZdzL9puuOfMcA4Puo2r/AMBr5r+Enhb/AISr4g2MEse+ztD9ruc9CqEYU/Vio+hNfY1ABXzt+0Z4W8i/sPFFvHhLgfZbogfxgEox+q5H/ARX0TXP+NvDcfi3wdqWjNt8yeImFj/DKvzIf++gM+2aAPiCtDQ9XudA12x1a0OJ7SZZVGcZweQfYjIP1qlNFJBNJDMjJLGxV0YYKkcEGmUAfeelalbazpFnqdo+63uoVmjPswzz71crxb9nfxT9v8O3fhy4kzPp7ebACeTC55A+jZ/77Fe00AFFFFABRRRQB8Ia7/yMOp/9fcv/AKGaz60Nd/5GHU/+vuX/ANDNZ9AHu/7NH/IR8Rf9coP5vXrvj7x5p3gPQmvbphJeSgraWoPzTP8A0UcZP9SBXgXwa8Y6Z4IsfE2qakxP7qBIIFPzzPl8KP6nsK4PxV4p1Pxhrs2q6pMXkc4jjB+SJOyKOwH69TyaAK+v6/qPibWrjVtUnM11Ock9Ao7Ko7ADoKzKKKAOx+Hfw+v/AB7rgt4g8OnQkG7uwvEa/wB0erHsPx7V9faHoeneHNIt9L0u2W3tIFwqjqT3JPcnua+UfhP8Q5PA3iER3Ts2jXrBLpOvlntIB6jv6j3Ar67hljuIY5oZFkikUOjochgeQQe4oAfRRRQAUUUUAFFFFAHH/FT/AJJd4h/69D/MV8YV9n/FT/kl3iH/AK9D/MV8YUAFfR/wj+IvhLw98O7HTdW1mK2vI5JS8TRuSAXJHRSOhr5wooA+x/8AhcHgH/oY4P8Av1J/8TR/wuDwD/0McH/fqT/4mvjiigD7H/4XB4B/6GOD/v1J/wDE0f8AC4PAP/Qxwf8AfqT/AOJr44ooA+x/+FweAf8AoY4P+/Un/wATR/wuDwD/ANDHB/36k/8Aia+OKKAPu7RNe0vxJpo1DSLtbq0LFBIqkDI6jkA1o15f8Af+SXwf9fc38xXqFABRRRQAUUUUAFfL/wC0F4q/tbxdDoUEmbbS0/eAdDM4BP1wu0ex3V9FeJtdg8M+GdQ1m5wY7SEyBSfvN0VfxYgfjXw7fXs+o39xfXUhkuLiVpZXP8TMck/maAIK674aeF/+Eu8eadp0ibrVH8+6z08pOSD9Thf+BVyNfTP7PHhb+zvDN14hnjxPqT+XCT2hQkZH1bP/AHyKAPZugwKiubeG8tZra4jWSCZDHIjdGUjBB/CpaKAPhvxf4em8K+LNR0WbJ+zTERsf44zyjfipBrEr6C/aN8K7otP8U28fKf6JdYHbkox/HcM+618+0Aeyfs9eKv7M8UXHh+4fFvqab4cnpMgJx+K5/ECvpuvgnTr+40rUrXULR9lxbSrNE3oynI/lX3H4d1q38R+HbDWLU/uruFZQM/dJ6qfcHI/CgDTooooAjnmS3t5J5DiONC7H0AGTXwbqN7JqWp3d9N/rbmZ5n/3mYk/zr7b8ZTtbeBvEE6Z3RabcuMHHIiY18N0AFek/AzQ11n4mWksi7otOie8YHpkYVfyZgfwrzaveP2aLYNqHiK6wMxxQRg9/mLn/ANkoA+h6KKKACiiigAor4o/4WR41/wCho1X/AMCW/wAaP+FkeNf+ho1X/wACW/xoA+16K+KP+FkeNf8AoaNV/wDAlv8AGj/hZHjX/oaNV/8AAlv8aAPteivij/hZHjX/AKGjVf8AwJb/ABo/4WR41/6GjVf/AAJb/GgD7XooooAKKKKACvDP2i/FX2bTLHwvbyfvLo/aboA/8s1OEB+rAn/gAr3CWWOCF5pXVI0Us7McBQOSTXxJ448SSeLfGWpayxPlzSkQKf4Yl4QfkBn3JoA56r2jaVc65rVlpdou64u5lhT2LHGT7DqfpVGvbP2dvC323X7zxJcR5hsF8i3JHWVxyR9F4/4GKAPobR9LttE0ay0u0Xbb2kKwx+pCjGT7nrV2iigD5D+NHhb/AIRr4g3UkMe2z1H/AEuHA4BY/Ov4Nk47AivPK+sPjr4W/t/wHJqEMe680ljcLgcmI8SD6Yw3/AK+T6AO3+E3ir/hE/H9jcyybLK6P2W6z0CORhj9G2n6A19kV8AV9k/CjxT/AMJZ4AsLqWTfeWw+y3RJ5LoB8x+q7T9SaAO2ooooAKKKKAPF/wBpH/kTdJ/7CH/tN6+aK+l/2kf+RN0n/sIf+03r5ooAK+79B/5F7TP+vSL/ANAFfCFfd+g/8i9pn/XpF/6AKANCvm/9pT/kYdD/AOvR/wD0OvpCvm/9pT/kYdD/AOvR/wD0OgDxCtjwn/yOWh/9hC3/APRi1j1seE/+Ry0P/sIW/wD6MWgD7Q8T+G9P8WaBc6PqUe6CZeGH3o3HR19wf8Ohr4w8VeGdQ8I+IbnR9RTEsLZRwPllQ/ddfY/4jqK+5q4D4rfDyLx14ezbKiaxZgvaSHjeO8bH0Pb0OO2cgHx/Wt4a8RX/AIV1+11jTZNs9u2dp+7IvdG9QRx/9es2eCW2uJLeeNopomKSI4wysDggjsQajoA+5PCfiiw8YeHbbWNPb93KMSRk5aKQfeRvcfqMHvW3Xx78LPiFN4F8RDz2Z9IuyEu4hzt9JAPUfqMj0r6+t7iG6tori3kWWGVQ8ciHIZSMgg+lAElfGHxU/wCSoeIf+vs/yFfZ9fGHxU/5Kh4h/wCvs/yFAHH16x+zz/yUqT/sHy/+hJXk9esfs8/8lKk/7B8v/oSUAfU9FFFABRRRQAUUUUAee+MPg34W8WvJcrAdN1B+Tc2gADn1dOjfUYJ9a8W8Q/ALxdpBeTThb6vbjkGBtkmPdG/kCa+q6KAPgzUdJ1LR7jyNSsLqzl/uXETRn9RVOvvq5tbe8gaC6ginibrHKgZT+Bri9Y+EHgbWQxk0OG1kPSSyJhI/Bfl/MUAfHNFe+eIf2bpUV5fDmsiTuLe+XBx/vqME/wDARXjOv+GdZ8L35sta0+a0m6rvGVceqsOGHuDQBk16h8Lfi1e+D7yHTNVmkuNBkbaVbLNa5P3k77fVfxHPXy+igD78hmiuII54ZFkikUOjocqykZBB7jFPrxz9nvxVJqvhe60G5ctNpbAwknkwvnA/4CwP4ECvY6ACvhDXf+Rh1P8A6+5f/QzX3fXwhrv/ACMOp/8AX3L/AOhmgDPoor2n9nvQ9J1q/wBeXVdLsr9YooTGLq3SUISXzjcDjoKAPFqK+3/+EE8H/wDQqaH/AOC6H/4mj/hBPB//AEKmh/8Aguh/+JoA+IKK+3/+EE8H/wDQqaH/AOC6H/4mj/hBPB//AEKmh/8Aguh/+JoA+IKK+3/+EE8H/wDQqaH/AOC6H/4mj/hBPB//AEKmh/8Aguh/+JoA+IKK7H4qWVrp3xM1u0sraG2to5UCQwRhEUeWp4UcDmuOoA9Q+AP/ACVGD/r0m/kK+r6+UPgD/wAlRg/69Jv5Cvq+gAooooAKwPG3iSPwn4P1LWXK74Ij5Kn+KQ8IP++iPwzW/Xzt+0Z4qE+oWHhe3kyluPtV0Af42GEU/RST/wACFAHhk00lxPJNM7PLIxd3Y5LEnJJplFAxkZ6d8UAfUnwA8Lf2P4Lk1mdMXWrPvXI5EK5C/mdx9wRXrdfNNn+0VqNhZQWdt4bsI4II1ijQSvhVUYA/IVN/w0prH/Qv2P8A3+egD6Qor5v/AOGlNY/6F+x/7/PR/wANKax/0L9j/wB/noA5/wCOvhb+wPHkmoQx7bPVlNwuBwJRxIPrnDf8DrzCvRfHvxZuPH2jQ2F7otrbtBMJYp4pGLKcEEc9iD+g9K86oA6n4deKD4Q8cadqjOVtt/lXQHeJuG/Lhvqor7VVldQykFSMgg8EV8A19dfBXxV/wkvw/toppN17pp+yTZPJUD5G/FcD6qaAPRaKKKACiiigD4Q13/kYdT/6+5f/AEM1n1oa7/yMOp/9fcv/AKGaz6ACiiuk8E+C9S8c6/HplgNkY+a4uWUlIU9T7+g7n8SADJs9F1LULC9vrSymmtbFA9zKi5WIE4GT/ngE9Aao19xeG/COj+F/Di6HYWqm0KkTeYAxnJGGZ/Un8scdK+Xvix8PJPA3iEyWqM2jXrF7V+vlnvGT6jt6j3BoA8+r334EfEnaY/B2rzcHP9nTOeh6mIn9V/EegrwKnRyPDKksTskiEMrqcFSOhB7GgD79orzv4SfERPHHh/yLx1GtWShblenmr0EoHv39D7EV6JQAUUUUAFFFFAHH/FT/AJJd4h/69D/MV8YV9n/FT/kl3iH/AK9D/MV8YUAFFFfVnwR0rTrr4W6dLcWFrNIZZsvJCrE/vG7kUAfKdFfd/wDYOj/9Amx/8B0/wo/sHR/+gTY/+A6f4UAfCFFfd/8AYOj/APQJsf8AwHT/AAo/sHR/+gTY/wDgOn+FAHwhRX3f/YOj/wDQJsf/AAHT/Cj+wdH/AOgTY/8AgOn+FAHn/wAAf+SXwf8AX3N/MV6hUVvbQWkXlW0EcMec7I0CjP0FS0AFFFFABRRUV1cw2VpNdXEixwQo0kjt0VQMkn8BQB4R+0b4p2Q6f4Wt5OX/ANLugD2GQin8dxx7LXz5W14u8QTeKvFepa1NkG6mLIp/gQcIv4KAKxaANDQtIuNf12x0m0H7+7mWJTjIXJ5J9gMk/SvuTS9Ot9H0q0020Tbb2sKwxj/ZUYGffivi/wAD+LW8E+IhrMWnw3s6RNHEsrFQhbgsMd8ZH4mvS/8AhpTWP+hfsf8Av89AH0hRXzf/AMNKax/0L9j/AN/no/4aU1j/AKF+x/7/AD0Ae8+KNBg8T+GNR0W4wEu4WRWIzsfqrfgwB/Cvh68tJ9PvrizuozHcW8jRSoeqspwR+Yr2j/hpTWP+hfsf+/z15X4t8Q/8JV4lu9aNjFZyXRDSRRMSu4AAtz64yffNAGJX0R+zn4q86yv/AAvcSfPAftVqD/cJw6j6HB/4Ea+d63vBfiOXwn4v03WYyxS3lHnKv8cR4cf98k498UAfcNFMhmjuYI54XDxSKHR16MpGQRT6AMPxrE0/gTxDCv3pNMuVGfUxMK+HK++rq3S7s5raT7k0bRtj0Iwa+Crq3ks7ua2mGJYXaNx6EHBoAir3n9me4C33iO24zJFbyf8AfJkH/s1eDV6f8BNXXTPiXDbSNhNQtpLbnpu4cf8AoGPxoA+sKKKKACiiigD4Aor6n/4Z58Ff89dV/wDAhf8A4ij/AIZ58Ff89dV/8CF/+IoA+WKK+p/+GefBX/PXVf8AwIX/AOIrzv4v/C/QPA3h6xvtJe9aae68l/PlDDbsY8YUc5AoA8cooooA+/6KKKACiiigDzD46+Kv7A8ByafDJtvNWY2646iLrIfywv8AwOvk+vQ/jP4q/wCEm+IN0kMm6z07/RIcHglT87fi2RnuAK88oAVVZ2CqCWJwAByTX2r8O/DA8I+B9N0tkC3Ij826PrK3LfXH3foor450LU00bXbHU3tI7sWkyzCCQkK5U5Gcds4r1/8A4aU1j/oX7H/v89AH0hRXzf8A8NKax/0L9j/3+ej/AIaU1j/oX7H/AL/PQB9GzRRzwyQzIrxSKVdGGQwPBBr4j8beG5PCXjHUtGbd5cEpMLH+KJvmQ/8AfJGffNen/wDDSmsf9C/Y/wDf568/8f8AjuTx9qVrqFxpkFncQRGFmhct5i5yM59Mt+dAHIV658APFP8AY/jKTRZ5MWuqptXJ4Ey5K/mNw9yRXkdTWl1NY3kF3bSGOeCRZY3HVWU5B/MUAffNFY3hTxBB4p8LadrUG0LdQhmUHOx+jL+DAj8K2aACiiigDxf9pH/kTdJ/7CH/ALTevmivpf8AaR/5E3Sf+wh/7TevmigAr7v0H/kXtM/69Iv/AEAV8IV936D/AMi9pn/XpF/6AKANCvm/9pT/AJGHQ/8Ar0f/ANDr6Qr5v/aU/wCRh0P/AK9H/wDQ6APEK2PCf/I5aH/2ELf/ANGLWPWx4T/5HLQ/+whb/wDoxaAPueiiigDwf47fDX7RFJ4w0iH98g/4mEKD7yj/AJageo/i9uexr54r7+dFkRkdQyMMMrDII9DXyZ8YPhw3gvXPt2nxH+xL5yYcciB+pjPt3X2+hoA80r3b4E/Er7JPH4Q1if8AcSt/xL5XP3HP/LIn0J+778dxjwmlVmRgykhgcgg8g0Aff1fGHxU/5Kh4h/6+z/IV9BfB34kL4y0T+ztRlH9t2KASknm4j6CQe/QN7898D59+Kn/JUPEP/X2f5CgDj69Y/Z5/5KVJ/wBg+X/0JK8nr1j9nn/kpUn/AGD5f/QkoA+p6KKKACiiigAoqjrOsWOgaRc6pqU6wWlsheRz+gA7kngDuTXg+g/tETt4quf7bs1XQ7iTEPlLmS1XoCcffHc9+uPSgD6Goqrp2pWWr2EV9p11FdWsoyksTBlP+fSrVABRRRQAVkeJfDOl+LNFm0rVbcSwSD5W/ijbsynsR/8AWPFa9FAHwjr2kTaB4g1DSLg7pbOd4SwGA2DgMPYjB/Gs6uv+KV7Df/E7xBPAQY/tRjyDwSgCH9VNchQB6z+zzdtb/EeWAE7biwkQjtkMrA/ofzr6mr5W/Z7t2m+JZkXpBYyu3HYlV/8AZq+qaACvhDXf+Rh1P/r7l/8AQzX3fXwhrv8AyMOp/wDX3L/6GaAM+vd/2aP+Qj4i/wCuUH83rwivd/2aP+Qj4i/65QfzegD6IooooAKKKKACiiigD44+MH/JV9f/AOuqf+i0rh67j4wf8lX1/wD66p/6LSuHoA9Q+AP/ACVGD/r0m/kK+r6+UPgD/wAlRg/69Jv5Cvq+gAooooAq6nqFvpOl3eo3b7Le1iaaRvRVGT/KvhzxBrNz4i8QX+r3Z/fXczSkZztBPCj2AwB9K+h/2hvFP9neGbbw9byYn1J98wB5EKEHH4tj/vk18zUAFFOjjeWRY41LO5CqqjJJPQCvTR8AvHRAP2exHt9qFAHmFFeof8KB8c/8+9j/AOBQ/wAKP+FA+Of+fex/8Ch/hQB5fRXqH/CgfHP/AD72P/gUP8KP+FA+Of8An3sf/Aof4UAeX0V6h/woHxz/AM+9j/4FD/CsbxP8KPFXhHRm1bVLe3+yI6ozQzBypbgEj0zx+IoA4ivTfgb4p/4R7x9FZTybbPVVFs+TwJM5jP55X/gdeZU6OR4ZUljdkkQhlZTggjoRQB9+0VzngPxMni7wXpusAr50se24VeNsq8OMduRkexFdHQAUUUUAfCGu/wDIw6n/ANfcv/oZrPrQ13/kYdT/AOvuX/0M1n0Ab3hHwjqnjTXI9L0uLLH5pZm+5CndmP8ATv0r7D8IeEdL8F6FFpemRYUfNNMw+eZ+7Mf6duleK/s0f8hHxF/1yg/m9fRFABWL4r8M2Hi/w7daNqC/uplykgHzROPuuvuD+fI6GtqigD4W8S+Hb/wrr91o+pR7Z7dsbh92Rezr6gjn/wCvWTX1z8XPh0njfQPtNlGo1qxUtbt085epiJ9+o9D6AmvkiSN4pGjkRkdCVZWGCCOoIoA1fDPiO/8ACniC11jTpNs8DcqfuyKfvI3sR/j1FfZ/hbxNYeLvD1rrGnPmKZfmQn5onH3kb3B/oehr4Zr0H4TfEKTwP4iEd1Ix0a9IS6Tr5Z7SAeo7+o+goA+vqKZFLHPCk0TrJHIoZHU5DA8gg+lPoAKKKKAOP+Kn/JLvEP8A16H+Yr4wr7P+Kn/JLvEP/Xof5ivjCgAr63+BX/JKNN/66z/+jGr5Ir63+BX/ACSjTf8ArrP/AOjGoA9IooooAKKKKACiiigAooooAKKKKACvJ/j74q/sXwUukQSbbrVnMZx1EK4Ln8cqv0Jr1ivjr4ueKf8AhKviBfTRSbrOzP2S2weCqE5YfVtxz6YoA4Wiit/wl4N1nxrqM1jo0MbywxebIZH2Kq5A6+uT0+tAGBRXqH/CgfHP/PvY/wDgUP8ACj/hQPjn/n3sf/Aof4UAeX0V6h/woHxz/wA+9j/4FD/Cj/hQPjn/AJ97H/wKH+FAHl9Feof8KB8c/wDPvY/+BQ/wo/4UD45/597H/wACh/hQB5fRWz4n8L6p4Q1ltK1eJY7kIsg2NuVlPQg9+4+oNY1AH1Z8B/FP9u+BV0yeTdd6SwgOTyYjzGfwGV/4DXqdfH/wc8Vf8Iv8QbMzSbbK/wD9Enz0G4ja34Njn0Jr7AoAK+PfjJoB0H4l6mFTbBesL2I4xkPy3/j4cV9hV5H8ffCDa34Sj1u1i3XekktJjq0B+/8A98kBvYbqAPlyrOnX9xpWp2uoWj7Li1lWaJvRlII/UVWooA+6fDOv2nijw5Y6zZNmG6jDbc8o3RlPuCCPwrWr5P8AhB8Tf+EK1JtN1N2bRLtwXIGTbydN4HoRgEewI6YP1ZBPFc28c8EqSwyKHSRGBVlPIII6igCSiiigAooooAK8X/aR/wCRN0n/ALCH/tN69orxf9pH/kTdJ/7CH/tN6APmiiiigD7/AKKKKACuU+JHikeEPA2o6mjhbop5Nr7yvwpH05b6Ka6uvmf9obxV/aPiW18O28mYNOXzJwDwZnHQ/Rcf99GgDxgkkkk5J6k0UVo6Dod/4k1u20jTIhLd3LFUUnA4BJJPYAAn8KAM6ivUP+FA+Of+fex/8Ch/hR/woHxz/wA+9j/4FD/CgDy+ivUP+FA+Of8An3sf/Aof4Uf8KB8c/wDPvY/+BQ/woA8vor1D/hQPjn/n3sf/AAKH+FH/AAoHxz/z72P/AIFD/CgDy+iun8X+Ade8Dtaf21BEi3W7ynikDqSuMgnseRXMUAe//s5eKudQ8LXEn/T3ag/gJFH/AI6cf71fQFfDHhXX5/C/ijTtat8lrSYOyj+NOjL+Kkj8a+4bO7gv7KC8tpBJBPGssbjoysMg/kaAJqKKKAPF/wBpH/kTdJ/7CH/tN6+aK+l/2kf+RN0n/sIf+03r5ooAK+79B/5F7TP+vSL/ANAFfCFfd+g/8i9pn/XpF/6AKANCvm/9pT/kYdD/AOvR/wD0OvpCvm/9pT/kYdD/AOvR/wD0OgDxCtjwn/yOWh/9hC3/APRi1j1seE/+Ry0P/sIW/wD6MWgD7nooooAKzdf0Kw8S6HdaRqUXmWtym1vVT2YHsQcEfStKigD4f8Y+E7/wX4juNIv1yUO6GYDCzRn7rj/DsQRWBX2R8TvAFv488OGFAkeqWuXs5j2buhP91sD6HB7V8e3dpcWN5NaXULw3ELmOSNxgqwOCDQBb0HXL/wAN63a6vpsvlXVs+5T2Yd1PqCMgj0NWfFutp4k8VahrKRGEXkgl8snO0kDIz35zWLRQAV6x+zz/AMlKk/7B8v8A6EleT16x+zz/AMlKk/7B8v8A6ElAH1PRRRQAUUUUAfJXxc+JcnjbWPsOnyMuh2jnyR089+hkI9PQHoPcmvNa9l+JfwPvNDabVvDEUl3pnLSWgy0tuPbu6/qO+eTXjXQ4NAHSeEvHWv8Agq88/R7wrExzLbSfNDL9V9fcYPvXv/hX4/8AhvV0jh1tH0i7PBZsyQsfZgMj8RgetfLlFAH3lp2r6Zq8Pm6bqFreR4zut5lkH6GrtfASO8bh0ZlYdCpwRWnH4n1+FdsWuanGpOcLdyAZ/OgD7luLmC0gae5mjhiXlpJGCqPqTXjvxH+OWmabYzab4VuUvdSkBQ3cfMUA7lT0dvTGR3ycYr5vur+8vmDXd3PcMOhlkLn9ar0AKzM7FmJLE5JJ5JpKK3vB/hPUPGfiKDSdPTBc7ppiPlhjHVz/AIdzgUAe2fs3+Hng03VfEMyY+0utrbk9dq8ufoSVH/ATXutUNE0az8P6JZ6Tp8fl2trGI0Hc+pPuTkk+pNX6ACvhDXf+Rh1P/r7l/wDQzX3fXwhrv/Iw6n/19y/+hmgDPr3f9mj/AJCPiL/rlB/N68Ir3f8AZo/5CPiL/rlB/N6APoiiiigAooooAKKKKAPjj4wf8lX1/wD66p/6LSuHruPjB/yVfX/+uqf+i0rh6APUPgD/AMlRg/69Jv5Cvq+vlD4A/wDJUYP+vSb+Qr6voAKCQASTgDqTRXn3xm8U/wDCM/D67WGTbe6h/okGDyAw+dvwXPPqRQB82/EnxQfF/jrUdSR91qr+Ra88eUnAI+vLf8Crk6KKAPS/gd4W/wCEh8fw3cybrTSgLqTI4L5xGP8Avr5v+AmvrSvNvgh4W/4R34fwXUyYu9UIu5D3CEfux/3zz9WNek0AFFFFABRRRQAVmeItFg8ReHdQ0e5/1V5A0RbGdpI4b6g4P4Vp0UAfBGoWNxpmo3NhdJsuLaVoZV9GU4P6iq9ev/tB+GP7K8YQ65AmLfVY/nwOBMgAP5rtP1zXkFAHuH7Ovir7JrF94ZuJMRXi/aLYHtKo+YD6rz/wCvo+vg/RNXudB1yx1a0OJ7SZZU5wDg9D7EcH2Nfcmk6nba1pFnqdo263u4VmjPfDDPPvQBcooooA+ENd/wCRh1P/AK+5f/QzWfWhrv8AyMOp/wDX3L/6Gaz6APd/2aP+Qj4i/wCuUH83r6Ir53/Zo/5CPiL/AK5QfzevoigAooooAK+evjv8NvIkk8YaRB+7c/8AExiQfdY9JQPfo3vg9zX0LUc8EVzbyW88aywyqUkRxlWUjBBHcEUAfAlFd78Vfh9L4F8Rn7OrNpF4S9pIedvrGT6rn8Rg+tcFQB7/APAj4k/6vwfq83/YOlc/nET+q/iPSvoCvgOKWSCZJonaOSNgyOpwVI5BB9a+uvhN8RI/HHh8Q3bqNZslC3KdPMHQSAeh7+h+ooA9CooooA4/4qf8ku8Q/wDXof5ivjCvs/4qf8ku8Q/9eh/mK+MKACvpv4OeM/DOjfDWwstS12wtLpJZi0U06qwBkJHB9q+ZKKAPtf8A4WR4K/6GjSv/AAJX/Gj/AIWR4K/6GjSv/Alf8a+KKKAPtf8A4WR4K/6GjSv/AAJX/Gj/AIWR4K/6GjSv/Alf8a+KKKAPtf8A4WR4K/6GjSv/AAJX/Gj/AIWR4K/6GjSv/Alf8a+KKKAPtf8A4WR4K/6GjSv/AAJX/GtzS9W0/WrIXmmXsF5bFiolhcMuR1GRXwZX1f8AAH/kl8H/AF9zfzFAHqFFFFAHF/FTxT/wiXgG/vIpNl5OPstrg4PmOCMj/dXc34V8aV69+0D4p/tbxhFodvJm20pMPg8GZ8FvyG0ex3V5DQAV9V/AXwv/AGH4F/tSaPbd6s/nZI5EQ4jH/oTf8CFfN/hDw9L4q8WabosWR9qmCuw/hQcu34KCa+4Le3itLaK2gjEcMKCONF6KoGAPyoAkooooAKKKKACiiigDxX9onwv9u8O2fiOBMzae/kzkDrE54J+jY/77NfNVfeOs6Vba5ot7pd2u63u4Whf2DDGR7jqPpXw3q+mXGi6xeaXdri4tJmhf0ypxke1AFLocivs/4Y+KR4u8B6fqEkm67jX7PdevmpwSfqMN/wACr4wr2P8AZ78Vf2Z4quNAnkxb6mm6IE8CZASPpldw+oWgD6cpskaTRPFIivG6lWVhkEHqDTqKAPj34q/D6bwN4jY28bHR7ti9pJ1CesZPqP1GD61wVfdXiPw7p3inQ7jSNUh8y2mHUfeRuzKezD1r5H8f/DjV/AWpFLlGuNNkbFvfIuEf2b+63sfTjNAHG133gH4sa54FItVxfaSTlrOZiNnOSY2/hP5j271wNFAH2J4Z+L/g/wATRIF1NLC7PW2viIiD7Mflb8Dn2FdzHIksayRurowyGU5BH1r4Cqza6jfWP/Hpe3Fvzn9zKyc/gaAPvaqGp65pOiwmXVNStLJAM5uJlTP0yea+I5fEuvXCbJtb1KRfR7tyP1NZju0jl3Ysx6knJNAH094q/aD8PaWkkOgQyatdDgSEGOBT9T8zfgMH1r5/8VeM9c8Z6h9s1m8Mu3PlQp8sUQPZV7fXqe5rAooAKKVVZ3CIpZmOAAMkmvcfht8Cri+eHV/F0TwWvDx6eflkk/66f3R/s9fXHcA+jaKKKAM3xBrNt4d8P3+r3Z/c2kLSkZxuIHCj3JwB9a+HNT1C41bVLvUbt99xdStNI3qzHJ/nX0B+0Z4q+z6dYeF7eTD3J+1XQB/5ZqcID9WBP/ABXzrQAV77+zj4Xy+o+KLiPhf9DtSfXhpD/wCgjPu1eDW9vLd3MVtBGZJpnEcaL1ZicAfnX3B4Q8PxeFvCem6LFg/ZYQrsP4pDy5/FiTQBt0UUUAFFFFABRRRQBwXxh8L/APCT/Dy9WJN15Y/6ZBgckoDuX8VLceuK+Pa+/wDqMGvi34leF/8AhEfHeo6aiFbVn8+14wPKfkAfTlf+A0AclX1H8APFP9seDZNFnkzdaU+1cnkwtkr+R3D2AFfLldt8KPFP/CJ+P7C6lk2Wdyfst0SeAjkfMfo20/QGgD7JooooA8X/AGkf+RN0n/sIf+03r5or6X/aR/5E3Sf+wh/7TevmigAr7v0H/kXtM/69Iv8A0AV8IV936D/yL2mf9ekX/oAoA0K+b/2lP+Rh0P8A69H/APQ6+kK+b/2lP+Rh0P8A69H/APQ6APEK2PCf/I5aH/2ELf8A9GLWPWx4T/5HLQ/+whb/APoxaAPueiiigAooooAK8R+Onw1Gp2cnizSIP9Nt0zfRIP8AWxgf6wf7Sjr6j6c+3UdRg0AfAFFeqfGf4bHwlrB1jS4caLev91RxbSnkp7KeSPxHYZ8roAK9Y/Z5/wCSlSf9g+X/ANCSvJ69Y/Z5/wCSlSf9g+X/ANCSgD6nooooAKKKKACvO/G3wc8N+MHku0Q6ZqbZJubZRhz6unRvqMH3r0SigD5D8TfBbxj4dZ3jsP7TtR0mscuce6feH5Ee9efSRvDI0cqMjqcMrDBB9xX37Wbqnh7RdbXbquk2V7xgG4gVyPoSMigD4Sor69vfgl4BvWLDRWt3PUwXMi/puI/SsyT9nvwS7llbU0H91bkY/VTQB8q0AEkADJPQCvrW1+A/gK3YGTT7m5x2mu3A/wDHSK63RvBnhrw+yvpWh2NrIvSVYQZP++zlv1oA+YvBvwZ8UeKpI5ri3bStOPJuLpCGYf7CdT9Tge9fTPhDwZo/gnSBYaTBtLYM1w+DJMw7sf5DoO1dDRQAUUUUAFfCGu/8jDqf/X3L/wChmvu+sGTwR4SlkaSTwvoju5LMzafESSepJ20AfD1e7/s0f8hHxF/1yg/m9e0f8IJ4P/6FTQ//AAXQ/wDxNX9M0DRtFaRtK0iwsGlAEhtbZIi4HTO0DPU0AaNFFFABRRRQAUUUUAfHHxg/5Kvr/wD11T/0WlcPX3NeeEfDWo3cl3e+HtJubmQ5eaeyjd2OMcsVyeKg/wCEE8H/APQqaH/4Lof/AImgD5w+AP8AyVGD/r0m/kK+r6ydP8LeHtJuhdaboWmWdwAVEttaRxuAeoyoBrWoAK+UPjt4q/t/x4+nwSbrPSVNuuOhlPMh/PC/8Ar6vrCl8E+E5pXll8L6LJI7Fnd7CIliepJ28mgD4dro/Afhp/FvjTTdHCsYZZQ1wR/DEvLnP0BA9yK+vP8AhBPB/wD0Kmh/+C6H/wCJq5pvhrQdHuWuNL0TTbGdlKGW1tEiYqSDjKgHGQOPagDSRFjjWNFCooAVQMAAdqdRRQAUUUUAFFFFABRRRQBxHxY8L/8ACVfD6/tooy93bD7XbAdS6A5A+qlh+Ir43r7/AKwD4F8IEknwroZJ6k6fF/8AE0AfD9fSn7O/ir7d4fu/Dc8mZtPbzrcE8mFzyB9HJ/77Fel/8IJ4P/6FTQ//AAXQ/wDxNW9O8MaBpFybnTND0yyuCpTzba0jjbaeoyoBxwKANWiiigD4Q13/AJGHU/8Ar7l/9DNZ9fcMngjwlLI0knhfRHdyWZm0+Ikk9STtpv8Awgng/wD6FTQ//BdD/wDE0AeL/s0f8hHxF/1yg/m9fRFZ2maBo2itI2laRYWDSgCQ2tskRcDpnaBnqa0aACiiigAooooAw/F3haw8Y+HLnR79fklGY5QMtFIPuuPcfqMjvXxh4i8P3/hfXrrSNSj2XFu2CR0dezL6gjmvuuszUvDehazOs+qaLp19Mq7FkurVJWC9cAsDxzQB8J1seF/El/4S8QWusac+JoW+ZCflkQ/eRvYj/HtX2P8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTQBY8L+JLDxb4ftdY058wzL8yE/NG4+8je4P8Aj3rYqlpuj6Xo0Lw6XptnYxO250tYFiVj0yQoGTV2gDj/AIqf8ku8Q/8AXof5ivjCvvm7tLa/tZLW8t4ri3lG2SKZA6OPQg8GsX/hBPB//QqaH/4Lof8A4mgD4gor7f8A+EE8H/8AQqaH/wCC6H/4mj/hBPB//QqaH/4Lof8A4mgD4gor7f8A+EE8H/8AQqaH/wCC6H/4mj/hBPB//QqaH/4Lof8A4mgD4gor7f8A+EE8H/8AQqaH/wCC6H/4mj/hBPB//QqaH/4Lof8A4mgD4gor7f8A+EE8H/8AQqaH/wCC6H/4mj/hBPB//QqaH/4Lof8A4mgD4gr6v+AP/JL4P+vub+YrsP8AhBPB/wD0Kmh/+C6H/wCJrW0/TbDSbUWum2VtZ24JYRW0SxoCepwoAoAtVkeKdeg8MeGNR1q4wUtIS6qf436Kv4sQPxrXqrf6bYaram11Gytry3JBMVxEsiEjocMCKAPhG9vJ9Qvri9upDJcXEjSyuf4mY5J/M1BX2/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTQB5D+zl4Xwmo+KLhOv+h2ufThpG/9BGf96vfqr2NhZ6ZZpaafaQWltHnZDbxiNFycnCgADkk/jVigAooooAKKKKACiiigAr5p/aI8Lmw8SWniKBP3OoJ5U5A6TIMAn6rj/vk19LVU1HStO1i2Ftqdha30AYOIrmFZVDDIBwwIzyefegD4Lqzp99caXqVrf2j7Li2lWaJvRlOR+or7W/4QTwf/ANCpof8A4Lof/iaP+EE8H/8AQqaH/wCC6H/4mgC54c1u38SeHNP1m1x5V3Csm3Odp/iX6g5H4VqVWsNOstLtFtNPs7eztlJKw28SxoCTk4UADrVmgAqvfWFpqdlLZX1tFc20q7ZIpVDKw9wasUUAfP8A41/Z5JeS98IXCgEkmwuX6eyOf5N+deJ614d1nw7dfZtY025spO3nRkBv91ujD3BNfdlRXFtBeQNBcwRzwt96OVAyn6g0AfAtFfY+p/CDwJqrM8vh+CBz/Fas0OP+AqQv6Vzs/wCzv4MmOUuNXg56R3CH/wBCQ0AfLVFfUKfs5+DkcM1/rbgfwtPFg/lGK2LD4GeArIqz6XNdsOhuLlz+ikA/lQB8kxQyTyrFDG8kjnCoiklj6ACvRfC/wR8XeImSW6tRpNmeTLeAhyPaP72frge9fUmleHdF0JNulaVZWQIwTBAqE/UgZP41p0AcL4J+FHhzwUEuIIftupgc3twAWB/2F6J+HPua7qiigApk0scEMk0zqkUalndjgKBySafUc8EN1byW9xFHNBKpSSORQyupGCCDwQR2oA+JPG/iSTxb4x1LWXyI55SIVP8ADEvCD8gM++a5+vt//hBPB/8A0Kmh/wDguh/+Jo/4QTwf/wBCpof/AILof/iaAPnT4C+Fv7c8c/2nPHutNJQTZIyDMeIx+HzN/wABFfVdUdM0XStFjkj0rTLOwSQ7nW1gWIMfUhQM1eoAKKKKACiiigAooooAK8V/aJ8L/bvDtn4jgTM2nv5U5HeJzwT9Gx/32a9qqG6tLa+tZLW7t4ri3lG2SKZA6OPQg8EUAfA1Ffb/APwgng//AKFTQ/8AwXQ//E0f8IJ4P/6FTQ//AAXQ/wDxNAGP8JvFX/CWeALG4lk33tqPst1nqXQDDfipU/Un0ruKoaZomk6KkiaVpdlYLKQZBa26RByOmdoGav0AeL/tI/8AIm6T/wBhD/2m9fNFfeWpaPpmswpDqmnWd9Ejb1S6gWVVbpkBgcHmsz/hBPB//QqaH/4Lof8A4mgD4gr7v0H/AJF7TP8Ar0i/9AFZ/wDwgng//oVND/8ABdD/APE1vRxpFGscaKiIAqqowAB0AFADq+b/ANpT/kYdD/69H/8AQ6+kKzdT8PaJrUkcmq6Pp9+8Y2o11bJKVHoCwOKAPhKtjwn/AMjlof8A2ELf/wBGLX2P/wAIJ4P/AOhU0P8A8F0P/wATT4fBXhS3mjmh8MaLHLGwdHSwiDKw5BBC8EUAbtFFFABRRRQAUUUUAUdZ0ey1/R7rStRhE1pcoUkQ/wAx6EHkHsRXxn468G3vgfxLNpV3l4j89tPjAmjPQ/XsR2Ir7aqhqehaRrQjGq6VY34iz5YurdJdmeuNwOOgoA+D69Y/Z5/5KVJ/2D5f/Qkr6H/4QTwf/wBCpof/AILof/iat6d4Y0DSLk3OmaHpllcFSnm21pHG209RlQDjgUAatFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAH//2Q==">
+    <div class="cover-meta">Reporte de performance - Meta Ads + Google Ads<br><b>Mes cerrado</b></div>
+  </div>
+  <div class="kicker">Bonvivir</div>
+  <h1>Resumen ejecutivo <em>- Julio 2026</em></h1>
+  <p class="subtitle">Mes cerrado (31 días) · Club de Suscripción (vino + oliva), Tienda online y Leads · Meta + Google Ads</p>
+</div>
+</div>
+
+<!-- INSIGHTS DEL MES -->
+<div class="card">
+  <div class="st"><span class="n">✓</span>Insights del mes</div>
+  <div class="bul"><svg style="margin-top:3px;flex-shrink:0;color:var(--rojo)" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10l-1 6a4 4 0 0 1-8 0z"/></svg><span><strong>Vino:</strong> el cruce entre lo que reportan las plataformas y las altas reales muestra una diferencia significativa: Meta registra 312 eventos de "registro completo" en el mes, pero solo 254 se traducen en altas pagas confirmadas (incluyendo Google). Esa brecha llevó a revisar qué evento utiliza Meta para optimizar la campaña: es justamente "registro completo", que ocurre antes del pago. Mientras esa sea la señal que entrena la puja, el algoritmo seguirá priorizando usuarios que se parecen a quienes registran, no a quienes pagan.</span></div>
+  <div class="bul"><svg style="margin-top:3px;flex-shrink:0;color:var(--rojo)" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10l-1 6a4 4 0 0 1-8 0z"/></svg><span><strong>Vino:</strong> las sesiones pagas alcanzaron el 102% del objetivo, pero las altas se quedaron en 51% — la conversión sesión→alta real quedó en ≈0,52%, la mitad del ≈1,04% necesario con ese mismo volumen. El tráfico no es el problema, ya que superó la meta; la brecha está en lo que ocurre entre la sesión y el pago.</span></div>
+  <div class="bul"><i class="ti ti-shopping-cart"></i><span><strong>Tienda:</strong> al comparar las 357 compras que reportan las plataformas contra las 151 ventas reales confirmadas por Bonvivir, se identifica una brecha de 2,4x. Si esa sobreatribución no es pareja entre campañas, el "ganador" que muestra cada plataforma podría no ser el que más vende en la práctica. Al no tener aún medida la distribución de esa brecha, las decisiones de optimización no se basan en el ranking de plataforma hasta poder confirmarlo.</span></div>
+  <div class="bul"><svg style="margin-top:3px;flex-shrink:0;color:var(--rojo)" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="14" rx="5" ry="7"/><path d="M12 7c0-2 1.5-3.5 3.5-4"/></svg><span><strong>Oliva:</strong> la medición de conversión de esta línea quedó correctamente configurada recién sobre el cierre de julio, por lo que la mayor parte del mes transcurrió sin esa visibilidad completa. Con la ventana disponible ya se observa que las keywords utilizadas tienen muy poco volumen de búsqueda. La diferencia real de contar con el tracking activo se reflejará en los números de agosto.</span></div>
+  <div class="bul"><i class="ti ti-user"></i><span><strong>Leads:</strong> sobre el cierre de julio se recibió el feedback de calidad solicitado, que indica que los leads de Google convierten mejor a socio real que los de Meta, aunque cuesten 66% más ($1.780 vs. $1.074). Con ese dato ya se migró presupuesto hacia Google para agosto, mes que se toma como prueba: se anticipa una posible baja en el volumen de leads a cambio de una mayor efectividad.</span></div>
+</div>
+
+<!-- INVERSIÓN CONSOLIDADA -->
+<div class="card">
+  <div class="st"><span class="n">✓</span>Inversión total del mes</div>
+  <div class="wb headline"><strong>Motivo de la sobre-ejecución:</strong> durante julio la cuenta sufrió un hackeo que generó consumo no planificado. Esta es la causa principal de que el mes haya cerrado 36% por encima del presupuesto ($19,25M reales vs. $14,10M planificados), y no una decisión de escalar inversión.</div>
+  <div class="g g4">
+    <div class="mc"><p class="ml">Inversión Meta + Google</p><p class="mv">$19.248.320</p></div>
+    <div class="mc"><p class="ml">Meta</p><p class="mv">$16.609.634</p><p class="ms">86% del total</p></div>
+    <div class="mc"><p class="ml">Google</p><p class="mv">$2.638.686</p><p class="ms">14% del total</p></div>
+    <div class="mc"><p class="ml">vs. plan Club+Tienda</p><p class="mv warn">136%</p><p class="ms">Plan $14,10M</p></div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs-card">
+  <div class="tab-nav">
+    <button class="tab-btn active" data-tab="vino"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10l-1 6a4 4 0 0 1-8 0z"/></svg>Club Vinos</button>
+    <button class="tab-btn" data-tab="tienda"><i class="ti ti-shopping-cart"></i>Tienda</button>
+    <button class="tab-btn" data-tab="oliva"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="14" rx="5" ry="7"/><path d="M12 7c0-2 1.5-3.5 3.5-4"/></svg>Club Oliva</button>
+    <button class="tab-btn" data-tab="leads"><i class="ti ti-user"></i>Leads</button>
+  </div>
+
+  <!-- VINO -->
+  <div class="tab-panel active" id="tab-vino">
+    <div class="tab-title">Club de Suscripción — Vino</div>
+    <div class="tab-subtitle">La vertical principal del Club y la métrica norte del mes</div>
+
+    <div class="gap-box">
+      <div class="gap-item"><div class="gl">Meta+Google (suma bruta)</div><div class="gv">477</div></div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-item"><div class="gl">Altas reales (CRM/Tableau)</div><div class="gv">254</div></div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-item"><div class="gl">Brecha</div><div class="gv" style="color:var(--rojo-brillante)">1,9x</div></div>
+    </div>
+
+    <div class="wb"><span class="headline-tag">Accionable</span>Consideramos optimizar esa medición junto al equipo de data, para que el evento que entrena la puja sea la alta real y no el registro.</div>
+
+    <div class="g g4" style="margin-bottom:6px">
+      <div class="mc"><p class="ml">Inversión (Meta+Google)</p><p class="mv">$9.622.386*</p><p class="ms">Campañas de Suscripción Vino</p></div>
+      <div class="mc"><p class="ml">Sesiones pagas</p><p class="mv">48.646</p><p class="ms up">Obj. 47.600 → 102%</p></div>
+      <div class="mc"><p class="ml">Meta reporta</p><p class="mv">312</p><p class="ms">"Registro completo" (pixel)</p></div>
+      <div class="mc"><p class="ml">Google reporta</p><p class="mv">165</p><p class="ms">Conversión "Suscripción"</p></div>
+    </div>
+    <p class="footer-note">*Suma de campañas Meta (RMKT Suscripción Digital, Tráfico Consideración Club, Club Sale RMKT) y la única campaña de Google de Club/Vino: Suscripción Digital genérica.</p>
+
+    <div class="sub-st"><i class="ti ti-speakerphone"></i>Campañas</div>
+    <table class="t">
+      <thead><tr><th>Campaña</th><th>Plataforma</th><th>Inversión</th><th>Resultado</th></tr></thead>
+      <tbody>
+        <tr><td><strong>RMKT Suscripción Digital</strong></td><td><span class="badge b-blue">Meta</span></td><td>$6.641.112</td><td>309 registros · 64 suscripciones</td></tr>
+        <tr><td><strong>Tráfico Consideración Club</strong></td><td><span class="badge b-blue">Meta</span></td><td>$1.123.010</td><td>1 suscriptor</td></tr>
+        <tr><td><strong>Suscripción Digital (genérica)</strong></td><td><span class="badge b-amber">Google</span></td><td>$1.537.215</td><td>165 conversiones "Suscripción"</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">La campaña de remarketing de Meta concentra 69% de la inversión en Vino y es la única con volumen real de registros; el resto es tráfico de consideración con escasa conversión directa. En Google, toda la Suscripción Digital se gestiona en una sola campaña genérica, sin segmentar por ticket o tipo de caja.</div>
+
+    <div class="sub-st"><i class="ti ti-photo"></i>Creativos (Meta)</div>
+    <table class="t">
+      <thead><tr><th>Anuncio</th><th>Inv.</th><th>Suscripciones</th><th>CTR</th><th>CPC</th></tr></thead>
+      <tbody>
+        <tr><td><strong>UGC Teresita — Servicio Club</strong></td><td>$1.125.131</td><td>22</td><td>1,21%</td><td>$265</td></tr>
+        <tr><td><strong>UGC Matías — Servicio (juntada)</strong></td><td>$1.404.791</td><td>12</td><td>1,51%</td><td>$231</td></tr>
+        <tr><td><strong>UGC Giuli — Desc. Selección Exclusiva</strong></td><td>$1.054.008</td><td>6</td><td>1,26%</td><td>$205</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">Los tres creativos que más invierten en la campaña de remarketing del Club mantienen un CTR saludable (1,2%-1,5%) y un CPC relativamente bajo ($205-$265) — el problema no es que no generen clics ni que salgan caros, sino que ese tráfico de calidad se convierte en pocas suscripciones. Son piezas de formato UGC/testimonial, orientadas a generar confianza y registro más que a cerrar el pago en el momento, lo que es consistente con una tasa de "suscripción" (pixel) baja si buena parte de su aporte es el registro mencionado anteriormente.</div>
+
+    <div class="sub-st"><i class="ti ti-users"></i>Audiencias (Meta)</div>
+    <div class="ab-row"><span class="ab-label">Género</span>
+      <div class="ab-track">
+        <div class="ab-fill f" style="width:38.2%"></div>
+        <div class="ab-fill m" style="width:61.8%"></div>
+      </div>
+    </div>
+    <p class="footer-note" style="margin:-4px 0 10px">38,2% mujeres · 61,8% varones</p>
+    <table class="t">
+      <thead><tr><th>Edad</th><th>% inversión</th><th>Costo por registro</th></tr></thead>
+      <tbody>
+        <tr><td>25-34</td><td>31,5%</td><td class="up" style="font-weight:600">$17.700</td></tr>
+        <tr><td>35-44</td><td>32,3%</td><td>$22.800</td></tr>
+        <tr><td>45-54</td><td>20,8%</td><td class="dn" style="font-weight:600">$26.400</td></tr>
+        <tr><td>55-64</td><td>8,8%</td><td>$24.200</td></tr>
+        <tr><td>65+</td><td>6,5%</td><td>$21.100</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">El costo por registro por franja etaria muestra que 25-34 es la más eficiente ($17.700 por registro) y 45-54 la más cara ($26.400), un 49% más. Sin embargo, la inversión está distribuida de forma similar entre ambos segmentos (31,5% vs. 20,8%). Reasignar presupuesto hacia el segmento de menor costo es una palanca concreta para agosto, sin necesidad de aumentar la inversión total.</div>
+
+    <div class="sub-st"><i class="ti ti-search"></i>Keywords (Google Search)</div>
+    <div class="nb"><span class="headline-tag">Hallazgo principal</span>El 92,8% de la inversión en la campaña de Suscripción Digital va a términos de marca ("bonvivir", "club bonvivir", "bon vivir") — tráfico de alta intención, esperable y saludable. El otro ~6% (~$83.000) corresponde a un adset de "aceite de oliva [marca]" que sumamos junto con Bonvivir después de detectar que buena parte de las suscripciones de Oliva estaban entrando por esta campaña. Como acordamos en conjunto, el presupuesto está financiando tráfico hacia otra vertical, con la intención de capturar esa demanda cruzada.</div>
+  </div>
+
+  <!-- TIENDA -->
+  <div class="tab-panel" id="tab-tienda">
+    <div class="tab-title">Tienda online</div>
+    <div class="tab-subtitle">Ventas reales vs. lo reportado por plataforma</div>
+
+
+    <div class="gap-box">
+      <div class="gap-item"><div class="gl">Compras reportadas (plataforma)</div><div class="gv">357</div></div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-item"><div class="gl">Ventas reales (cliente)</div><div class="gv">151</div></div>
+      <div class="gap-arrow">→</div>
+      <div class="gap-item"><div class="gl">Brecha</div><div class="gv" style="color:var(--rojo-brillante)">2,4x</div></div>
+    </div>
+
+    <div class="eb"><span class="headline-tag">Accionable</span>Consideramos auditar la configuración de conversión de las campañas de Tienda junto al equipo de data, antes de tomar decisiones de optimización basadas en el ranking de plataforma.</div>
+
+    <div class="g g4">
+      <div class="mc"><p class="ml">Inversión (Meta+Google)</p><p class="mv">$3.691.039</p><p class="ms up">97,1% del plan ($3,80M)</p></div>
+      <div class="mc"><p class="ml">Meta reporta</p><p class="mv">289</p><p class="ms">Compras (pixel purchase)</p></div>
+      <div class="mc"><p class="ml">Google reporta</p><p class="mv">68</p><p class="ms">Conversiones ("Compra")</p></div>
+      <div class="mc"><p class="ml">Total plataformas</p><p class="mv warn">357</p><p class="ms">Meta + Google</p></div>
+    </div>
+
+    <div class="sub-st"><i class="ti ti-speakerphone"></i>Campañas</div>
+    <table class="t">
+      <thead><tr><th>Campaña</th><th>Plataforma</th><th>Inversión</th><th>Resultado (plat.)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Conv. Ventas v2</strong></td><td><span class="badge b-blue">Meta</span></td><td>$1.092.992</td><td>207 compras · $16,87M</td></tr>
+        <tr><td><strong>Conv. Sale ADV+ v2</strong></td><td><span class="badge b-blue">Meta</span></td><td>$527.361</td><td>74 compras · $6,02M</td></tr>
+        <tr><td><strong>Brand Search</strong></td><td><span class="badge b-amber">Google</span></td><td>$127.210</td><td>40,8 conv. · $3,05M</td></tr>
+        <tr><td><strong>PMax Tienda</strong></td><td><span class="badge b-amber">Google</span></td><td>$139.724</td><td>27,6 conv. · $2,93M</td></tr>
+      </tbody>
+    </table>
+    <p class="footer-note">No incluye el gasto asociado al hackeo de julio, que se contabiliza aparte en "Inversión total del mes".</p>
+
+    <div class="sub-st"><i class="ti ti-photo"></i>Creativos (Meta)</div>
+    <table class="t">
+      <thead><tr><th>Anuncio</th><th>Inv.</th><th>Compras</th><th>Revenue</th><th>ROAS plat.</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Estático Combo 2 Invierno</strong></td><td>$870.746</td><td>158</td><td>$11.923.933</td><td class="up" style="font-weight:600">13,7</td></tr>
+        <tr><td><strong>Carrusel AON Sin Descuento</strong></td><td>$25.033</td><td>7</td><td>$724.739</td><td class="up" style="font-weight:600">29,0</td></tr>
+        <tr><td><strong>Estático AON VHombre</strong></td><td>$108.117</td><td>27</td><td>$2.633.682</td><td class="up" style="font-weight:600">24,4</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">Los creativos estáticos con descuento (combos de invierno) son, con amplio margen, los más eficientes del mes en Tienda — ROAS de plataforma de entre 13,7 y 29. La pieza de mejor desempeño individual, "Combo 2 Invierno", generó cerca de $12M con menos de $1M de inversión.</div>
+
+    <div class="sub-st"><i class="ti ti-users"></i>Audiencias (Meta)</div>
+    <div class="ab-row"><span class="ab-label">Género</span>
+      <div class="ab-track">
+        <div class="ab-fill f" style="width:26.5%"></div>
+        <div class="ab-fill m" style="width:73.5%"></div>
+      </div>
+    </div>
+    <p class="footer-note" style="margin:-4px 0 10px">26,5% mujeres · 73,5% varones</p>
+    <table class="t">
+      <thead><tr><th>Edad</th><th>% inversión</th></tr></thead>
+      <tbody>
+        <tr><td>25-34</td><td>12,4%</td></tr>
+        <tr><td>35-44</td><td class="up" style="font-weight:600">27,8%</td></tr>
+        <tr><td>45-54</td><td>26,9%</td></tr>
+        <tr><td>55-64</td><td>20,6%</td></tr>
+        <tr><td>65+</td><td>12,3%</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">Con el gasto del hackeo excluido, la audiencia real de Tienda difiere considerablemente del promedio general que incluía ese gasto: 73,5% varones, concentrada en 35-54 años (54,7% de la inversión). Es un perfil más coherente con lo esperable en un e-commerce de vino, y una referencia más confiable para segmentar campañas futuras.</div>
+
+    <div class="sub-st"><i class="ti ti-search"></i>Keywords (Google Search)</div>
+    <div class="nb">Brand Search en Tienda es, al igual que en Vino, mayormente de términos de marca: "bonvivir" ($59.898), "tienda bonvivir" ($12.182) y variantes cercanas concentran la mayor parte de los $127.210 de esta campaña. Es tráfico de intención directa de compra; no se identifica aquí el mismo problema de dispersión hacia términos genéricos observado en Vino.</div>
+  </div>
+
+  <!-- OLIVA -->
+  <div class="tab-panel" id="tab-oliva">
+    <div class="tab-title">Club de Suscripción — Oliva</div>
+    <div class="tab-subtitle">Campaña en rodaje — lleva un par de meses activa</div>
+
+
+    <div class="wb"><span class="headline-tag">Pasos hechos</span>
+      <ul class="steps">
+        <li><i class="ti ti-circle-check"></i>Sumamos keywords asociadas a la marca.</li>
+        <li><i class="ti ti-circle-check"></i>Negativizamos términos de búsqueda y palabras no relevantes, como supermercados y búsquedas informativas.</li>
+        <li><i class="ti ti-circle-check"></i>Pasamos de concordancia amplia en los términos de cabecera a frase, para que dejen de traer tráfico de baja intención.</li>
+        <li><i class="ti ti-circle-check"></i>Subimos la puja en lo que está funcionando.</li>
+      </ul>
+      <p style="margin-top:10px">Con esto debería recuperarse buena parte de ese ~30% de presupuesto que no generaba conversiones.</p>
+    </div>
+
+    <div class="eb"><span class="headline-tag">Próximos pasos</span>
+      <ul class="steps">
+        <li><i class="ti ti-point" style="color:var(--rojo)"></i>Acordar con el cliente un CPA objetivo para la línea.</li>
+        <li><i class="ti ti-point" style="color:var(--rojo)"></i>Activar campañas de Meta Ads — todavía pendiente de nuestro lado.</li>
+      </ul>
+    </div>
+
+    <div class="g g4">
+      <div class="mc"><p class="ml">Inversión (Google)</p><p class="mv">$409.790</p><p class="ms">Única campaña activa</p></div>
+      <div class="mc"><p class="ml">Google reporta</p><p class="mv">3</p><p class="ms">Conversiones</p></div>
+      <div class="mc"><p class="ml">Altas reales (CPC, final)</p><p class="mv">13</p><p class="ms warn">Obj. 110 → 11,8%</p></div>
+      <div class="mc"><p class="ml">CPA real</p><p class="mv">$31.522</p><p class="ms">Inversión / 13 altas</p></div>
+    </div>
+
+    <div class="sub-st"><i class="ti ti-speakerphone"></i>Campañas</div>
+    <table class="t">
+      <thead><tr><th>Campaña</th><th>Plataforma</th><th>Inversión</th><th>Resultado</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Club Oliva — Suscripción Digital</strong></td><td><span class="badge b-olive">Google</span></td><td>$409.790</td><td>3 conversiones · $193.120</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">Oliva es la única vertical con una sola campaña activa, en una sola plataforma. No hay creativos para analizar (es Search, sin componente visual) ni audiencias de Meta para desglosar, dado que esta línea todavía no cuenta con campañas activas en esa plataforma.</div>
+
+    <div class="sub-st"><i class="ti ti-search"></i>Keywords (Google Search)</div>
+    <table class="t">
+      <thead><tr><th>Término (ejemplos)</th><th>Clicks</th><th>Inversión</th></tr></thead>
+      <tbody>
+        <tr><td>aceite de oliva</td><td>36</td><td>$18.859</td></tr>
+        <tr><td>carrefour</td><td>12</td><td>$6.088</td></tr>
+        <tr><td>aceite de oliva extra virgen</td><td>13</td><td>$6.378</td></tr>
+        <tr><td>olivos de tupungato</td><td>10</td><td>$5.230</td></tr>
+      </tbody>
+    </table>
+    <div class="nb"><span class="headline-tag">Hallazgo principal</span>Ningún término supera los 36 clicks en todo el mes, y la gran mayoría son búsquedas de una sola palabra clave con 1 click — nombres de marcas puntuales de aceite ("laur", "zuccardi", "carrefour aceite de girasol"), no de club o suscripción. Esto es consistente con el hallazgo principal de esta sección: el problema no es de conversión, sino que el universo de búsqueda es todavía reducido. Ampliar hacia keywords de mayor volumen es el paso lógico antes de evaluar el objetivo de altas.</div>
+  </div>
+
+  <!-- LEADS -->
+  <div class="tab-panel" id="tab-leads">
+    <div class="tab-title">Leads (Club — generación)</div>
+    <div class="tab-subtitle">Presupuesto migrado a Google para agosto</div>
+
+    <div class="eb headline"><span class="headline-tag">Accionable</span>Vamos a monitorear junto al equipo de data la conversión de estos leads a socio real durante agosto, para confirmar si la migración de presupuesto hacia Google se sostiene o hay que ajustarla.</div>
+
+    <div class="g g4" style="margin-bottom:6px">
+      <div class="mc"><p class="ml">Inversión (Meta+Google)</p><p class="mv">$607.592</p><p class="ms">Campañas de Leads</p></div>
+      <div class="mc"><p class="ml">Meta reporta</p><p class="mv">299</p><p class="ms">Leads (pixel lead)</p></div>
+      <div class="mc"><p class="ml">Google reporta</p><p class="mv">161</p><p class="ms">Conversiones (lead)</p></div>
+      <div class="mc"><p class="ml">CPL de plataforma (blended)</p><p class="mv">$1.321</p><p class="ms">Inversión / 460 leads</p></div>
+    </div>
+    <div class="g g2">
+      <div class="mc"><p class="ml">CPL Meta</p><p class="mv up">$1.074</p><p class="ms">$321.049 / 299 leads</p></div>
+      <div class="mc"><p class="ml">CPL Google</p><p class="mv warn">$1.780</p><p class="ms">$286.543 / 161 leads</p></div>
+    </div>
+    <div class="sub-st"><i class="ti ti-speakerphone"></i>Campañas</div>
+    <table class="t">
+      <thead><tr><th>Campaña</th><th>Plataforma</th><th>Inversión</th><th>Resultado</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Club Sale RMKT Contáctese</strong></td><td><span class="badge b-blue">Meta</span></td><td>$321.049</td><td>299 leads</td></tr>
+        <tr><td><strong>Club_Vinos (Search producto)</strong></td><td><span class="badge b-amber">Google</span></td><td>$105.565</td><td>74 conv.</td></tr>
+        <tr><td><strong>Search Leads Conquista</strong></td><td><span class="badge b-amber">Google</span></td><td>$74.575</td><td>26,5 conv.</td></tr>
+        <tr><td><strong>PMax Club Leads</strong></td><td><span class="badge b-amber">Google</span></td><td>$106.403</td><td>60,5 conv.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sub-st"><i class="ti ti-photo"></i>Creativos (Meta)</div>
+    <table class="t">
+      <thead><tr><th>Anuncio</th><th>Inv.</th><th>Leads</th></tr></thead>
+      <tbody>
+        <tr><td><strong>UGC Tere v1 — Desc. Selección Exclusiva</strong></td><td>$222.609</td><td>232</td></tr>
+        <tr><td><strong>UGC Giuli v2 — Desc. Selección Exclusiva</strong></td><td>$52.187</td><td>33</td></tr>
+        <tr><td><strong>UGC Matías/Rochy — Servicio (junio-julio)</strong></td><td>$46.730</td><td>34</td></tr>
+      </tbody>
+    </table>
+    <div class="nb">A diferencia de Vino, en esta vertical los creativos UGC de descuento funcionan como generadores directos de lead: la pieza de Tere concentra el 78% de los leads de Meta con menos de un tercio del presupuesto de la campaña. Es un formato a replicar con prioridad sobre el de Vino.</div>
+
+    <div class="sub-st"><i class="ti ti-users"></i>Audiencias (Meta)</div>
+    <div class="ab-row"><span class="ab-label">Género</span>
+      <div class="ab-track">
+        <div class="ab-fill f" style="width:48.5%"></div>
+        <div class="ab-fill m" style="width:51.5%"></div>
+      </div>
+    </div>
+    <p class="footer-note" style="margin:-4px 0 10px">48,5% mujeres · 51,5% varones — la única vertical prácticamente pareja por género. Se concentra en 25-44 años (65,5% de la inversión).</p>
+
+    <div class="sub-st"><i class="ti ti-search"></i>Keywords (Google Search)</div>
+    <div class="nb">A diferencia de las búsquedas de marca que predominan en Vino, en esta vertical el tráfico es de prospección: "club del vino", "vino colon frutos rojos", "el club del vino argentina" — términos genéricos y de competencia, no de Bonvivir. Es coherente con el objetivo de "conquista" de estas campañas, orientadas a usuarios que todavía no conocen la marca, lo que explica un costo por lead más alto que en Vino.</div>
+  </div>
+</div>
+
+<!-- RESUMEN EJECUTIVO -->
+<div class="card">
+  <div class="st"><span class="n">✓</span>Resumen ejecutivo</div>
+  <div class="bul"><i class="ti ti-currency-dollar"></i><span><strong>Presupuesto:</strong> $19,25M invertidos en el mes (86% Meta, 14% Google), 36% por encima del plan de Club+Tienda ($14,10M) — explicado por el hackeo sufrido durante julio.</span></div>
+  <div class="bul"><svg style="margin-top:3px;flex-shrink:0;color:var(--rojo)" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10l-1 6a4 4 0 0 1-8 0z"/></svg><span><strong>Vino:</strong> la campaña de remarketing en Meta concentra el 69% de la inversión de la vertical y es la que sostiene el volumen de registros, con formato UGC/testimonial y CTR estable entre 1,2% y 1,5%. La audiencia se inclina a varones (61,8%) y el segmento 25-34 es el más eficiente en costo por registro. En Search de Google, el 92,8% del gasto es de marca, con "bonvivir" como término principal.</span></div>
+  <div class="bul"><i class="ti ti-shopping-cart"></i><span><strong>Tienda:</strong> el presupuesto se reparte entre dos campañas de conversión en Meta y dos en Google (Brand Search y PMax), con los estáticos de descuento (combos de invierno) como el formato de mejor ROAS de plataforma del mes. La audiencia real —excluyendo el gasto del hackeo— es mayormente masculina (73,5%) y concentrada en 35-54 años. En Search, "bonvivir" domina la inversión, igual que en Vino.</span></div>
+  <div class="bul"><svg style="margin-top:3px;flex-shrink:0;color:var(--rojo)" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="14" rx="5" ry="7"/><path d="M12 7c0-2 1.5-3.5 3.5-4"/></svg><span><strong>Oliva:</strong> única campaña activa, en Search de Google, sin formatos de Meta corriendo todavía. El término "aceite de oliva" concentra la mayor parte del tráfico y la inversión del mes, y ya se aplicaron ajustes de keywords y puja de cara a agosto.</span></div>
+  <div class="bul"><i class="ti ti-user"></i><span><strong>Leads:</strong> la campaña de remarketing en Meta (Contáctese) concentra más de la mitad de la inversión de Leads y es la más eficiente en CPL; del lado de Google, tres campañas —Club_Vinos, Search Conquista y PMax— se reparten el resto, con Club_Vinos aportando el mayor volumen. Es la vertical con la audiencia más pareja por género (48,5%/51,5%) y se concentra en 25-44 años. El formato UGC de descuento (pieza de Tere) fue el que más leads generó en Meta.</span></div>
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var target = btn.getAttribute('data-tab');
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('active');
+    document.getElementById('tab-' + target).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
