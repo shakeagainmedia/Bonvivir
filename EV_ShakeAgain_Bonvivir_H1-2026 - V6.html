@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entregable de Valor · Bonvivir · H1 2026 — Shake Again</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Manual de Marca Shake Again 2026 */
+    --red:#9B0000;
+    --red-deep:#6E0000;
+    --red-accent:#ED1C24;
+    --ink:#141414;
+    --grey:#9E9E9E;
+    --grey-light:#CCCCCC;
+    --paper:#FFFFFF;
+    --soft:#F5F5F5;
+    --mute:#5A5A5A;
+    --ok:#1E7A3C;
+    --warn:#C88A00;
+    --sans:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+    --serif:Georgia,'Times New Roman',serif;
+  }
+
+  *{box-sizing:border-box; margin:0;}
+  html,body{height:100%;}
+  body{
+    background:var(--ink); color:var(--ink);
+    font-family:var(--sans); font-size:15px; line-height:1.5;
+    -webkit-font-smoothing:antialiased; overflow:hidden;
+  }
+  b,strong{font-weight:700;}
+  .georgia{font-family:var(--serif); font-weight:700;}
+  [contenteditable]{outline:none; border-radius:4px;}
+  [contenteditable]:focus{box-shadow:0 0 0 3px rgba(237,28,36,.25);}
+
+  /* ============ CHROME (barra superior) ============ */
+  .chrome{
+    position:fixed; inset:0 0 auto 0; z-index:60; height:52px;
+    display:flex; align-items:center; gap:14px; padding:0 18px;
+    background:rgba(20,20,20,.92); backdrop-filter:blur(8px);
+    border-bottom:2px solid var(--red);
+  }
+  .chrome .brand{font-weight:800; letter-spacing:2.5px; font-size:13px; color:#fff; margin-right:auto;}
+  .chrome .brand span{color:var(--red-accent);}
+  .seg{display:inline-flex; border:1px solid #3a3a3a; border-radius:6px; overflow:hidden;}
+  .seg button{
+    font-family:var(--sans); font-size:11.5px; font-weight:600; letter-spacing:.4px;
+    padding:6px 12px; background:transparent; color:#cfcfcf; border:0; cursor:pointer;
+  }
+  .seg button[aria-pressed="true"]{background:var(--red); color:#fff;}
+  .seg .lbl{padding:6px 8px 6px 11px; color:var(--grey); font-size:10px; letter-spacing:1px; text-transform:uppercase; align-self:center;}
+  .btn-print{
+    font-family:var(--sans); font-weight:700; font-size:11.5px; letter-spacing:.5px;
+    padding:7px 14px; background:var(--red-accent); color:#fff; border:0; border-radius:6px; cursor:pointer;
+  }
+  .btn-print:hover{background:#c8151d;}
+  .chrome button:focus-visible{outline:2px solid #fff; outline-offset:2px;}
+
+  /* ============ DECK ============ */
+  .deck{position:fixed; inset:52px 0 0 0; overflow:hidden;}
+  .track{
+    display:flex; height:100%; will-change:transform;
+    transition:transform .55s cubic-bezier(.65,.05,.25,1);
+  }
+  .slide{
+    position:relative; flex:0 0 100%; height:100%;
+    background:var(--paper); overflow:hidden;
+    display:flex; flex-direction:column;
+  }
+  .slide-inner{
+    flex:1; display:flex; flex-direction:column; justify-content:center;
+    padding:4.5vh 7vw 8vh; max-width:1400px; width:100%; margin:0 auto;
+    overflow-y:auto;
+  }
+
+  /* Marca de agua en footer de cada slide */
+  .slide-foot{
+    position:absolute; left:7vw; right:7vw; bottom:3vh; z-index:5;
+    display:flex; align-items:center; justify-content:space-between;
+    font-size:10.5px; letter-spacing:2px; font-weight:700; text-transform:uppercase; color:var(--grey);
+    pointer-events:none;
+  }
+  .slide-foot .wm span{color:var(--red-accent);}
+  .dark-slide .slide-foot{color:rgba(255,255,255,.55);}
+
+  /* Animación de entrada del contenido */
+  .a{opacity:0; transform:translateY(22px); transition:opacity .6s ease, transform .6s ease;}
+  .slide.active .a{opacity:1; transform:none;}
+  .slide.active .a.d1{transition-delay:.08s;}
+  .slide.active .a.d2{transition-delay:.18s;}
+  .slide.active .a.d3{transition-delay:.28s;}
+  .slide.active .a.d4{transition-delay:.38s;}
+  .slide.active .a.d5{transition-delay:.48s;}
+
+  /* ============ Tipografía de slides ============ */
+  .eyebrow{font-size:12px; letter-spacing:4px; font-weight:800; text-transform:uppercase; color:var(--red-accent); line-height:1.3;}
+  .eyebrow.on-red{color:rgba(255,255,255,.85);}
+  .rule{width:56px; height:4px; background:var(--red); margin:16px 0 22px;}
+  h1.hero{font-size:clamp(46px,7.2vw,96px); line-height:.98; font-weight:800; letter-spacing:-1px;}
+  h2.title{font-size:clamp(26px,2.9vw,40px); line-height:1.08; font-weight:800; letter-spacing:-.5px;}
+  .lede{color:var(--mute); font-size:clamp(14px,1.25vw,17px); max-width:62ch; margin-top:14px;}
+  .kicker{font-size:11px; letter-spacing:2.5px; text-transform:uppercase; font-weight:800; color:var(--mute);}
+
+  /* ============ Portada / dividers rojos ============ */
+  .red-bleed{background:linear-gradient(135deg,#B00000 0%, var(--red) 55%, var(--red-deep) 100%); color:#fff;}
+  .red-bleed .sform{
+    position:absolute; right:-14vw; top:-18vh; width:58vw; height:140vh; opacity:.16; pointer-events:none;
+  }
+  .divider-num{
+    font-size:clamp(120px,17vw,230px); font-weight:800; line-height:1; letter-spacing:-6px;
+    color:rgba(255,255,255,.14); position:absolute; right:6vw; bottom:2vh; user-select:none;
+  }
+  .divider-title{font-size:clamp(44px,6vw,84px); font-weight:800; line-height:1.0; letter-spacing:-1px; max-width:14ch;}
+  .divider-sub{margin-top:20px; font-size:clamp(14px,1.35vw,18px); opacity:.92; max-width:56ch;}
+  .ink-bleed{background:linear-gradient(150deg,#1c1c1c,#0d0d0d); color:#fff;}
+  .ink-bleed .sform{position:absolute; left:-16vw; bottom:-40vh; width:55vw; height:120vh; opacity:.08;}
+
+  /* ============ Guía (nota flotante para AMs) ============ */
+  .guia-btn{
+    position:absolute; right:26px; bottom:64px; z-index:20;
+    width:38px; height:38px; border-radius:50%; border:0; cursor:pointer;
+    background:var(--ink); color:#fff; font-weight:800; font-size:15px;
+    box-shadow:0 4px 14px rgba(0,0,0,.25);
+  }
+  .dark-slide .guia-btn{background:#fff; color:var(--red);}
+  .guia-panel{
+    position:absolute; right:26px; bottom:112px; z-index:21; width:min(430px,80vw);
+    background:#fff; color:var(--ink); border-left:5px solid var(--red);
+    box-shadow:0 14px 40px rgba(0,0,0,.3); padding:18px 20px; font-size:13px; line-height:1.55;
+    display:none; text-align:left;
+  }
+  .guia-panel.open{display:block;}
+  .guia-panel .tag{font-weight:800; letter-spacing:1px; color:var(--red); text-transform:uppercase; font-size:11px; margin-bottom:8px;}
+  .guia-panel .tag em{font-weight:500; font-style:italic; color:var(--grey); letter-spacing:0; text-transform:none;}
+  .guia-panel dt{font-weight:700; margin-top:7px;}
+  .guia-panel dd{margin:1px 0 0; color:var(--mute);}
+  body.mode-cliente .guia-btn, body.mode-cliente .guia-panel{display:none!important;}
+
+  /* ============ Datos del entregable ============ */
+  .datagrid{margin-top:30px; width:100%;}
+  .datarow{display:grid; grid-template-columns:200px 1fr; gap:24px; padding:15px 0; border-bottom:1px solid #E7E7E7; align-items:baseline;}
+  .datarow .k{font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:800; color:var(--red);}
+  .datarow .v{font-size:clamp(14px,1.25vw,17px); font-weight:500;}
+
+  /* ============ Métrica norte — hero numbers ============ */
+  .north{display:grid; grid-template-columns:1.25fr 1fr 1fr; gap:22px; margin-top:34px; align-items:stretch;}
+  .ncard{padding:30px 28px; border-top:5px solid var(--red); background:var(--soft); display:flex; flex-direction:column;}
+  .ncard.main{background:var(--red); color:#fff; border-top-color:var(--red-accent);}
+  .ncard .k{font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:800; opacity:.85;}
+  .ncard.main .k{color:#fff;}
+  .ncard:not(.main) .k{color:var(--red);}
+  .ncard .v{font-size:clamp(34px,3.6vw,54px); font-weight:800; line-height:1; margin-top:14px; letter-spacing:-1px;}
+  .ncard .s{font-size:12.5px; margin-top:12px; opacity:.85;}
+  .ncard .fnref{font-size:10px; margin-top:auto; padding-top:14px; opacity:.7; font-style:italic; line-height:1.4;}
+  .ncard.main .fnref{color:rgba(255,255,255,.8);}
+  .pill{display:inline-block; font-size:11px; font-weight:800; letter-spacing:.6px; color:#fff; background:var(--ok); padding:4px 12px; border-radius:20px; margin-top:14px;}
+
+  /* ============ Titulares ============ */
+  .heads{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:34px;}
+  .head{border-top:4px solid var(--red); padding-top:18px;}
+  .head .num{font-size:clamp(40px,4.5vw,64px); font-weight:800; color:var(--grey-light); line-height:1; letter-spacing:-2px;}
+  .head h3{font-size:clamp(15px,1.35vw,18px); font-weight:800; margin:12px 0 10px; line-height:1.3;}
+  .head p{font-size:clamp(12.5px,1.05vw,14px); color:var(--mute);}
+  .head .big{color:var(--red-accent); font-weight:800;}
+
+  /* ============ Quote slides ============ */
+  .quote{font-family:var(--serif); font-weight:700; font-size:clamp(24px,2.9vw,42px); line-height:1.3; max-width:26ch;}
+  .quote .q{color:var(--red-accent);}
+  .on-red .quote .q{color:#fff; opacity:.6;}
+  .talk{margin-top:34px; padding:24px 28px; background:rgba(255,255,255,.08); border-left:4px solid var(--red-accent); max-width:78ch; font-size:clamp(13px,1.2vw,15.5px);}
+  .talk .k{font-size:11px; letter-spacing:2.5px; text-transform:uppercase; font-weight:800; color:var(--red-accent); display:block; margin-bottom:8px;}
+
+  /* ============ Compromisos (1.1) ============ */
+  .commits{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; margin-top:30px;}
+  .commit{background:var(--soft); padding:22px 20px; display:flex; flex-direction:column; gap:12px; border-top:4px solid var(--grey-light);}
+  .commit.ok{border-top-color:var(--ok);} .commit.mid{border-top-color:var(--warn);} .commit.no{border-top-color:var(--red-accent);}
+  .st{align-self:flex-start; font-size:10px; font-weight:800; letter-spacing:.8px; text-transform:uppercase; padding:4px 10px; border-radius:3px; color:#fff;}
+  .st.ok{background:var(--ok);} .st.mid{background:var(--warn);} .st.no{background:var(--red-accent);}
+  .commit h4{font-size:clamp(12.5px,1.05vw,14px); font-weight:800; line-height:1.35;}
+  .commit p{font-size:clamp(11.5px,.95vw,12.5px); color:var(--mute);}
+
+  /* ============ Embudo (1.2) ============ */
+  .split{display:grid; grid-template-columns:1.35fr 1fr; gap:5vw; margin-top:20px; align-items:center;}
+  .funnel .frow{display:grid; grid-template-columns:170px 1fr; gap:14px; align-items:center; margin:8px 0;}
+  .frow .fk{font-size:11.5px; font-weight:800; letter-spacing:.4px; text-transform:uppercase; color:var(--mute); text-align:right;}
+  .frow .fbar{height:30px; background:var(--soft); position:relative;}
+  .frow .fbar i{position:absolute; inset:0 auto 0 0; width:0; background:linear-gradient(90deg,var(--red),#C31414); transition:width 1s cubic-bezier(.2,.7,.2,1);}
+  .frow .fbar .fv{position:absolute; inset:0; display:flex; align-items:center; gap:10px; padding:0 14px; font-size:12.5px; font-weight:800; color:var(--ink); z-index:2; white-space:nowrap;}
+  .frow .fbar i[data-w="100"] ~ .fv, .frow .fbar.full .fv{color:#fff;}
+  .frow .fv small{font-weight:500; color:inherit; opacity:.75; font-size:11px;}
+  .fnote{font-size:11.5px; color:var(--mute); font-style:italic; margin-top:12px;}
+  .kstack{display:grid; gap:10px;}
+  .kpi{border:1px solid #E7E7E7; padding:12px 16px; display:flex; align-items:baseline; justify-content:space-between; gap:14px;}
+  .kpi .k{font-size:10.5px; letter-spacing:1.5px; text-transform:uppercase; font-weight:800; color:var(--mute);}
+  .kpi .v{font-size:clamp(22px,2vw,30px); font-weight:800; letter-spacing:-.5px;}
+  .kpi .d{font-size:11px; font-weight:700;}
+  /* KPI en pares (Club | Tienda) para métricas divididas por vertical */
+  .kpi.pair{display:grid; grid-template-columns:1fr 1fr; padding:12px 16px; gap:12px; align-items:stretch;}
+  .kpi.pair .side{display:flex; flex-direction:column; gap:2px;}
+  .kpi.pair .side + .side{border-left:1px solid #E7E7E7; padding-left:12px;}
+  .kpi.pair .label{font-size:9.5px; letter-spacing:1.4px; text-transform:uppercase; font-weight:800; color:var(--red); margin-bottom:2px;}
+  .kpi.pair .vv{font-size:clamp(18px,1.6vw,24px); font-weight:800; letter-spacing:-.5px; line-height:1.05;}
+  .kpi.pair .dd{font-size:10.5px; font-weight:600; color:var(--mute); line-height:1.35;}
+  .kpi.pair .top{font-size:10.5px; letter-spacing:1.5px; text-transform:uppercase; font-weight:800; color:var(--mute); grid-column:1/-1; margin-bottom:-2px;}
+  /* Disclaimer del funnel */
+  .disclaimer{background:var(--soft); border-left:4px solid var(--red-accent); padding:12px 16px; margin-top:12px; font-size:11.5px; line-height:1.5;}
+  .disclaimer b{color:var(--ink);}
+  .up{color:var(--ok);} .down{color:var(--red-accent);} .flat{color:var(--warn);}
+
+  /* ============ Retro (1.3) ============ */
+  .retro{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:30px;}
+  .lane{padding:24px 22px; background:var(--soft);}
+  .lane.win{border-top:5px solid var(--ok);}
+  .lane.fail{border-top:5px solid var(--red-accent);}
+  .lane.learn{border-top:5px solid var(--ink); background:var(--ink); color:#fff;}
+  .lane .lh{font-size:12px; letter-spacing:1.5px; text-transform:uppercase; font-weight:800; margin-bottom:14px; display:flex; align-items:center; gap:8px;}
+  .lane.win .lh{color:var(--ok);} .lane.fail .lh{color:var(--red-accent);} .lane.learn .lh{color:#fff;}
+  .lane ul{padding-left:16px; display:grid; gap:10px;}
+  .lane li{font-size:clamp(11.5px,1vw,13px); line-height:1.5;}
+  .lane.learn li{opacity:.95;}
+  .lane li b{display:block;}
+  .lane.learn li .to{color:var(--red-accent); font-weight:800;}
+
+  /* ============ Bloque 2 ============ */
+  .ctx{display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-top:30px;}
+  .ctx-card{background:var(--soft); padding:26px 26px; border-left:5px solid var(--red);}
+  .ctx-card h3{font-size:14px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--red); margin-bottom:12px;}
+  .ctx-card p, .ctx-card li{font-size:clamp(12.5px,1.05vw,14px); color:var(--ink);}
+  .ctx-card ul{padding-left:18px; display:grid; gap:9px;}
+  .badge{display:inline-block; font-size:9.5px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#fff; background:var(--red-accent); padding:3px 8px; border-radius:3px; margin-left:8px; vertical-align:middle;}
+  .comp-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:30px;}
+  .comp{padding:22px 22px; border:1px solid #E7E7E7;}
+  .comp .t{font-size:11px; letter-spacing:1.5px; text-transform:uppercase; font-weight:800; color:var(--red); margin-bottom:8px;}
+  .comp p{font-size:clamp(12.5px,1.05vw,14px); color:var(--mute);}
+  .comp.spot{background:var(--red); color:#fff; border:0;}
+  .comp.spot .t{color:#fff;} .comp.spot p{color:rgba(255,255,255,.92);}
+
+  /* ============ Oportunidades (3.1) ============ */
+  .opps{display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin-top:32px; align-items:stretch;}
+  .opp{background:var(--soft); padding:22px 18px 20px; display:flex; flex-direction:column; border-top:5px solid var(--red);}
+  .opp:first-child{background:var(--red); color:#fff; border-top-color:var(--red-accent);}
+  .opp .n{font-size:clamp(28px,2.6vw,40px); font-weight:800; letter-spacing:-1px; color:var(--grey-light); line-height:1;}
+  .opp:first-child .n{color:rgba(255,255,255,.4);}
+  .opp h4{font-size:clamp(12.5px,1.05vw,14px); font-weight:800; margin:12px 0 8px; line-height:1.3;}
+  .opp p{font-size:clamp(11px,.9vw,12px); color:var(--mute); flex:1;}
+  .opp:first-child p{color:rgba(255,255,255,.9);}
+  .opp .goal{margin-top:12px; font-size:11px; font-weight:800; color:var(--red-accent);}
+  .opp:first-child .goal{color:#fff;}
+
+  /* ============ Business case (3.2) ============ */
+  table.bc{width:100%; border-collapse:collapse; margin-top:18px; font-size:clamp(11px,.95vw,12.5px);}
+  table.bc th{background:var(--red); color:#fff; text-align:left; padding:10px 12px; font-weight:800; font-size:11px; letter-spacing:.6px; text-transform:uppercase;}
+  table.bc td{border-bottom:1px solid #E7E7E7; padding:8px 12px; vertical-align:top; line-height:1.35;}
+  table.bc td:first-child{font-weight:800;}
+  table.bc .imp{font-weight:800; color:var(--red-accent); white-space:nowrap;}
+  .chip{display:inline-block; font-size:10px; font-weight:800; padding:3px 10px; border-radius:20px; background:var(--ink); color:#fff;}
+
+  /* ============ Roadmap (3.3) — timeline horizontal ============ */
+  .timeline{margin-top:52px; position:relative;}
+  .timeline:before{content:""; position:absolute; left:0; right:0; top:9px; height:3px; background:linear-gradient(90deg,var(--red),var(--red-accent));}
+  .tl-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+  .tl{position:relative; padding-top:34px;}
+  .tl:before{content:""; position:absolute; top:0; left:0; width:20px; height:20px; border-radius:50%; background:#fff; border:5px solid var(--red);}
+  .tl .when{font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:800; color:var(--red-accent);}
+  .tl h4{font-size:clamp(13px,1.15vw,15px); font-weight:800; margin:8px 0 8px; line-height:1.3;}
+  .tl p{font-size:clamp(11.5px,.95vw,12.5px); color:var(--mute);}
+  .tl.hot:before{background:var(--red-accent); border-color:var(--red-accent);}
+  .tl.hot .when{color:var(--red);}
+
+  /* ============ Bloque 4 ============ */
+  .method{margin-top:30px; max-width:80ch; font-size:clamp(14px,1.3vw,17px); line-height:1.7;}
+  .method .hl{background:linear-gradient(transparent 62%, rgba(237,28,36,.22) 62%); font-weight:700;}
+  .pledges{display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:30px;}
+  .pledge{border:1px solid #E7E7E7; padding:22px 22px; display:grid; gap:10px;}
+  .pledge h4{font-size:clamp(13px,1.15vw,15px); font-weight:800; line-height:1.35;}
+  .pledge .meta{display:flex; flex-wrap:wrap; gap:8px;}
+  .pledge .m{font-size:10.5px; font-weight:700; letter-spacing:.4px; padding:4px 10px; background:var(--soft); border-radius:3px; color:var(--mute);}
+  .pledge .m b{color:var(--ink);}
+  .pledge.joint{border:0; background:var(--ink); color:#fff;}
+  .pledge.joint .m{background:rgba(255,255,255,.12); color:rgba(255,255,255,.85);}
+  .pledge.joint .m b{color:#fff;}
+  .next{margin-top:30px; display:grid; grid-template-columns:1fr 1fr 1.3fr; gap:20px;}
+  .nx{padding:24px 22px; background:var(--soft); border-top:4px solid var(--red);}
+  .nx .k{font-size:10.5px; letter-spacing:1.8px; text-transform:uppercase; font-weight:800; color:var(--red); margin-bottom:10px;}
+  .nx p{font-size:clamp(12.5px,1.05vw,14px);}
+  .nx.hot{background:var(--red); color:#fff; border-top-color:var(--red-accent);}
+  .nx.hot .k{color:#fff;}
+
+  /* ============ Tecnologías (4.1 bis) ============ */
+  .techlist{display:grid; grid-template-columns:1fr 1fr; gap:16px 30px; margin-top:30px;}
+  .tech{display:flex; gap:14px; align-items:flex-start; padding:4px 0;}
+  .tech .ti{flex:0 0 34px; height:34px; border-radius:8px; background:var(--red); color:#fff; display:grid; place-items:center; font-weight:800; font-size:15px;}
+  .tech .tc h4{font-size:clamp(13px,1.1vw,14.5px); font-weight:800; margin-bottom:3px; line-height:1.3;}
+  .tech .tc p{font-size:clamp(11.5px,.95vw,13px); color:var(--mute); line-height:1.5;}
+  .tech.more .ti{background:var(--ink);}
+
+  /* ============ Navegación inferior ============ */
+  .navbar{
+    position:fixed; left:0; right:0; bottom:0; z-index:60; height:56px;
+    display:flex; align-items:center; gap:18px; padding:0 18px;
+    background:rgba(20,20,20,.92); backdrop-filter:blur(8px);
+  }
+  .counter{font-size:12px; font-weight:800; letter-spacing:2px; color:#fff; min-width:74px;}
+  .counter span{color:var(--grey);}
+  .progress{flex:1; height:3px; background:#333; position:relative; border-radius:2px;}
+  .progress i{position:absolute; inset:0 auto 0 0; background:var(--red-accent); border-radius:2px; transition:width .4s ease;}
+  .sec-name{font-size:10.5px; letter-spacing:2px; text-transform:uppercase; font-weight:700; color:var(--grey); min-width:180px; text-align:right;}
+  .nav-btn{
+    width:40px; height:40px; border-radius:50%; border:1px solid #3a3a3a; background:transparent;
+    color:#fff; font-size:17px; cursor:pointer; display:grid; place-items:center;
+  }
+  .nav-btn:hover{background:var(--red);}
+  .nav-btn:disabled{opacity:.3; cursor:default;}
+  .nav-btn:focus-visible{outline:2px solid #fff;}
+
+  .deck-hint{
+    position:fixed; bottom:70px; left:50%; transform:translateX(-50%); z-index:55;
+    font-size:11px; letter-spacing:1px; color:rgba(255,255,255,.75); background:rgba(20,20,20,.7);
+    padding:6px 14px; border-radius:20px; pointer-events:none; transition:opacity .5s;
+  }
+
+  /* ============ EV semestral / anual ============ */
+  body.ev-semestral .annual-full{display:none;}
+  body.ev-anual .annual-delta{display:none;}
+
+  /* ============ Responsive ============ */
+  @media (max-width:900px){
+    .slide-inner{justify-content:flex-start; padding:4vh 6vw 12vh;}
+    .north,.heads,.retro,.commits,.ctx,.comp-grid,.opps,.tl-grid,.pledges,.next,.split{grid-template-columns:1fr; gap:14px;}
+    .timeline:before{display:none;}
+    .tl{padding-top:0; padding-left:26px;}
+    .tl:before{left:0; top:4px; width:12px; height:12px; border-width:3px;}
+    .frow{grid-template-columns:1fr;}
+    .frow .fk{text-align:left;}
+    .sec-name{display:none;}
+    .divider-num{font-size:110px;}
+    table.bc{display:block; overflow-x:auto;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important; animation:none!important;}
+    .a{opacity:1; transform:none;}
+  }
+
+  /* ============ Print: 1 slide = 1 página apaisada ============ */
+  @media print{
+    @page{size:A4 landscape; margin:0;}
+    body{overflow:visible; background:#fff;}
+    .chrome,.navbar,.deck-hint,.guia-btn,.guia-panel{display:none!important;}
+    .deck{position:static; inset:auto; overflow:visible;}
+    .track{display:block; transform:none!important;}
+    .slide{page-break-after:always; height:100vh; width:100%;}
+    .a{opacity:1!important; transform:none!important;}
+    .frow .fbar i{width:var(--w)!important;}
+    *{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body class="mode-cliente ev-semestral">
+
+<!-- ================= CHROME ================= -->
+<div class="chrome">
+  <div class="brand">SHAKE<span>AGAIN</span></div>
+  <button class="btn-print" onclick="window.print()">Imprimir / PDF</button>
+</div>
+
+<div class="deck" id="deck">
+<div class="track" id="track">
+
+  <!-- ========== S1 · PORTADA ========== -->
+  <section class="slide red-bleed dark-slide" data-sec="Portada">
+    <svg class="sform" viewBox="0 0 200 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+      <path fill="#FFFFFF" d="M42.7,-64.9C54.4,-57.6,62.2,-44.3,68.1,-30.4C74,-16.5,78,-2,75.5,11.2C73,24.4,64,36.3,53.1,46.6C42.2,56.9,29.4,65.6,14.8,70.9C0.2,76.2,-16.2,78.1,-30.6,72.9C-45,67.7,-57.4,55.4,-65.3,41C-73.2,26.6,-76.6,10.1,-74.2,-5.3C-71.8,-20.7,-63.6,-35,-52.1,-42.9C-40.6,-50.8,-25.8,-52.3,-11.6,-56.6C2.6,-60.9,16.2,-68,42.7,-64.9Z" transform="translate(100 100)"/>
+    </svg>
+    <div class="slide-inner">
+      <div class="eyebrow on-red a">Informe semestral · H1 2026</div>
+      <h1 class="hero a d1" style="margin-top:22px;">Entregable<br>de Valor</h1>
+      <p class="a d2" style="margin-top:26px; font-size:clamp(15px,1.5vw,20px); opacity:.95; max-width:52ch;">
+        <b>Bonvivir</b> · Club de vinos y tienda online<br>
+        Estrategia e implementación de Paid Media
+      </p>
+      <p class="a d3" style="margin-top:34px; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:700; opacity:.8;">
+        Resultados del semestre · Contexto de mercado · Hacia dónde vamos
+      </p>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>H1 · 2026</span></div>
+  </section>
+
+  <!-- ========== S2 · DATOS DEL ENTREGABLE ========== -->
+  <section class="slide" data-sec="Portada">
+    <div class="slide-inner">
+      <div class="eyebrow a">Datos del entregable</div>
+      <div class="rule a d1"></div>
+      <div class="datagrid">
+        <div class="datarow a d1"><div class="k">Cliente</div><div class="v" contenteditable="true">Bonvivir — Club de suscripción de vinos y tienda online</div></div>
+        <div class="datarow a d2"><div class="k">Período</div><div class="v" contenteditable="true">H1 · 2026 (enero – junio)</div></div>
+        <div class="datarow a d2"><div class="k">Equipo Shake</div><div class="v" contenteditable="true">Micaela García Gulisano y Jesica Salomón — Account Managers · Brenda Ditzel y Harumi Nakama — Paid Media Analysts Sr. · Ayelén Caserta — Media Leader · Martín Nuñez — Head of Client Operations · Gonzalo Pereyra — Head of Client Strategy</div></div>
+        <div class="datarow a d3"><div class="k">Servicio</div><div class="v" contenteditable="true">Estrategia e implementación de Paid Media (Meta Ads · Google Ads)</div></div>
+        <div class="datarow a d3"><div class="k">Tipo de EV</div><div class="v" contenteditable="true">Semestral</div></div>
+        <div class="datarow a d4"><div class="k">Fecha de presentación</div><div class="v" contenteditable="true">08 / 09 / 2026</div></div>
+      </div>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Entregable de Valor</span></div>
+  </section>
+
+  <!-- ========== S3 · RESUMEN · MÉTRICA NORTE + TITULARES ========== -->
+  <section class="slide" data-sec="Resumen ejecutivo">
+    <div class="slide-inner">
+      <div class="eyebrow a">Resumen ejecutivo · Dónde estamos hoy</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">La métrica norte<br>del semestre</h2>
+      <div class="north">
+        <div class="ncard main a d2">
+          <div class="k">Altas Club de Vinos (CRM)*</div>
+          <div class="v">1.531</div>
+          <div class="s">Altas válidas Ene–Jun 2026 · netas del filtro de fraude/duplicados del CRM</div>
+          <div class="fnref">* Fuente: archivo "['26] Canal Digital Control"</div>
+        </div>
+        <div class="ncard a d3">
+          <div class="k">Objetivo del semestre</div>
+          <div class="v">2.077</div>
+          <div class="s">Objetivo digital de Club, compartido por Bonvivir mes a mes</div>
+        </div>
+        <div class="ncard a d4">
+          <div class="k">Cumplimiento Club</div>
+          <div class="v">73,7%</div>
+          <span class="pill" style="background:var(--red-accent);">🔴 Por debajo del objetivo</span>
+        </div>
+      </div>
+      <p class="a d4" style="margin-top:20px; font-size:13.5px; color:var(--mute); max-width:82ch;">
+        El Club de Vinos es la métrica norte del período. En paralelo, la <b>Tienda</b> —con una inversión deliberadamente menor— cerró en <b>98,4%</b> de su objetivo (1.457 de 1.481): un negocio secundario en foco, pero muy eficiente.
+      </p>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo <em>· no visible en modo cliente</em></div>
+      <dl>
+        <dt>Fuente:</dt><dd>"['26] Canal Digital Control" (Club CPC / Tienda CPC) — resultados CRM por mes calendario. Objetivo digital de Bonvivir (2.077), no el target ideal de negocio (2.541), que incluye altas fuera de digital.</dd>
+        <dt>Scorecards:</dt><dd>los tres recuadros son siempre de la métrica norte (Club). Tienda se menciona en el texto como objetivo secundario.</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Resumen ejecutivo</span></div>
+  </section>
+
+  <!-- ========== S4 · RESUMEN · TRES TITULARES ========== -->
+  <section class="slide" data-sec="Resumen ejecutivo">
+    <div class="slide-inner">
+      <div class="eyebrow a">Resumen ejecutivo · Los titulares</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Tres lecturas<br>del semestre</h2>
+      <div class="heads">
+        <div class="head a d2" contenteditable="true">
+          <div class="num">01</div>
+          <h3>El foco estuvo en Club, y quedó corto</h3>
+          <p>Las Altas cerraron en <span class="big">73,7%</span> del objetivo. La brecha se sostuvo todos los meses — parte se explica por el filtro de fraude/duplicados que se aplica en el CRM, no por gestión de pauta.</p>
+        </div>
+        <div class="head a d3" contenteditable="true">
+          <div class="num">02</div>
+          <h3>Tienda rindió con poca inversión</h3>
+          <p>Con presupuesto deliberadamente menor, alcanzó el <span class="big">98,4%</span> de su meta. Proponemos formalizar objetivos propios de Tienda por evento comercial para capitalizar esa eficiencia.</p>
+        </div>
+        <div class="head a d4" contenteditable="true">
+          <div class="num">03</div>
+          <h3>Aprendimos a leer el negocio real</h3>
+          <p>Desde junio cruzamos objetivo de Plataforma con el Real de negocio. Esa doble lectura se sostiene en el segundo semestre y ordena todo el plan que viene.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Resumen ejecutivo</span></div>
+  </section>
+
+  <!-- ========== S6 · DIVIDER BLOQUE 01 ========== -->
+  <section class="slide red-bleed dark-slide" data-sec="Bloque 01 · Resultados">
+    <svg class="sform" viewBox="0 0 200 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+      <path fill="#FFFFFF" d="M42.7,-64.9C54.4,-57.6,62.2,-44.3,68.1,-30.4C74,-16.5,78,-2,75.5,11.2C73,24.4,64,36.3,53.1,46.6C42.2,56.9,29.4,65.6,14.8,70.9C0.2,76.2,-16.2,78.1,-30.6,72.9C-45,67.7,-57.4,55.4,-65.3,41C-73.2,26.6,-76.6,10.1,-74.2,-5.3C-71.8,-20.7,-63.6,-35,-52.1,-42.9C-40.6,-50.8,-25.8,-52.3,-11.6,-56.6C2.6,-60.9,16.2,-68,42.7,-64.9Z" transform="translate(100 100)"/>
+    </svg>
+    <div class="slide-inner">
+      <div class="eyebrow on-red a">Bloque 01</div>
+      <h2 class="divider-title a d1" style="margin-top:18px;">Resultados<br>del semestre</h2>
+      <p class="divider-sub a d2">Qué propusimos, qué avanzamos y qué dicen los números del negocio de Bonvivir.</p>
+    </div>
+    <div class="divider-num">01</div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 01</span></div>
+  </section>
+
+  <!-- ========== S7 · 1.1 COMPROMISOS ========== -->
+  <section class="slide" data-sec="Bloque 01 · Resultados">
+    <div class="slide-inner">
+      <div class="eyebrow a">1.1 · Rendición de cuentas</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Compromisos del<br>período anterior</h2>
+      <div class="commits" style="grid-template-columns:repeat(3,1fr);">
+        <div class="commit no a d2">
+          <span class="st no">No se avanzó</span>
+          <h4 contenteditable="true">Menor dependencia del "OFF" como eje comunicacional</h4>
+          <p contenteditable="true">La promoción sigue siendo lo que más tracciona en pauta, tanto en Club como en Tienda — hoy es un beneficio de marca real, no un atajo a resignar.</p>
+        </div>
+        <div class="commit ok a d3">
+          <span class="st ok">Cumplido</span>
+          <h4 contenteditable="true">Contenidos UGC con foco en estilo de vida</h4>
+          <p contenteditable="true">Los formatos UGC/Reels son hoy los de mejor rendimiento en pauta, en Club y en Tienda. Se sostiene como práctica de trabajo.</p>
+        </div>
+        <div class="commit ok a d4">
+          <span class="st ok">Es la forma de trabajo</span>
+          <h4 contenteditable="true">Testeo controlado (test &amp; learn) con respaldo de datos</h4>
+          <p contenteditable="true">Toda idea nueva arranca con un piloto acotado (semanas / un mes) antes de escalar inversión — es el marco con el que evaluamos las oportunidades del Bloque 3.</p>
+        </div>
+      </div>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo</div>
+      <dl>
+        <dt>Qué va acá:</dt><dd>este es el primer EV de Bonvivir con esta estructura — no había compromisos formales de Shake previos. Se toman como base las "oportunidades de mejora" sugeridas en el Reporte Anual 2025.</dd>
+        <dt>Nota:</dt><dd>se descartó "storytelling always-on del Club" — los contratos de embajadores (máx. 90 días) no permiten sostener un relato continuo. No vuelve al mapa de oportunidades.</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 01 · 1.1</span></div>
+  </section>
+
+  <!-- ========== S8 · 1.2 RESULTADOS DE NEGOCIO ========== -->
+  <section class="slide" data-sec="Bloque 01 · Resultados">
+    <div class="slide-inner">
+      <div class="eyebrow a">1.2 · Resultados de negocio</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">El embudo completo,<br>hasta el CRM</h2>
+      <div class="split">
+        <div class="funnel a d2">
+          <div class="frow"><div class="fk">Inversión</div><div class="fbar full"><i style="--w:100%" data-w="100"></i><div class="fv">ARS 78,9 M <small>Meta 82,6% · Google 17,4%</small></div></div></div>
+          <div class="frow"><div class="fk">Impresiones</div><div class="fbar"><i style="--w:88%" data-w="88"></i><div class="fv">40,4 M</div></div></div>
+          <div class="frow"><div class="fk">Clics</div><div class="fbar"><i style="--w:44%" data-w="44"></i><div class="fv">719.830 <small>CTR 1,78%</small></div></div></div>
+          <div class="frow"><div class="fk">Sesiones</div><div class="fbar"><i style="--w:32%" data-w="32"></i><div class="fv">421.403 <small>Club 295.067 · Tienda 126.336</small></div></div></div>
+          <div class="frow"><div class="fk">Altas + ventas · CRM</div><div class="fbar"><i style="--w:6%" data-w="6"></i><div class="fv">2.988 <small>Club 1.531 · Tienda 1.457</small></div></div></div>
+          <div class="frow"><div class="fk">Ingresos plataforma</div><div class="fbar full"><i style="--w:100%" data-w="100"></i><div class="fv">ARS 306 M <small>reportado por Meta+Google, sin ajuste de fraude/duplicados</small></div></div></div>
+          <p class="fnote">Ene–jun 2026 · Fuente: Master Metrics (Meta+Google) + CRM Bonvivir ("['26] Canal Digital Control") para altas y ventas. Ingresos en ARS son de plataforma — hasta junio 2026 no contamos con el revenue final validado por CRM.</p>
+        </div>
+        <div class="kstack a d3">
+          <div class="kpi"><div><div class="k">Cumplimiento Club (CRM)</div><div class="d down">▼ 1.531 de 2.077 · métrica norte</div></div><div class="v">73,7%</div></div>
+          <div class="kpi"><div><div class="k">Cumplimiento Tienda</div><div class="d up">▲ 1.457 de 1.481 · muy eficiente</div></div><div class="v">98,4%</div></div>
+          <div class="kpi pair">
+            <div class="top">CPA por vertical (plataforma / CRM)</div>
+            <div class="side"><span class="label">Club</span><span class="vv">ARS 34.993</span><span class="dd">Inversión Club / altas CRM</span></div>
+            <div class="side"><span class="label">Tienda</span><span class="vv">ARS 8.610</span><span class="dd">Inversión Tienda / ventas CRM</span></div>
+          </div>
+          <div class="kpi pair">
+            <div class="top">ROAS plataforma</div>
+            <div class="side"><span class="label">Club</span><span class="vv">2,07</span><span class="dd">Ingresos plataforma / inversión</span></div>
+            <div class="side"><span class="label">Tienda</span><span class="vv">12,86</span><span class="dd">Ingresos plataforma / inversión</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="disclaimer a d4">
+        Para completar el embudo de punta a punta y acompañarlos en el crecimiento del negocio, el próximo paso es incorporar el <b>revenue final de Club y Tienda</b> junto a los resultados que ya compartimos. Hoy trabajamos con los ingresos que reportan las plataformas; sumar la cifra real de negocio nos permitirá medir el retorno completo, no solo la performance de la pauta.
+      </div>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo</div>
+      <dl>
+        <dt>Qué va acá:</dt><dd>el embudo completo hasta el resultado real — no cortar en la conversión de Meta/Google.</dd>
+        <dt>Fuente:</dt><dd>Master Metrics (Meta+Google, Ene-Jun 2026) + CRM Bonvivir vía archivo de control. No usamos MER/% clientes nuevos porque Bonvivir todavía no comparte revenue final ni segmentación nuevo/recurrente por CRM — se reemplazó por las dos métricas que sí tenemos validadas y que cuentan la historia real del semestre.</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 01 · 1.2</span></div>
+  </section>
+
+  <!-- ========== S9 · 1.3 RETRO ========== -->
+  <section class="slide" data-sec="Bloque 01 · Resultados">
+    <div class="slide-inner">
+      <div class="eyebrow a">1.3 · Performance del semestre</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Qué funcionó, qué no,<br>qué aprendimos</h2>
+      <div class="retro">
+        <div class="lane win a d2">
+          <div class="lh">✓ Qué funcionó</div>
+          <ul contenteditable="true">
+            <li><b>Contenido UGC/testimonial</b> concentró las conversiones de Club y Tienda, con CTR y CPC estables — el formato más rentable del semestre.</li>
+            <li><b>Tienda con inversión acotada</b> alcanzó el 98,4% de su objetivo, liberando presupuesto para priorizar Club sin resignar su performance.</li>
+            <li><b>Search de marca en Google</b> sostuvo tráfico de alta intención a bajo costo, defendiendo la demanda que ya busca a Bonvivir.</li>
+          </ul>
+        </div>
+        <div class="lane fail a d3">
+          <div class="lh">✗ Qué no funcionó</div>
+          <ul contenteditable="true">
+            <li><b>Altas de Club por debajo del objetivo</b> 1.531 de 2.077 (73,7%), con brecha sostenida todos los meses del semestre.</li>
+            <li><b>Campañas de tráfico/consideración de Club</b> aportaron volumen pero muy poca conversión directa a alta — peso alto en inversión, retorno marginal.</li>
+            <li><b>Concentración del presupuesto en RMKT en Club Conversiones</b> el peso de audiencias de remarketing dejó menos margen para prospección de audiencias nuevas y más eficientes. En Tienda el mix es diferente (mayoría de audiencias amplias/ADV+) y no aplica el mismo diagnóstico.</li>
+          </ul>
+        </div>
+        <div class="lane learn a d4">
+          <div class="lh">→ Qué aprendimos</div>
+          <ul contenteditable="true">
+            <li><b>Medir contra CRM cambia la lectura del semestre</b> desde junio cruzamos objetivo de Plataforma y Real de negocio — la brecha de Club es estructural, no puntual. <span class="to">→ Iniciativa 1</span></li>
+            <li><b>Tienda puede sostener objetivos propios de evento</b> no solo mensuales — hoy rinde sin estar en el foco prioritario. <span class="to">→ Iniciativa 2</span></li>
+            <li><b>Hay margen para redistribuir inversión en Club hacia adquisición</b> en Club Conversiones el mix nuevo/RMKT viene alrededor de 60/40 y se puede tender a un balance más orientado a captar público nuevo, sin resignar eficiencia. <span class="to">→ Iniciativa 5</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo <em>· la retro, no un resumen de tareas</em></div>
+      <dl>
+        <dt>Disciplina:</dt><dd>cada "funcionó" lleva la palanca, el porqué y la métrica. Un win sin número es una opinión.</dd>
+        <dt>Honestidad:</dt><dd>el carril "qué no funcionó" va sí o sí. Un EV sin un "no funcionó" no es un EV: es un folleto.</dd>
+        <dt>Círculo:</dt><dd>cada aprendizaje cambia algo del plan → se engancha con el Bloque 3 y los compromisos del 4.</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 01 · 1.3</span></div>
+  </section>
+
+  <!-- ========== S10 · DIVIDER BLOQUE 02 ========== -->
+  <section class="slide red-bleed dark-slide" data-sec="Bloque 02 · Qué pasa afuera">
+    <svg class="sform" viewBox="0 0 200 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+      <path fill="#FFFFFF" d="M42.7,-64.9C54.4,-57.6,62.2,-44.3,68.1,-30.4C74,-16.5,78,-2,75.5,11.2C73,24.4,64,36.3,53.1,46.6C42.2,56.9,29.4,65.6,14.8,70.9C0.2,76.2,-16.2,78.1,-30.6,72.9C-45,67.7,-57.4,55.4,-65.3,41C-73.2,26.6,-76.6,10.1,-74.2,-5.3C-71.8,-20.7,-63.6,-35,-52.1,-42.9C-40.6,-50.8,-25.8,-52.3,-11.6,-56.6C2.6,-60.9,16.2,-68,42.7,-64.9Z" transform="translate(100 100)"/>
+    </svg>
+    <div class="slide-inner">
+      <div class="eyebrow on-red a">Bloque 02</div>
+      <h2 class="divider-title a d1" style="margin-top:18px;">Qué pasa<br>afuera</h2>
+      <p class="divider-sub a d2">Contexto de mercado, competencia y mirada externa del negocio de Bonvivir.</p>
+    </div>
+    <div class="divider-num">02</div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 02</span></div>
+  </section>
+
+  <!-- ========== S11 · 2.1 MERCADO ========== -->
+  <section class="slide" data-sec="Bloque 02 · Qué pasa afuera">
+    <div class="slide-inner">
+      <div class="eyebrow a">2.1 · Mercado e industria</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">El tablero donde<br>juega Bonvivir</h2>
+      <div class="ctx">
+        <div class="ctx-card a d2" contenteditable="true">
+          <h3>Lo estructural</h3>
+          <p>La comercialización interna de vino se mantuvo prácticamente estable (+0,8% i.a., Ene–Jun 2026), mientras el e-commerce de vino sigue ganando peso como canal — todavía minoritario en el total del sector, pero en expansión sostenida. Contexto favorable, sin viento de cola fuerte.</p>
+        </div>
+        <div class="ctx-card a d3" contenteditable="true">
+          <h3>La señal del semestre</h3>
+          <p>La confianza y transparencia en la gestión de la suscripción (altas, bajas, cobros) es cada vez más determinante en la categoría club. Un competidor directo (Baco) acumuló durante 2026 quejas públicas recurrentes por dificultad para dar de baja y cobros no reconocidos — abre una ventana que <b>nadie está capitalizando todavía</b>.</p>
+        </div>
+      </div>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo</div>
+      <dl>
+        <dt>Criterio:</dt><dd>solo lo que mueve decisiones, no relleno de research. Siempre con fuente (INV / Argentina.gob.ar para el dato de mercado).</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 02 · 2.1</span></div>
+  </section>
+
+  <!-- ========== S12 · 2.2 COMPETENCIA ========== -->
+  <section class="slide" data-sec="Bloque 02 · Qué pasa afuera">
+    <div class="slide-inner">
+      <div class="eyebrow a">2.2 · Movimientos de la competencia</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Qué hicieron los demás<br>este semestre</h2>
+      <div class="comp-grid">
+        <div class="comp a d2" contenteditable="true">
+          <div class="t">Baco Club</div>
+          <p>Líder de reconocimiento de marca en Club de Vinos, pero con un patrón sostenido de quejas públicas en 2026: dificultad para dar de baja, cobros no reconocidos, mala atención al socio.</p>
+        </div>
+        <div class="comp a d2" contenteditable="true">
+          <div class="t">Delirio (Editorial Perfil)</div>
+          <p>Modelo editorial + vino análogo al de Bonvivir/LA NACION: caja mensual, revista propia y embajador de marca. Compite directo por posicionamiento de marca de medio.</p>
+        </div>
+        <div class="comp a d3" contenteditable="true">
+          <div class="t">Vinos y Spirits</div>
+          <p>Fuerte en catálogo y variedad en Tienda online — el competidor más directo en la vertical de venta online, no de club.</p>
+        </div>
+        <div class="comp spot a d3" contenteditable="true">
+          <div class="t">La ventana abierta</div>
+          <p><b>Ningún competidor está capitalizando la confianza/transparencia</b> en la gestión de la suscripción. Dado el ruido reputacional de Baco Club, Bonvivir puede apropiarse de "baja fácil, sin letra chica" como diferencial de marca.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 02 · 2.2</span></div>
+  </section>
+
+  <!-- ========== S14 · DIVIDER BLOQUE 03 ========== -->
+  <section class="slide red-bleed dark-slide" data-sec="Bloque 03 · Hacia dónde vamos">
+    <svg class="sform" viewBox="0 0 200 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+      <path fill="#FFFFFF" d="M42.7,-64.9C54.4,-57.6,62.2,-44.3,68.1,-30.4C74,-16.5,78,-2,75.5,11.2C73,24.4,64,36.3,53.1,46.6C42.2,56.9,29.4,65.6,14.8,70.9C0.2,76.2,-16.2,78.1,-30.6,72.9C-45,67.7,-57.4,55.4,-65.3,41C-73.2,26.6,-76.6,10.1,-74.2,-5.3C-71.8,-20.7,-63.6,-35,-52.1,-42.9C-40.6,-50.8,-25.8,-52.3,-11.6,-56.6C2.6,-60.9,16.2,-68,42.7,-64.9Z" transform="translate(100 100)"/>
+    </svg>
+    <div class="slide-inner">
+      <div class="eyebrow on-red a">Bloque 03</div>
+      <h2 class="divider-title a d1" style="margin-top:18px;">Hacia dónde<br>vamos</h2>
+      <p class="divider-sub a d2">Oportunidades priorizadas por impacto en el negocio de Bonvivir — el foco es cerrar la brecha de Club.</p>
+    </div>
+    <div class="divider-num">03</div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 03</span></div>
+  </section>
+
+  <!-- ========== S15 · 3.1 MAPA DE OPORTUNIDADES ========== -->
+  <section class="slide" data-sec="Bloque 03 · Hacia dónde vamos">
+    <div class="slide-inner">
+      <div class="eyebrow a">3.1 · Mapa de oportunidades</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Cinco oportunidades,<br>ordenadas por impacto</h2>
+      <div class="opps">
+        <div class="opp a d1" contenteditable="true">
+          <div class="n">1</div>
+          <h4>Cerrar el gap de Altas de Club</h4>
+          <p>Separar las altas de vino y de oliva para tener una medición diferenciada que nos permita optimizar con mayor precisión.</p>
+          <div class="goal">73,7% → acercar el cumplimiento real</div>
+        </div>
+        <div class="opp a d2" contenteditable="true">
+          <div class="n">2</div>
+          <h4>Objetivos propios de Tienda por evento</h4>
+          <p>Metas dedicadas para Bonweek, Cyber Monday y otros eventos comerciales — no solo objetivos mensuales — para capitalizar la eficiencia que ya demostró.</p>
+          <div class="goal">≥95% de cumplimiento por evento</div>
+        </div>
+        <div class="opp a d3" contenteditable="true">
+          <div class="n">3</div>
+          <h4>Nueva unidad de negocio: venta corporativa B2B</h4>
+          <p>Oportunidad de crecimiento a investigar: abrir una vertical B2B focalizada en Neuquén / Vaca Muerta, un mercado premium en plena expansión que hoy nadie atiende con foco regional.</p>
+          <div class="goal">Espacio de mercado vacío · a investigar</div>
+        </div>
+        <div class="opp a d4" contenteditable="true">
+          <div class="n">4</div>
+          <h4>Pauta en motores de búsqueda por IA</h4>
+          <p>Sumar presencia en las plataformas de IA donde ya se puede pautar desde Argentina (Google AI Overviews, Microsoft Copilot, Meta AI), una superficie de captación en pleno crecimiento.</p>
+          <div class="goal">Nueva superficie de captación</div>
+        </div>
+        <div class="opp a d5" contenteditable="true">
+          <div class="n">5</div>
+          <h4>Redistribuir inversión hacia adquisición</h4>
+          <p>Dar más peso al público nuevo y hablarle distinto según el momento en que está: hoy comunicamos igual a quienes recién nos conocen y a quienes ya nos siguen.</p>
+          <div class="goal">Más altas a CPA constante</div>
+        </div>
+      </div>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo</div>
+      <dl>
+        <dt>Qué va acá:</dt><dd>oportunidades ordenadas por impacto sobre el negocio del cliente — no por lo que más nos conviene vender.</dd>
+        <dt>Cuidado con el sesgo:</dt><dd>si el cliente lee "pipeline de upsell", falló. El upsell es consecuencia del valor demostrado.</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 03 · 3.1</span></div>
+  </section>
+
+  <!-- ========== S16 · 3.2 BUSINESS CASE ========== -->
+  <section class="slide" data-sec="Bloque 03 · Hacia dónde vamos">
+    <div class="slide-inner">
+      <div class="eyebrow a">3.2 · Iniciativas priorizadas</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">El caso de negocio<br>de cada iniciativa</h2>
+      <table class="bc a d2">
+        <thead>
+          <tr><th style="width:19%">Iniciativa</th><th style="width:33%">Cómo lo resolvemos</th><th style="width:24%">Impacto esperado (rango)</th><th style="width:9%">Esfuerzo</th><th style="width:15%">Ventana</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Cerrar el gap de Altas de Club</td>
+            <td contenteditable="true">Acompañamos la separación de altas de Club y Oliva junto al equipo de medición. Con las métricas diferenciadas, optimizamos la pauta proyectando en paralelo contra plataforma y objetivo de negocio para acercar el resultado real.</td>
+            <td class="imp" contenteditable="true">+8 a +15% en tasa de altas válidas</td>
+            <td><span class="chip">M</span></td>
+            <td contenteditable="true">Todo el semestre 2</td>
+          </tr>
+          <tr>
+            <td contenteditable="true">Objetivos de Tienda por evento</td>
+            <td contenteditable="true">Definir metas específicas para Bonweek, Cyber Monday y Black Friday, con seguimiento más fino durante esas fechas para poder hacer ajustes rápidamente.</td>
+            <td class="imp" contenteditable="true">≥95% de cumplimiento por evento</td>
+            <td><span class="chip">S</span></td>
+            <td contenteditable="true">Próximo evento comercial</td>
+          </tr>
+          <tr>
+            <td contenteditable="true">Venta corporativa B2B (Neuquén)</td>
+            <td contenteditable="true">Investigación de mercado: viabilidad, modelo de negocio, comunicación y segmentación de pauta en Neuquén / Vaca Muerta (trabajo conjunto). El piloto es un paso posterior que definiremos juntos según los aprendizajes.</td>
+            <td class="imp" contenteditable="true">Nueva unidad de negocio · exploratorio</td>
+            <td><span class="chip">M</span></td>
+            <td contenteditable="true">No antes del último Q 2026</td>
+          </tr>
+          <tr>
+            <td contenteditable="true">Pauta en motores de búsqueda IA</td>
+            <td contenteditable="true">Activar y optimizar presencia en Google AI Overviews (automático), Microsoft Copilot (bajo costo, sesgo corporativo) y Meta AI. Monitorear apertura de ChatGPT Ads en Argentina.</td>
+            <td class="imp" contenteditable="true">Nueva superficie de captación medible</td>
+            <td><span class="chip">S</span></td>
+            <td contenteditable="true">Cierre del semestre 2</td>
+          </tr>
+          <tr>
+            <td contenteditable="true">Redistribuir inversión hacia adquisición</td>
+            <td contenteditable="true">Rebalanceamos gradualmente el presupuesto de Club hacia audiencias de adquisición y desarrollamos piezas diferenciadas para público nuevo y para quienes ya nos siguen, adaptando el mensaje a cada etapa del recorrido.</td>
+            <td class="imp" contenteditable="true">+5 a +12% más altas a CPA constante</td>
+            <td><span class="chip">S</span></td>
+            <td contenteditable="true">Próximo trimestre</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo</div>
+      <dl>
+        <dt>Clave:</dt><dd>cada iniciativa con impacto esperado en rango y esfuerzo. Esto ataca el gap histórico: "no hay business case".</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 03 · 3.2</span></div>
+  </section>
+
+  <!-- ========== S17 · 3.3 · PROFUNDIZACIÓN B2B NEUQUÉN ========== -->
+  <section class="slide" data-sec="Bloque 03 · Hacia dónde vamos">
+    <div class="slide-inner">
+      <div class="eyebrow a">3.3 · Oportunidad B2B · Neuquén / Vaca Muerta</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Una vertical nueva<br>en un mercado que explota</h2>
+      <p class="a d2" style="font-size:clamp(13px,1.15vw,15px); color:var(--mute); max-width:88ch; margin-top:6px;">
+        Neuquén es hoy la <b>2ª provincia del país en PBI per cápita</b> (PwC, jun 2026), con un crecimiento del <b>+118% desde el inicio de Vaca Muerta</b> y más de 66.000 nuevos residentes en tres años. La llegada de ejecutivos y trabajadores de alto ingreso genera una demanda de servicios premium —gifting corporativo, eventos, experiencias— que todavía no está satisfecha localmente.
+      </p>
+      <div class="ctx" style="margin-top:22px;">
+        <div class="ctx-card a d3" contenteditable="true">
+          <h3>Por qué Bonvivir puede ganarlo</h3>
+          <ul>
+            <li>Marca reconocida (1º/2º club de vinos en búsquedas nacionales) + respaldo de Club La Nación.</li>
+            <li>Catálogo amplio: vinos, oliva, delicatessen y accesorios — ideal para regalo corporativo curado.</li>
+            <li>Logística nacional resuelta y posibilidad de co-branding con bodegas patagónicas.</li>
+          </ul>
+        </div>
+        <div class="ctx-card a d4" contenteditable="true" style="border-left-color:var(--red-accent);">
+          <h3 style="color:var(--red-accent);">El espacio vacío</h3>
+          <p>Baco Club hace B2B pero opera desde CABA, sin foco regional ni propuesta adaptada al sector energético. La competencia local (bodegas, vinotecas) no tiene catálogo, personalización ni logística dedicada. <b>Nadie combina marca premium + catálogo amplio + logística nacional + foco en Neuquén.</b></p>
+        </div>
+      </div>
+      <p class="a d5" style="font-size:11.5px; color:var(--mute); margin-top:20px; font-style:italic;">
+        Drivers de demanda: regalos de fin de año, hitos de seguridad/producción, eventos corporativos, onboarding por alta migración laboral. · Fuente: Relevamiento B2B Neuquén / Vaca Muerta, Shake Again, ago 2026 (PwC, RENAPER, Centro PyME-ADENEU, Cluster Vaca Muerta).
+      </p>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo</div>
+      <dl>
+        <dt>Marco:</dt><dd>es una oportunidad a investigar, no un plan cerrado. El piloto real no arranca antes del último Q, y solo si Bonvivir decide avanzar. Ese matiz debe quedar claro en la presentación.</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 03 · 3.3</span></div>
+  </section>
+
+  <!-- ========== S18 · 3.4 · PAUTA EN MOTORES DE BÚSQUEDA IA ========== -->
+  <section class="slide" data-sec="Bloque 03 · Hacia dónde vamos">
+    <div class="slide-inner">
+      <div class="eyebrow a">3.4 · Pauta en motores de búsqueda por IA</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Dónde se puede pautar<br>hoy desde Argentina</h2>
+      <p class="a d2" style="font-size:clamp(13px,1.15vw,15px); color:var(--mute); max-width:88ch; margin-top:6px;">
+        A agosto 2026 hay <b>tres plataformas de IA</b> donde ya es posible pautar desde Argentina, todas gestionables desde las cuentas que ya operamos. No requieren presupuesto mínimo ni setup adicional.
+      </p>
+      <table class="bc a d3" style="margin-top:22px;">
+        <thead>
+          <tr><th style="width:22%">Plataforma</th><th style="width:16%">Estado en Argentina</th><th style="width:20%">Se gestiona desde</th><th style="width:42%">Qué conviene saber</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td contenteditable="true">Google AI Overviews</td>
+            <td class="imp" contenteditable="true" style="color:var(--ok);">Disponible (automático)</td>
+            <td contenteditable="true">Google Ads</td>
+            <td contenteditable="true">Las campañas Search/Shopping/PMax ya son elegibles. Sin opt-out. La penetración de ads en AI Overviews crece fuerte (+394% i.a.). Acción: optimizar broad match y PMax.</td>
+          </tr>
+          <tr>
+            <td contenteditable="true">Microsoft Copilot</td>
+            <td class="imp" contenteditable="true" style="color:var(--ok);">Disponible</td>
+            <td contenteditable="true">Microsoft Advertising</td>
+            <td contenteditable="true">Menor competencia de subasta y CTR superior a Bing. Sesgo de audiencia +35 años y corporativa — muy útil si avanzamos con B2B.</td>
+          </tr>
+          <tr>
+            <td contenteditable="true">Meta AI</td>
+            <td class="imp" contenteditable="true" style="color:var(--warn);">Parcial</td>
+            <td contenteditable="true">Meta Ads</td>
+            <td contenteditable="true">Las campañas activas ya pueden servir en WhatsApp/Instagram/Facebook. Sin targeting ni reportería desagregada por esta superficie todavía.</td>
+          </tr>
+          <tr>
+            <td contenteditable="true">ChatGPT Ads (OpenAI)</td>
+            <td class="imp" contenteditable="true" style="color:var(--red-accent);">No disponible aún</td>
+            <td contenteditable="true">— (a monitorear)</td>
+            <td contenteditable="true">Ya activo en México y Brasil (ago 2026). Argentina podría habilitarse pronto — conviene registrar interés y monitorear.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="a d4" style="font-size:11.5px; color:var(--mute); margin-top:14px; font-style:italic;">
+        Perplexity abandonó la publicidad (feb 2026) y Claude (Anthropic) es ad-free por política. · Fuente: Relevamiento de Pauta Digital en Motores de Búsqueda IA, Shake Again, ago 2026.
+      </p>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo</div>
+      <dl>
+        <dt>Encuadre:</dt><dd>interesa al cliente pero no es prioritario — es operativo de pauta, para el cierre del semestre. Presentarlo como "ya lo tenemos cubierto y lo optimizamos", no como un gran proyecto nuevo.</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 03 · 3.4</span></div>
+  </section>
+
+  <!-- ========== S19 · 3.5 ROADMAP ========== -->
+  <section class="slide" data-sec="Bloque 03 · Hacia dónde vamos">
+    <div class="slide-inner">
+      <div class="eyebrow a">3.5 · Roadmap del próximo semestre</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Qué arranca cuándo</h2>
+      <div class="timeline a d2">
+        <div class="tl-grid">
+          <div class="tl" contenteditable="true">
+            <div class="when">Jul – Ago</div>
+            <h4>Medición limpia de Club + objetivos de Tienda</h4>
+            <p>Acompañar la separación de altas de Club y Oliva para poder optimizar con la medición diferenciada · definir objetivos propios de Tienda para el próximo evento.</p>
+          </div>
+          <div class="tl" contenteditable="true">
+            <div class="when">Ago – Sep</div>
+            <h4>Investigación B2B + test B2C Neuquén + pauta en IA</h4>
+            <p>Arranque de la investigación de mercado B2B Neuquén · testeo de anuncios geolocalizados en Neuquén para Club B2C, con mensaje adaptado al público local · optimización de la presencia en motores de búsqueda por IA.</p>
+          </div>
+          <div class="tl hot" contenteditable="true">
+            <div class="when">Bonweek · Sep</div>
+            <h4>Ejecución con objetivos propios de Tienda</h4>
+            <p>La Bonweek será el primer evento del semestre con meta dedicada y seguimiento fino, validando la eficiencia de Tienda en contexto real · redistribución de inversión hacia adquisición.</p>
+          </div>
+          <div class="tl" contenteditable="true">
+            <div class="when">Cierre del semestre</div>
+            <h4>Definición B2B + próximo EV</h4>
+            <p>Los aprendizajes del test B2C en Neuquén serán clave para determinar si es factible abrir la vertical B2B · próximo EV con la vertical de Oliva ya incorporada al análisis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 03 · 3.5</span></div>
+  </section>
+
+  <!-- ========== S18 · DIVIDER BLOQUE 04 ========== -->
+  <section class="slide red-bleed dark-slide" data-sec="Bloque 04 · Cómo trabajamos">
+    <svg class="sform" viewBox="0 0 200 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+      <path fill="#FFFFFF" d="M42.7,-64.9C54.4,-57.6,62.2,-44.3,68.1,-30.4C74,-16.5,78,-2,75.5,11.2C73,24.4,64,36.3,53.1,46.6C42.2,56.9,29.4,65.6,14.8,70.9C0.2,76.2,-16.2,78.1,-30.6,72.9C-45,67.7,-57.4,55.4,-65.3,41C-73.2,26.6,-76.6,10.1,-74.2,-5.3C-71.8,-20.7,-63.6,-35,-52.1,-42.9C-40.6,-50.8,-25.8,-52.3,-11.6,-56.6C2.6,-60.9,16.2,-68,42.7,-64.9Z" transform="translate(100 100)"/>
+    </svg>
+    <div class="slide-inner">
+      <div class="eyebrow on-red a">Bloque 04</div>
+      <h2 class="divider-title a d1" style="margin-top:18px;">Cómo trabajamos<br>juntos</h2>
+      <p class="divider-sub a d2">El método, los compromisos del próximo semestre y la próxima conversación.</p>
+    </div>
+    <div class="divider-num">04</div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 04</span></div>
+  </section>
+
+  <!-- ========== S19 · 4.1 MÉTODO ========== -->
+  <section class="slide" data-sec="Bloque 04 · Cómo trabajamos">
+    <div class="slide-inner">
+      <div class="eyebrow a">4.1 · El método Shake</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Crecemos con ustedes,<br>no hacemos sólo paid media</h2>
+      <p class="method a d2" contenteditable="true">
+        Trabajar la cuenta de Bonvivir es hacerlo codo a codo: nos sentamos del mismo lado de la mesa para leer juntos qué dice el negocio, no solo qué dice la plataforma. Por eso <span class="hl">medimos cruzando los datos de las plataformas con los resultados reales del CRM</span>, y toda idea nueva arranca con un testeo chico antes de escalar. Nos apalancamos en soluciones de <span class="hl">inteligencia artificial para escalar nuestros procesos, tiempos y análisis</span> — y así dedicar el criterio humano a lo que de verdad mueve la aguja: ayudarlos a crecer en los objetivos del negocio.
+      </p>
+      <p class="method a d3" contenteditable="true" style="margin-top:20px;">
+        Ese trabajo compartido pide algo esencial: <span class="hl">transparencia de datos</span>. Para ayudarlos a crecer en resultados reales necesitamos los datos duros del negocio —revenue real por vertical, porcentaje de churn del Club, cualquier señal que hoy solo ustedes ven— y así retroalimentar la estrategia con la foto completa, no solo con la mitad que muestra la pauta.
+      </p>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo</div>
+      <dl>
+        <dt>Qué va acá:</dt><dd>breve y concreto — no es el deck de ventas. Mantener fijo entre EVs; actualizar solo si cambió el modo de trabajo.</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 04 · 4.1</span></div>
+  </section>
+
+  <!-- ========== S20 · 4.1 bis · TECNOLOGÍA Y IA ========== -->
+  <section class="slide" data-sec="Bloque 04 · Cómo trabajamos">
+    <div class="slide-inner">
+      <div class="eyebrow a">4.1 · Cómo nos apalancamos en tecnología</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">La IA al servicio<br>de su negocio</h2>
+      <div class="techlist">
+        <div class="tech a d2" contenteditable="true">
+          <div class="ti">◆</div>
+          <div class="tc">
+            <h4>Reportes interactivos en HTML con IA</h4>
+            <p>Nuevos reportes apalancados con Claude que dan mejor visibilidad de insights y resultados, permitiendo escalar la conversación con el cliente.</p>
+          </div>
+        </div>
+        <div class="tech a d2" contenteditable="true">
+          <div class="ti">◆</div>
+          <div class="tc">
+            <h4>Tableros de Master Metrics</h4>
+            <p>En reemplazo de Looker Studio, conectados por IA directa a las plataformas: traen y cruzan información de todas las cuentas donde pautamos, incluyendo el historial.</p>
+          </div>
+        </div>
+        <div class="tech a d3" contenteditable="true">
+          <div class="ti">◆</div>
+          <div class="tc">
+            <h4>Generación de creativos con IA</h4>
+            <p>Exploramos nuevas posibilidades de diseño ahorrando tiempos de producción y logística (viajes, locaciones), manteniendo siempre la calidad y el criterio humano de nuestros diseñadores.</p>
+          </div>
+        </div>
+        <div class="tech a d3" contenteditable="true">
+          <div class="ti">◆</div>
+          <div class="tc">
+            <h4>Gestión y notas con ClickUp + Brain</h4>
+            <p>Tareas internas y toma de notas de reuniones conectadas a la IA de ClickUp: agiliza tiempos, organiza las células de trabajo y los accionables, y centraliza toda la información en un mismo lugar.</p>
+          </div>
+        </div>
+        <div class="tech more a d4" contenteditable="true">
+          <div class="ti">+</div>
+          <div class="tc">
+            <h4>Y muchas otras herramientas y aplicaciones</h4>
+            <p>Incorporamos y probamos nuevas soluciones de forma continua para escalar procesos sin perder criterio humano.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 04 · 4.1</span></div>
+  </section>
+  <section class="slide" data-sec="Bloque 04 · Cómo trabajamos">
+    <div class="slide-inner">
+      <div class="eyebrow a">4.2 · Compromisos del próximo semestre</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Lo que el próximo EV<br>va a auditar</h2>
+      <div class="pledges">
+        <div class="pledge joint a d2" contenteditable="true">
+          <h4>Cerrar la brecha de Altas de Club</h4>
+          <div class="meta"><span class="m">Shake: <b>optimiza estrategia y pujas contra el objetivo corregido, proyectando sobre plataforma y negocio</b></span><span class="m">Bonvivir: <b>diferencia la medición de Club y Oliva y acompaña la experiencia de suscripción</b></span><span class="m">Ventana: <b>fin de semestre 2</b></span></div>
+        </div>
+        <div class="pledge joint a d3" contenteditable="true">
+          <h4>Sostener la medición dual — Plataforma + Real de negocio, todos los meses</h4>
+          <div class="meta"><span class="m">Shake: <b>proyecta ambos objetivos en el Media Plan</b></span><span class="m">Bonvivir: <b>comparte datos cerrados reales, revenue por vertical y % churn de Club</b></span><span class="m">Ventana: <b>mensual</b></span></div>
+        </div>
+        <div class="pledge a d4" contenteditable="true">
+          <h4>Definir e implementar objetivos propios de Tienda por evento</h4>
+          <div class="meta"><span class="m">Bonvivir: <b>comparte los objetivos por evento</b></span><span class="m">Shake: <b>proyecta pauta y optimiza para alcanzarlos</b></span><span class="m">Ventana: <b>próximo evento</b></span></div>
+        </div>
+        <div class="pledge joint a d5" contenteditable="true">
+          <h4>Investigar la vertical B2B (Neuquén) — compromiso conjunto</h4>
+          <div class="meta"><span class="m">Ambos: <b>viabilidad, modelo y estrategia</b></span><span class="m">Piloto: <b>decisión de Bonvivir según resultados del test B2C y oportunidades reales tras la investigación</b></span><span class="m">Ventana: <b>no antes del último Q</b></span></div>
+        </div>
+      </div>
+      <p class="a d5" style="margin-top:26px; font-size:12.5px; color:var(--mute); max-width:80ch;">
+        El próximo EV sumará al análisis la vertical de <b>Oliva</b> —nueva e importante para el negocio— que este semestre quedó fuera del reporte por haber arrancado a fines de junio.
+      </p>
+    </div>
+    <button class="guia-btn" onclick="toggleGuia(this)" aria-label="Guía para el equipo">◆</button>
+    <div class="guia-panel">
+      <div class="tag">◆ Guía para el equipo</div>
+      <dl>
+        <dt>Clave:</dt><dd>estos compromisos los audita el próximo EV en el Bloque 1.1. El círculo se cierra acá. Pocos y reales.</dd>
+      </dl>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 04 · 4.2</span></div>
+  </section>
+
+  <!-- ========== S21 · 4.3 PRÓXIMA CONVERSACIÓN ========== -->
+  <section class="slide" data-sec="Bloque 04 · Cómo trabajamos">
+    <div class="slide-inner">
+      <div class="eyebrow a">4.3 · Próxima conversación</div>
+      <div class="rule a"></div>
+      <h2 class="title a d1">Qué decidimos juntos<br>en el camino</h2>
+      <div class="next">
+        <div class="nx a d2" contenteditable="true">
+          <div class="k">Próximo EV · Semestral</div>
+          <p><b>Cierre del semestre 2, 2026.</b> Con la vertical de Oliva incorporada al análisis y, si contamos con revenue y churn de Bonvivir, un análisis general del funnel de negocio de punta a punta.</p>
+        </div>
+        <div class="nx a d3" contenteditable="true">
+          <div class="k">Checkpoint intermedio</div>
+          <p><b>A mitad del semestre 2:</b> avance del gap de Club, resultado de la investigación B2B (todavía sin piloto), aprendizajes del testeo de anuncios geolocalizados en Neuquén para B2C y primeros números de Oliva ya con tracking configurado.</p>
+        </div>
+        <div class="nx hot a d4" contenteditable="true">
+          <div class="k">La decisión del semestre</div>
+          <p><b>Si la investigación B2B muestra señal positiva, ¿abrimos la vertical corporativa con un piloto en el último trimestre?</b> Queremos definirlo juntos antes de esa ventana.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Bloque 04 · 4.3</span></div>
+  </section>
+
+  <!-- ========== S22 · CIERRE ========== -->
+  <section class="slide red-bleed dark-slide" data-sec="Cierre">
+    <svg class="sform" viewBox="0 0 200 200" aria-hidden="true" preserveAspectRatio="xMidYMid slice" style="right:auto; left:-16vw; top:auto; bottom:-30vh; opacity:.12;">
+      <path fill="#FFFFFF" d="M42.7,-64.9C54.4,-57.6,62.2,-44.3,68.1,-30.4C74,-16.5,78,-2,75.5,11.2C73,24.4,64,36.3,53.1,46.6C42.2,56.9,29.4,65.6,14.8,70.9C0.2,76.2,-16.2,78.1,-30.6,72.9C-45,67.7,-57.4,55.4,-65.3,41C-73.2,26.6,-76.6,10.1,-74.2,-5.3C-71.8,-20.7,-63.6,-35,-52.1,-42.9C-40.6,-50.8,-25.8,-52.3,-11.6,-56.6C2.6,-60.9,16.2,-68,42.7,-64.9Z" transform="translate(100 100)"/>
+    </svg>
+    <div class="slide-inner">
+      <div class="eyebrow on-red a">En una frase</div>
+      <p class="quote a d1" style="margin-top:26px; max-width:32ch;" contenteditable="true"><span class="q">"</span>H1 2026 nos enseñó a medir contra el negocio real. Con esa lectura, H2 tiene el rumbo claro: cerrar la brecha de Club y sostener lo que funciona en Tienda — y usar ese aprendizaje para escalar el negocio hacia nuevas unidades, como la corporativa.<span class="q">"</span></p>
+      <div class="a d3" style="margin-top:52px;">
+        <div style="font-weight:800; letter-spacing:5px; font-size:clamp(18px,2vw,26px);">SHAKE<span style="opacity:.65;">AGAIN</span></div>
+        <p style="margin-top:10px; opacity:.9;">El futuro no se espera, se acelera. Gracias.</p>
+      </div>
+    </div>
+    <div class="slide-foot"><span class="wm">SHAKE<span>AGAIN</span></span><span>Cierre · H1 2026</span></div>
+  </section>
+
+</div>
+</div>
+
+<!-- ================= NAV INFERIOR ================= -->
+<div class="navbar">
+  <button class="nav-btn" id="prev" onclick="go(-1)" aria-label="Slide anterior">←</button>
+  <button class="nav-btn" id="next" onclick="go(1)" aria-label="Slide siguiente">→</button>
+  <div class="counter"><span id="cur">01</span> <span>/ <span id="tot">22</span></span></div>
+  <div class="progress"><i id="pbar"></i></div>
+  <div class="sec-name" id="secname">Portada</div>
+</div>
+<div class="deck-hint" id="hint">← → para navegar</div>
+
+<script>
+  const track = document.getElementById('track');
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  let idx = 0;
+
+  function pad(n){return String(n).padStart(2,'0');}
+  document.getElementById('tot').textContent = pad(slides.length);
+
+  function render(){
+    track.style.transform = `translateX(${-idx*100}%)`;
+    slides.forEach((s,i)=>s.classList.toggle('active', i===idx));
+    document.getElementById('cur').textContent = pad(idx+1);
+    document.getElementById('pbar').style.width = ((idx+1)/slides.length*100)+'%';
+    document.getElementById('secname').textContent = slides[idx].dataset.sec || '';
+    document.getElementById('prev').disabled = idx===0;
+    document.getElementById('next').disabled = idx===slides.length-1;
+    // cerrar guías abiertas al cambiar de slide
+    document.querySelectorAll('.guia-panel.open').forEach(p=>p.classList.remove('open'));
+  }
+
+  function go(d){
+    const n = idx + d;
+    if(n<0 || n>=slides.length) return;
+    idx = n; render(); hideHint();
+  }
+
+  // Teclado
+  document.addEventListener('keydown', e=>{
+    if(e.target.isContentEditable) return;
+    if(e.key==='ArrowRight' || e.key==='PageDown' || e.key===' ') { e.preventDefault(); go(1); }
+    if(e.key==='ArrowLeft'  || e.key==='PageUp') { e.preventDefault(); go(-1); }
+    if(e.key==='Home'){ idx=0; render(); }
+    if(e.key==='End'){ idx=slides.length-1; render(); }
+  });
+
+  // Swipe táctil
+  let tx=null;
+  document.getElementById('deck').addEventListener('touchstart', e=>{tx=e.touches[0].clientX;},{passive:true});
+  document.getElementById('deck').addEventListener('touchend', e=>{
+    if(tx===null) return;
+    const dx = e.changedTouches[0].clientX - tx;
+    if(Math.abs(dx)>50) go(dx<0?1:-1);
+    tx=null;
+  },{passive:true});
+
+  // Guía flotante
+  function toggleGuia(btn){
+    const panel = btn.parentElement.querySelector('.guia-panel');
+    panel.classList.toggle('open');
+  }
+
+  // Toggles
+  function setView(mode){
+    document.body.classList.toggle('mode-cliente', mode==='cliente');
+    document.body.classList.toggle('mode-guia', mode==='guia');
+    document.getElementById('v-guia').setAttribute('aria-pressed', mode==='guia');
+    document.getElementById('v-cli').setAttribute('aria-pressed', mode==='cliente');
+  }
+  function setEV(type){
+    document.body.classList.toggle('ev-semestral', type==='semestral');
+    document.body.classList.toggle('ev-anual', type==='anual');
+    document.getElementById('ev-sem').setAttribute('aria-pressed', type==='semestral');
+    document.getElementById('ev-anu').setAttribute('aria-pressed', type==='anual');
+  }
+
+  // Animar el embudo cuando su slide se activa
+  const funnelSlide = document.querySelector('.funnel')?.closest('.slide');
+  const obs = new MutationObserver(()=>{
+    if(funnelSlide.classList.contains('active')){
+      funnelSlide.querySelectorAll('.fbar i').forEach(bar=>{
+        bar.style.width = bar.dataset.w + '%';
+      });
+    }
+  });
+  if(funnelSlide) obs.observe(funnelSlide,{attributes:true, attributeFilter:['class']});
+
+  // Hint
+  let hintShown = true;
+  function hideHint(){
+    if(!hintShown) return;
+    hintShown=false;
+    const h=document.getElementById('hint');
+    h.style.opacity='0';
+    setTimeout(()=>h.remove(), 600);
+  }
+  setTimeout(hideHint, 5000);
+
+  render();
+</script>
+</body>
+</html>
